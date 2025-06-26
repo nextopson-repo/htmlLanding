@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.nextdeal", 
+      "sha256_cert_fingerprints": [
+        "A9:34:50:3D:C1:8D:9D:49:86:95:90:96:6E:C6:C8:7A:8F:18:C0:80:EF:DA:63:19:23:EA:DE:F3:EC:88:70:81"
+      ]
+    }
+  }
+]
