@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+
+   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.job p{
+    color: #949494;
+    font-weight: 200;
+}
+
+/* Hide scrollbar but allow scrolling */
+.dropdown-list {
+  max-height: 240px; /* or whatever you use */
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+}
+.dropdown-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Dropdown item hover effect */
+.dropdown-list li {
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-list li:hover {
+    padding-left: 8px;
+  background-color: transparent ;
+  color: rgb(0, 0, 0);
+  text-align: start;
+}
+  .no-scrollbar {
+    scrollbar-width: none; /* Firefox */
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+</style>
+<body class="bg-white text-gray-900">
+ <!-- Header -->
+  <header class="flex items-center justify-between px-10 py-8 relative bg-white fixed top-0 left-0 w-full z-50 ">
+    <!-- Logo -->
+    <div class="flex items-center space-x-1">
+      <img src="../Images/NextDeal-Logo 1.svg" alt="Logo" class="h-6 w-auto" />
+    </div>
+
+    <!-- Nav links -->
+    <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-700">
+      <a href="../index.html"
+        class="relative inline-block text-black-600 font-bold hover:text-blue-800 transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300">
+        Home</a>
+      <a href="#"
+        class="relative inline-block text-black-600 font-bold hover:text-blue-800 transition duration-300
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300">
+        About Us</a>
+      <a href="#"
+        class="relative inline-block text-black-600 font-bold hover:text-blue-800 transition duration-300
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300">
+        Services</a>
+      <a href="./Pages/Careers.html"
+        class="relative inline-block text-black-600 font-bold hover:text-blue-800 transition duration-300
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300">
+        Careers</a>
+      <a href="#"
+        class="relative inline-block text-black-600 font-bold hover:text-blue-800 transition duration-300
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300 pb-1">
+        Contact Us</a>
+    </nav>
+
+    <!-- Icons -->
+   <div>
+    <div class="">
+  <div class="flex items-center bg-[#0057ff] text-white rounded-full px-4 py-1 space-x-3 shadow-md">
+    <!-- Android Icon -->
+    <img src="../Images/DownloadForAndroid.svg" alt="Android" class="h-4 w-4" />
+
+    <!-- Divider -->
+    <div class="h-4 w-px bg-white"></div>
+
+    <!-- Apple Icon -->
+    <img src="../Images/DownloadForApple.svg" alt="Apple" class="h-4 w-4" />
+  </div>
+</div>
+
+   </div>
+  </header>
+  <div class="min-h-screen bg-white px-6 py-12 flex flex-col items-center">
+    
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <button class="text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
+        ✦ Why Choose us?
+      </button>
+      <h1 class="text-4xl font-medium">
+        Legal terms and <br /> conditions of company
+      </h1>
+    </div>
+
+    <!-- Filters -->
+    <div class=" w-full max-w-4xl mb-6 flex justify-between items-center">
+       <h2 class="text-3xl font-semibold ">All Openings (1)</h2>
+      <!-- Dropdown -->
+        <div class="relative inline-block w-64">
+    <button id="dropdownButton" class=" w-full flex items-center justify-between w-full px-4 py-3 bg-white rounded-xl border border-gray-300 shadow-sm text-base font-medium focus:outline-none">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        All Departments
+      </div>
+      <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+
+    <!-- Dropdown Menu -->
+     <div id="dropdownMenu" class="absolute z-10 top-full left-0 mt-2 bg-white rounded-2xl border border-gray-200 hidden max-h-60 overflow-y-auto w-full no-scrollbar">
+
+    
+      <ul class=" dropdown-list divide-y divide-gray-100 text-center  ">
+        <li class="py-3 hover:bg-gray-50 cursor-pointer" onclick="scrollToSection('design')">Design</li>
+        <li class="py-3 hover:bg-gray-50 cursor-pointer" onclick="scrollToSection('development')">Development</li>
+        <li class="py-3 hover:bg-gray-50 cursor-pointer" onclick="scrollToSection('finance')">Finance</li>
+        <li class="py-3 hover:bg-gray-50 cursor-pointer" onclick="scrollToSection('sales')">Sales & Marketing</li>
+        <li class="py-3 hover:bg-gray-50 cursor-pointer" onclick="scrollToSection('telecallers')">Telecallers</li>
+      </ul>
+    </div>
+  </div>
+    </div>
+
+    <!-- Job Card 1 -->
+    <div  id="design" class=" job scroll-mt-80 w-full max-w-4xl bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-6">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+        <div>
+          <div class="flex items-center gap-2 justify-between">
+            <h3 class="text-xl font-semibold">
+              Product Designer 
+              <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">Design</span>
+            </h3>
+            <span class="flex items-center gap-2 border-2 border-gray-200 p-1 rounded-full">
+              <img src="https://flagcdn.com/in.svg" alt="India Flag" class="w-5 h-5 border rounded-md" />
+              <span class="text-xs text-gray-600">Bhopal, India</span>
+            </span>
+          </div>
+          <p class="text-sm mt-4 ">
+            We are looking for a talented Product Designer to join our team and help shape intuitive, user-friendly experiences. You will collaborate closely with developers, product managers, and stakeholders to design engaging interfaces and seamless user journeys.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between mt-8 border-t border-gray-200 pt-4">
+        <div class="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
+          <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
+            <i class="fa-solid fa-folder"></i> 3–4 Years
+          </div>
+          <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
+            <i class="fa-regular fa-clock"></i> Full-time
+          </div>
+        </div>
+        <div class="mt-6 text-right">
+       <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition hover:bg-white hover:text-black hover:border-black">
+  Apply Now <i class="fa-solid fa-arrow-right ml-1"></i>
+</button>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Job Card 2 -->
+    <div   id="development" class=" job scroll-mt-80 w-full max-w-4xl bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-6">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+        <div>
+          <div class="flex items-center gap-2 justify-between">
+            <h3 class="text-xl font-semibold">
+              Full-Stack Developer
+              <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">Development</span>
+            </h3>
+            <span class="flex items-center gap-2 border-2 border-gray-200 p-1 rounded-full">
+              <img src="https://flagcdn.com/in.svg" alt="India Flag" class="w-5 h-5 border rounded-md" />
+              <span class="text-xs text-gray-600">Indore, India</span>
+            </span>
+          </div>
+          <p class="text-sm  mt-4">
+            We are looking for a skilled Full Stack Developer to join our team and build scalable, high-performance web applications. You will work on both front-end and back-end development, collaborating with designers and product managers to deliver seamless user experiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between mt-8 border-t border-gray-200 pt-4">
+        <div class="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
+          <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
+            <i class="fa-solid fa-folder"></i> 3–4 Years
+          </div>
+          <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
+            <i class="fa-regular fa-clock"></i> Full-time
+          </div>
+        </div>
+        <div class="mt-6 text-right">
+       
+             <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition hover:bg-white hover:text-black hover:border-black">
+  Apply Now <i class="fa-solid fa-arrow-right ml-1"></i>
+</button>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Job Card 3 -->
+     <div    id="finance"  class="job w-full  scroll-mt-80 max-w-4xl bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-6">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+        <div>
+          <div class="flex items-center gap-2 justify-between">
+            <h3 class="text-xl font-semibold">
+             Finance
+              <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">Finance</span>
+            </h3>
+            <span class="flex items-center gap-2 border-2 border-gray-200 p-1 rounded-full">
+              <img src="https://flagcdn.com/in.svg" alt="India Flag" class="w-5 h-5 border rounded-md" />
+              <span class="text-xs text-gray-600">Indore, India</span>
+            </span>
+          </div>
+          <p class="text-sm  mt-4">
+            We are looking for a skilled Full Stack Developer to join our team and build scalable, high-performance web applications. You will work on both front-end and back-end development, collaborating with designers and product managers to deliver seamless user experiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between mt-8 border-t border-gray-200 pt-4">
+        <div class="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
+          <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
+            <i class="fa-solid fa-folder"></i> 3–4 Years
+          </div>
+          <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
+            <i class="fa-regular fa-clock"></i> Full-time
+          </div>
+        </div>
+        <div class="mt-6 text-right">
+       
+             <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition hover:bg-white hover:text-black hover:border-black">
+  Apply Now <i class="fa-solid fa-arrow-right ml-1"></i>
+</button>
+
+        </div>
+      </div>
+    </div>
+
+  <!-- Job Card 4 -->
+     <div    id="sales" class="job w-full scroll-mt-80  max-w-4xl bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-6">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+        <div>
+          <div class="flex items-center gap-2 justify-between">
+            <h3 class="text-xl font-semibold">
+              sales
+              <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">sales</span>
+            </h3>
+            <span class="flex items-center gap-2 border-2 border-gray-200 p-1 rounded-full">
+              <img src="https://flagcdn.com/in.svg" alt="India Flag" class="w-5 h-5 border rounded-md" />
+              <span class="text-xs text-gray-600">Indore, India</span>
+            </span>
+          </div>
+          <p class="text-sm  mt-4">
+            We are looking for a skilled Full Stack Developer to join our team and build scalable, high-performance web applications. You will work on both front-end and back-end development, collaborating with designers and product managers to deliver seamless user experiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between mt-8 border-t border-gray-200 pt-4">
+        <div class="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
+          <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
+            <i class="fa-solid fa-folder"></i> 3–4 Years
+          </div>
+          <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
+            <i class="fa-regular fa-clock"></i> Full-time
+          </div>
+        </div>
+        <div class="mt-6 text-right">
+       
+             <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition hover:bg-white hover:text-black hover:border-black">
+  Apply Now <i class="fa-solid fa-arrow-right ml-1"></i>
+</button>
+
+        </div>
+      </div>
+    </div>
+
+      <!-- Job Card 5 -->
+     <div  id="telecallers" class=" job  scroll-mt-80 w-full max-w-4xl bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-6">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+        <div>
+          <div class="flex items-center gap-2 justify-between">
+            <h3 class="text-xl font-semibold">
+             telecallers
+              <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">telecallers</span>
+            </h3>
+            <span class="flex items-center gap-2 border-2 border-gray-200 p-1 rounded-full">
+              <img src="https://flagcdn.com/in.svg" alt="India Flag" class="w-5 h-5 border rounded-md" />
+              <span class="text-xs text-gray-600">Indore, India</span>
+            </span>
+          </div>
+          <p class="text-sm  mt-4">
+            We are looking for a skilled Full Stack Developer to join our team and build scalable, high-performance web applications. You will work on both front-end and back-end development, collaborating with designers and product managers to deliver seamless user experiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between mt-8 border-t border-gray-200 pt-4">
+        <div class="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
+          <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
+            <i class="fa-solid fa-folder"></i> 3–4 Years
+          </div>
+          <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
+            <i class="fa-regular fa-clock"></i> Full-time
+          </div>
+        </div>
+        <div class="mt-6 text-right">
+       
+             <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition hover:bg-white hover:text-black hover:border-black">
+  Apply Now <i class="fa-solid fa-arrow-right ml-1"></i>
+</button>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white pt-10 pb-6 px-4 md:px-20">
+    <div class="flex flex-col md:flex-row justify-between gap-10">
+
+      <!-- Left: Logo and description -->
+      <div class="md:w-1/3 space-y-4">
+        <h1 class="text-xl font-bold">NEXT.<span class="text-blue-500">deals</span></h1>
+        <p class="text-sm text-gray-300">
+          Our platform facilitates high-value real estate transactions, specializing in the buying, selling, and leasing
+          of hotels and lands for high-net-worth individuals and businesses.
+        </p>
+        <p class="text-sm">
+          <strong>Office Address:</strong> XYZ Corporate Tower, 4th Floor, MP Nagar, Zone-1, Bhopal, Madhya Pradesh -
+          462011, India
+        </p>
+      </div>
+
+      <!-- Center: Company + Helpful -->
+      <div class="flex gap-16">
+        <div>
+          <h3 class="font-semibold mb-2">Company</h3>
+          <ul class="space-y-1 text-sm text-gray-300">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Terms of Usage</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Helpful</h3>
+          <ul class="space-y-1 text-sm text-gray-300">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right: CTA Buttons -->
+      <div class="flex flex-col space-y-4">
+        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg text-left">
+          <div class="text-xs">Also visit Nextopson.in :</div>
+          <div class="text-xl font-bold">NEXT.<span class="text-white">deals</span> <i
+              class="fas fa-arrow-right ml-1"></i></div>
+        </a>
+        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-lg text-left">
+          <div class="text-xs">Also visit NextCRM.in :</div>
+          <div class="text-xl font-bold">NEXT.<span class="text-white">deals</span> <i
+              class="fas fa-arrow-right ml-1"></i></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div
+      class="flex flex-col md:flex-row justify-between items-center mt-10 border-t border-gray-700 pt-4 text-sm text-gray-400">
+      <p>© 2025 Exson Proptech Private Limited. All rights reserved.</p>
+      <div class="flex space-x-4 mt-2 md:mt-0">
+        <a href="#" class="p-2 bg-gray-800 rounded-full hover:bg-gray-700"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="p-2 bg-gray-800 rounded-full hover:bg-gray-700"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="p-2 bg-gray-800 rounded-full hover:bg-gray-700"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+   <script>
+    const dropdownBtn = document.getElementById('dropdownButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    dropdownBtn.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+    });
+
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      section.scrollIntoView({ behavior: 'smooth' });
+      dropdownMenu.classList.add('hidden');
+    }
+
+    // Close dropdown if clicked outside
+    window.addEventListener('click', function (e) {
+      if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
