@@ -21,6 +21,8 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
 *{
     font-family: 'Outfit', sans-serif;
     box-sizing: border-box;
@@ -62,6 +64,8 @@ html {
   .no-scrollbar::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
   }
+
+
 </style>
 <body class="bg-white text-gray-900">
  <!-- Header -->
@@ -114,30 +118,47 @@ html {
   <div class="min-h-screen bg-white px-6 py-12 flex flex-col items-center">
     
     <!-- Header -->
-    <div class="text-center mb-10">
-      <button class="text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
-        ✦ Why Choose us?
-      </button>
-      <h1 class="text-4xl font-medium">
-        Legal terms and <br /> conditions of company
-      </h1>
-    </div>
+  <div class="p-0 text-center mb-10">
+  <!-- Mobile Button -->
+  <button class="block md:hidden text-2xl  text-white bg-blue-600 px-4 py-2 rounded-md mb-4 mx-auto
+">
+    ✦ Career
+  </button>
+
+  <!-- Desktop Button -->
+  <button class="hidden md:inline-block text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
+    ✦ Why Choose us?
+  </button>
+
+  <!-- Mobile Heading -->
+  <h1 class="block md:hidden text-4xl font-medium">
+    Join Our Team
+  </h1>
+
+  <!-- Desktop Heading -->
+  <h1 class="hidden md:block text-4xl font-medium">
+    Legal terms and <br /> conditions of company
+  </h1>
+</div>
+
 
     <!-- Filters -->
     <div class=" w-full max-w-4xl mb-6 flex justify-between items-center">
-       <h2 class="text-3xl font-semibold ">All Openings (1)</h2>
+       <h2 class="text-xl font-semibold ">All Openings (1)</h2>
       <!-- Dropdown -->
-        <div class="relative inline-block w-64">
-    <button id="dropdownButton" class=" w-full flex items-center justify-between w-full px-4 py-3 bg-white rounded-xl border border-gray-300 shadow-sm text-base font-medium focus:outline-none">
+        <div class="relative inline-block ">
+    <button id="dropdownButton" class="  flex items-center justify-between px-4 py-3 bg-white rounded-xl border border-gray-300 shadow-sm text-base font-medium focus:outline-none">
       <div class="flex items-center gap-2">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
         All Departments
-      </div>
+      
+      
       <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
       </svg>
+      </div>
     </button>
 
     <!-- Dropdown Menu -->
@@ -158,12 +179,14 @@ html {
     <!-- Job Card 1 -->
     <div  id="design" class=" job scroll-mt-80 w-full max-w-4xl bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-6">
       <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-        <div>
+        <div >
           <div class="flex items-center gap-2 justify-between">
+            <div class="flex flex-col lg:flex-row lg:flex-wrap items-start gap-2">
+              
             <h3 class="text-xl font-semibold">
-              Product Designer 
-              <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">Design</span>
-            </h3>
+              Product Designer </h3>
+            <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">Design</span>
+            </div>
             <span class="flex items-center gap-2 border-2 border-gray-200 p-1 rounded-full">
               <img src="https://flagcdn.com/in.svg" alt="India Flag" class="w-5 h-5 border rounded-md" />
               <span class="text-xs text-gray-600">Bhopal, India</span>
@@ -176,7 +199,7 @@ html {
       </div>
 
       <div class="flex items-center justify-between mt-8 border-t border-gray-200 pt-4">
-        <div class="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
+        <div id="job-tags" class=" flex flex-col lg:flex-row lg:flex-wrap gap-2 mt-4 text-sm text-gray-600">
           <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
             <i class="fa-solid fa-folder"></i> 3–4 Years
           </div>
@@ -185,7 +208,7 @@ html {
           </div>
         </div>
         <div class="mt-6 text-right">
-       <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition hover:bg-white hover:text-black hover:border-black">
+           <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition">
   Apply Now <i class="fa-solid fa-arrow-right ml-1"></i>
 </button>
 
@@ -198,14 +221,13 @@ html {
       <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
         <div>
           <div class="flex items-center gap-2 justify-between">
+
+           <div class="flex flex-col lg:flex-row lg:flex-wrap items-start gap-2">
+              
             <h3 class="text-xl font-semibold">
-              Full-Stack Developer
-              <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">Development</span>
-            </h3>
-            <span class="flex items-center gap-2 border-2 border-gray-200 p-1 rounded-full">
-              <img src="https://flagcdn.com/in.svg" alt="India Flag" class="w-5 h-5 border rounded-md" />
-              <span class="text-xs text-gray-600">Indore, India</span>
-            </span>
+             Development </h3>
+            <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">Design</span>
+            </div>
           </div>
           <p class="text-sm  mt-4">
             We are looking for a skilled Full Stack Developer to join our team and build scalable, high-performance web applications. You will work on both front-end and back-end development, collaborating with designers and product managers to deliver seamless user experiences.
@@ -214,7 +236,7 @@ html {
       </div>
 
       <div class="flex items-center justify-between mt-8 border-t border-gray-200 pt-4">
-        <div class="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
+        <div class="flex flex-col lg:flex-row lg:flex-wrap gap-2 mt-4 text-sm text-gray-600">
           <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
             <i class="fa-solid fa-folder"></i> 3–4 Years
           </div>
@@ -224,7 +246,7 @@ html {
         </div>
         <div class="mt-6 text-right">
        
-             <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition hover:bg-white hover:text-black hover:border-black">
+               <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition">
   Apply Now <i class="fa-solid fa-arrow-right ml-1"></i>
 </button>
 
@@ -237,14 +259,13 @@ html {
       <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
         <div>
           <div class="flex items-center gap-2 justify-between">
+
+            <div class="flex flex-col lg:flex-row lg:flex-wrap items-start gap-2">
+              
             <h3 class="text-xl font-semibold">
-             Finance
-              <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">Finance</span>
-            </h3>
-            <span class="flex items-center gap-2 border-2 border-gray-200 p-1 rounded-full">
-              <img src="https://flagcdn.com/in.svg" alt="India Flag" class="w-5 h-5 border rounded-md" />
-              <span class="text-xs text-gray-600">Indore, India</span>
-            </span>
+              Finince </h3>
+            <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">Design</span>
+            </div>
           </div>
           <p class="text-sm  mt-4">
             We are looking for a skilled Full Stack Developer to join our team and build scalable, high-performance web applications. You will work on both front-end and back-end development, collaborating with designers and product managers to deliver seamless user experiences.
@@ -253,7 +274,7 @@ html {
       </div>
 
       <div class="flex items-center justify-between mt-8 border-t border-gray-200 pt-4">
-        <div class="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
+        <div class="flex flex-col lg:flex-row lg:flex-wrap gap-2 mt-4 text-sm text-gray-600">
           <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
             <i class="fa-solid fa-folder"></i> 3–4 Years
           </div>
@@ -263,7 +284,7 @@ html {
         </div>
         <div class="mt-6 text-right">
        
-             <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition hover:bg-white hover:text-black hover:border-black">
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition">
   Apply Now <i class="fa-solid fa-arrow-right ml-1"></i>
 </button>
 
@@ -276,14 +297,13 @@ html {
       <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
         <div>
           <div class="flex items-center gap-2 justify-between">
+
+            <div class="flex flex-col lg:flex-row lg:flex-wrap items-start gap-2">
+              
             <h3 class="text-xl font-semibold">
-              sales
-              <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">sales</span>
-            </h3>
-            <span class="flex items-center gap-2 border-2 border-gray-200 p-1 rounded-full">
-              <img src="https://flagcdn.com/in.svg" alt="India Flag" class="w-5 h-5 border rounded-md" />
-              <span class="text-xs text-gray-600">Indore, India</span>
-            </span>
+              Sales </h3>
+            <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">Design</span>
+            </div>
           </div>
           <p class="text-sm  mt-4">
             We are looking for a skilled Full Stack Developer to join our team and build scalable, high-performance web applications. You will work on both front-end and back-end development, collaborating with designers and product managers to deliver seamless user experiences.
@@ -292,7 +312,7 @@ html {
       </div>
 
       <div class="flex items-center justify-between mt-8 border-t border-gray-200 pt-4">
-        <div class="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
+        <div class="flex flex-col lg:flex-row lg:flex-wrap gap-2 mt-4 text-sm text-gray-600">
           <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
             <i class="fa-solid fa-folder"></i> 3–4 Years
           </div>
@@ -302,7 +322,7 @@ html {
         </div>
         <div class="mt-6 text-right">
        
-             <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition hover:bg-white hover:text-black hover:border-black">
+           <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition">
   Apply Now <i class="fa-solid fa-arrow-right ml-1"></i>
 </button>
 
@@ -315,14 +335,12 @@ html {
       <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
         <div>
           <div class="flex items-center gap-2 justify-between">
+            <div class="flex flex-col lg:flex-row lg:flex-wrap items-start gap-2">
+              
             <h3 class="text-xl font-semibold">
-             telecallers
-              <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">telecallers</span>
-            </h3>
-            <span class="flex items-center gap-2 border-2 border-gray-200 p-1 rounded-full">
-              <img src="https://flagcdn.com/in.svg" alt="India Flag" class="w-5 h-5 border rounded-md" />
-              <span class="text-xs text-gray-600">Indore, India</span>
-            </span>
+              Product Designer </h3>
+            <span class="ml-2 text-sm text-blue-600 bg-white px-2 py-1 border-2 border-blue-100 rounded-2xl ">Design</span>
+            </div>
           </div>
           <p class="text-sm  mt-4">
             We are looking for a skilled Full Stack Developer to join our team and build scalable, high-performance web applications. You will work on both front-end and back-end development, collaborating with designers and product managers to deliver seamless user experiences.
@@ -331,7 +349,7 @@ html {
       </div>
 
       <div class="flex items-center justify-between mt-8 border-t border-gray-200 pt-4">
-        <div class="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
+        <div class="flex flex-col lg:flex-row lg:flex-wrap gap-2 mt-4 text-sm text-gray-600">
           <div class="flex items-center gap-2 border border-gray-200 rounded-md p-2">
             <i class="fa-solid fa-folder"></i> 3–4 Years
           </div>
@@ -341,7 +359,7 @@ html {
         </div>
         <div class="mt-6 text-right">
        
-             <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition hover:bg-white hover:text-black hover:border-black">
+             <button class="bg-blue-600 text-white px-6 py-2 rounded-full border border-transparent transition">
   Apply Now <i class="fa-solid fa-arrow-right ml-1"></i>
 </button>
 
