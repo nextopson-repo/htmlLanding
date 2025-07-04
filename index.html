@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nextdeal – More Than Just Real Estate</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'Montserrat', 'ui-sans-serif', 'system-ui'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+    * {
+      font-family: 'Outfit', sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+  <!-- Hero Section with Image and Overlayed Content -->
+  <section
+    class="relative w-full min-h-[350px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[600px] flex items-center justify-center overflow-hidden">
+    <img src="./images/Frame_AboutUs-SectionHeading.png" alt=""
+      class="absolute inset-0 w-full h-full object-cover object-center z-0" style="min-height:350px;" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent z-10"
+      style="width:100vw; height:100%; min-width:100vw; left:0; top:0;"></div>
+    <div class="relative z-20 w-full flex flex-col items-center justify-center text-center px-4 py-12">
+      <h1 class="text-white font-bold drop-shadow-lg mb-4"
+        style="font-family: 'Outfit', sans-serif; font-weight: 700; font-style: bold; font-size: 48px; line-height: 100%; letter-spacing: 2%; text-align: center;">
+        More Than Just Real Estate — It's Our Story</h1>
+      <p class="text-white text-base sm:text-lg md:text-2xl font-medium max-w-2xl mx-auto drop-shadow-md mb-4">
+        <span
+          style="font-family: 'Outfit', sans-serif; font-weight: 300; font-style: light; font-size: 20px; line-height: 100%; letter-spacing: 4%; text-align: center; display: block;">From
+          a shared vision to a growing movement—meet the people behind Nextdeal. Reshaping real estate with heart,
+          hustle, and innovation.</span>
+      </p>
+      <div class="relative mt-6 flex items-center justify-center" style="width:370px; height:17px; opacity:1; top:4px;">
+        <span class="text-gray-400 font-semibold flex items-center"
+          style="font-family: 'Outfit', sans-serif; font-weight: 400; font-style: normal; font-size: 24px; /* leading-trim: CAP_HEIGHT; */ line-height: 100%; letter-spacing: 4%; white-space: nowrap; width: 370px; height: 17px; opacity: 1; top: 4px; display:inline-block; vertical-align:middle;">Meet the Minds Behind Nextdeal</span>
+        <img src="./images/arrow.png" alt="arrow" class="arrow-bounce"
+          style="width:24px; height:24px; margin-left:8px; display:inline-block; vertical-align:middle;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder's Message Section -->
+  <section id="founder"
+    class="pt-0 pb-0 sm:pt-0 sm:pb-0 px-2 sm:px-4 min-h-[60vh] sm:min-h-[80vh] flex items-center bg-white">
+    <div
+      class="w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-col-reverse lg:flex-row items-center space-y-16 md:space-y-28 lg:space-y-40 lg:space-x-72">
+      <!-- Founder Image -->
+      <div
+        class="rounded-3xl p-2 xs:p-4 flex-shrink-0 w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:w-[22rem] lg:h-[30rem] flex items-center justify-center mx-auto">
+        <img src="./images/ceo.png" alt="">
+      </div>
+      <!-- Message -->
+      <div
+        class="flex-1 flex flex-col justify-start h-auto md:h-[30rem] lg:h-[36rem] w-full space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-20">
+        <!-- Top: Icon -->
+        <div class="mb-4 flex flex-col items-start gap-6 sm:gap-8 md:gap-10 lg:gap-[36px]">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl mb-0">
+            <img src="./images/msg.png" alt="" class="w-full h-full object-contain" />
+          </div>
+          <h2 class="text-[#1A2340] tracking-tight mb-0 text-2xl sm:text-3xl md:text-4xl lg:text-[64px] font-semibold"
+            style="font-family: 'Outfit', sans-serif; line-height:100%; letter-spacing:4%; vertical-align:middle; margin-bottom:0; max-width:100vw;">
+            Founder’s Message</h2>
+          <p class="text-[#1A2340] text-base sm:text-lg md:text-xl font-medium leading-relaxed w-full max-w-full sm:max-w-xl"
+            style="margin-bottom:0;">We started Nextdeal to solve the real estate challenges we faced ourselves. What
+            began as a small idea among friends is now a platform making property transactions easier, smarter, and more
+            transparent for everyone.</p>
+        </div>
+        <!-- Bottom: Name and Title -->
+        <div class="mt-4 sm:mt-6">
+          <span
+            class="block text-black font-semibold text-[20px] sm:text-[24px] md:text-[28px] leading-[100%] tracking-[0.04em] mb-2"
+            style="font-family: 'Outfit', sans-serif;">Anurag Dubey</span>
+          <span
+            class="block uppercase text-gray-400 tracking-widest font-light text-[14px] sm:text-[16px] md:text-[18px] leading-[100%]"
+            style="font-family: 'Outfit', sans-serif;">Founder & CEO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-0 sm:py-0 px-2 sm:px-4 bg-white">
+    <div class="w-full max-w-7xl mx-auto">
+      <h2 id="team-title" class="text-center mb-6 sm:mb-8"
+        style="font-family: 'Outfit', sans-serif; font-weight: 600; font-style: normal; font-size: 48px; line-height: 100%; letter-spacing: 4%;">
+        Meet our <span class="text-[#0066FF]">Founding</span> Team</h2>
+      <!-- Team Tabs -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-10">
+        <button id="founding-btn"
+          class="px-6 py-2 rounded-full font-semibold bg-[#0066FF] text-white shadow-md border-2 border-[#0066FF] focus:outline-none">Founding
+          Team</button>
+        <button id="tech-btn"
+          class="px-6 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none">Tech
+          Team</button>
+        <button id="marketing-btn"
+          class="px-6 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none">Marketing
+          Team</button>
+      </div>
+      <!-- Team Grid -->
+      <div id="team-grid" class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
+        <!-- Founding Team (default) -->
+      </div>
+    </div>
+  </section>
+  <script>
+    // Team data
+    const teams = {
+      founding: {
+        title: 'Meet our <span class="text-[#0066FF]">Founding</span> Team',
+        members: [
+          {
+            img: './images/member.jpg',
+            role: 'FOUNDER & CEO',
+            name: 'Anurag Dubey',
+            desc: 'Technology expert innovating solution to propel growth',
+            linkedin: '#'
+          },
+          {
+            img: './images/member.jpg',
+            role: 'CO-FOUNDER',
+            name: 'Adarsh Verma',
+            desc: 'Technology expert innovating solution to propel growth',
+            linkedin: '#'
+          },
+          {
+            img: './images/member.jpg',
+            role: 'Managing Director',
+            name: 'vinay shakya',
+            desc: 'Technology expert innovating solution to propel growth',
+            linkedin: '#'
+          },
+          {
+            img: './images/member.jpg',
+            role: 'Relationship Manager',
+            name: 'Umesh Shakya',
+            desc: 'Technology expert innovating solution to propel growth',
+            linkedin: '#'
+          }
+        ]
+      },
+      tech: {
+        title: 'Meet our <span class="text-[#0066FF]">Tech</span> Team',
+        members: [
+          {
+            img: './images/member.jpg',
+            role: 'UX UI Designer',
+            name: 'Aaditya kumar',
+            desc: 'Technology expert innovating solution to propel growth',
+            linkedin: '#'
+          },
+          {
+            img: './images/member.jpg',
+            role: 'Android Developer',
+            name: 'Sachin Pandey',
+            desc: 'Technology expert innovating solution to propel growth',
+            linkedin: '#'
+          },
+          {
+            img: './images/member.jpg',
+            role: 'BACKEND Developer',
+            name: 'Yogesh Malvia',
+            desc: 'Technology expert innovating solution to propel growth',
+            linkedin: '#'
+          }
+        ]
+      },
+      marketing: {
+        title: 'Meet our <span class="text-[#0066FF]">Marketing</span> Team',
+        members: [
+          {
+            img: './images/member.jpg',
+            role: 'Team Management',
+            name: 'Ashish Pandey',
+            desc: 'Technology expert innovating solution to propel growth',
+            linkedin: '#'
+          },
+          {
+            img: './images/member.jpg',
+            role: 'Supply Head',
+            name: 'Hemant Mehra',
+            desc: 'Technology expert innovating solution to propel growth',
+            linkedin: '#'
+          },
+          {
+            img: './images/member.jpg',
+            role: 'Demand Head',
+            name: 'Hemant Rajput',
+            desc: 'Technology expert innovating solution to propel growth',
+            linkedin: '#'
+          }
+        ]
+      }
+    };
+
+    // Render team
+    function renderTeam(teamKey) {
+      const team = teams[teamKey];
+      document.getElementById('team-title').innerHTML = team.title;
+      const grid = document.getElementById('team-grid');
+      grid.innerHTML = team.members.map(member => `
+          <div class="bg-white rounded-xl shadow-md p-4 sm:p-6 md:p-8 flex flex-col items-center hover:shadow-lg transition w-full max-w-xs mx-auto">
+            <div class=" rounded-xl p-2 mb-4 w-[288px] h-[219.85px] flex items-center justify-center">
+              <img src="${member.img}" alt="Team Member" class="rounded-lg object-cover w-full h-full" style="width:288px;height:219.85px;object-fit:cover;" />
+            </div>
+            <span class="text-[#0066FF] text-xs sm:text-sm font-semibold mb-1">${member.role}</span>
+            <span class="font-bold text-base sm:text-lg text-[#003366] text-center">${member.name}</span>
+            <p class="text-gray-600 text-center mt-2 text-sm sm:text-base">${member.desc}</p>
+            <div class="flex gap-3 mt-3">
+              <a href="#" class="group linkedin-black-hover" aria-label="FontAwesome LinkedIn Blue" target="_blank">
+                <i class="fa-brands fa-linkedin fa-2x linkedin-black-icon" style="color: #0066FF;"></i>
+              </a>
+            </div>
+          </div>
+        `).join('');
+    }
+
+    // Add hover effect for black LinkedIn icon
+    if (!window.__linkedinBlackHoverStyleInjected) {
+      const style = document.createElement('style');
+      style.innerHTML = `
+        .linkedin-black-hover .linkedin-black-icon {
+          transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+          color: #0066FF;
+          background: white;
+          border-radius: 8px;
+          padding: 4px;
+        }
+        .linkedin-black-hover:hover .linkedin-black-icon {
+          color: #0A66C2;
+          background: #e8f4fd;
+          box-shadow: 0 2px 8px 0 #0A66C233;
+        }
+      `;
+      document.head.appendChild(style);
+      window.__linkedinBlackHoverStyleInjected = true;
+    }
+    // Tab button logic
+    function setActive(btnId) {
+      document.getElementById('founding-btn').className = "px-6 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none";
+      document.getElementById('tech-btn').className = "px-6 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none";
+      document.getElementById('marketing-btn').className = "px-6 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none";
+      document.getElementById(btnId).className = "px-6 py-2 rounded-full font-semibold bg-[#0066FF] text-white shadow-md border-2 border-[#0066FF] focus:outline-none";
+    }
+
+    document.getElementById('founding-btn').addEventListener('click', function () {
+      renderTeam('founding');
+      setActive('founding-btn');
+    });
+    document.getElementById('tech-btn').addEventListener('click', function () {
+      renderTeam('tech');
+      setActive('tech-btn');
+    });
+    document.getElementById('marketing-btn').addEventListener('click', function () {
+      renderTeam('marketing');
+      setActive('marketing-btn');
+    });
+
+    // Initial render
+    renderTeam('founding');
+    setActive('founding-btn');
+    // Load Font Awesome if not already loaded
+    if (!window.__fontAwesomeInjected) {
+      const fa = document.createElement('link');
+      fa.rel = 'stylesheet';
+      fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+      document.head.appendChild(fa);
+      window.__fontAwesomeInjected = true;
+    }
+  </script>
+
+
+  <!-- Footer -->
+
+  <!-- Our Story Section -->
+  <section id="our-story-section" class="w-full flex justify-center items-center py-12 bg-white min-h-screen"
+    style="height:100vh;min-height:100vh; font-family: 'Outfit', sans-serif;">
+    <div class="flex flex-row w-full max-w-6xl rounded-2xl shadow-lg overflow-hidden min-h-[400px] h-full">
+      <!-- Sidebar -->
+      <aside class="flex flex-col justify-center items-center w-40 md:w-56 lg:w-72 relative overflow-hidden bg-white">
+        <img src="./images/our story.jpg" alt="Our Story" class="w-full h-full object-contain z-0"
+          style="position:absolute; left:0; top:0; width:100%; height:100%; object-fit:contain; background:white;" />
+        <span class="font-bold text-[#0046FF] tracking-widest select-none whitespace-nowrap text-center z-10"
+          style="writing-mode: vertical-rl; transform: rotate(-180deg); letter-spacing: 0.15em; line-height: 1.1; font-size:52px; position:relative; font-family: 'Outfit', sans-serif;">Our
+          Story</span>
+      </aside>
+      <!-- Main Content -->
+      <div id="our-story-main" class="flex-1 flex flex-row bg-white z-10 animate-story-main" style="font-family: 'Outfit', sans-serif; opacity:0; transform:translateX(-80px) scale(0.95);">
+        <!-- Navigation List -->
+        <nav
+          id="our-story-nav"
+          class="flex flex-col justify-center items-start w-48 md:w-56 lg:w-64 px-4 py-8 gap-2 border-r border-blue-100 bg-white animate-story-fadein"
+          style="position:relative; z-index:20; font-family: 'Outfit', sans-serif; opacity:0; transform:translateY(30px);">
+          <div id="story-nav-list" class="flex flex-col gap-2 w-full"></div>
+        </nav>
+        <!-- Content Area -->
+        <section id="our-story-content" class="flex-1 flex flex-col justify-center items-start px-6 py-8 bg-white animate-story-fadein"
+          style="position:relative; z-index:20; font-family: 'Outfit', sans-serif; opacity:0; transform:translateY(30px);">
+          <div id="story-content-area" class="w-full"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes storyMainIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-80px) scale(0.95);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(0) scale(1.04);
+      }
+      80% {
+        transform: translateX(0) scale(0.98);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+    }
+    @keyframes storyFadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-story-main {
+      animation: storyMainIn 1s cubic-bezier(0.77,0,0.175,1) 0.1s both;
+    }
+    .animate-story-fadein {
+      animation: storyFadeInUp 0.7s cubic-bezier(0.77,0,0.175,1) 0.7s both;
+    }
+    .story-fadein-stagger {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: storyFadeInUp 0.7s cubic-bezier(0.77,0,0.175,1) both;
+    }
+    @keyframes headingSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateX(80px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes contentSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-80px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .heading-animate {
+      opacity: 0;
+      animation: headingSlideIn 0.7s cubic-bezier(0.77,0,0.175,1) forwards;
+    }
+    .content-animate {
+      opacity: 0;
+      animation: contentSlideIn 0.7s cubic-bezier(0.77,0,0.175,1) 0.15s forwards;
+    }
+    @keyframes star-rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .star-animate {
+      animation: star-rotate 1s cubic-bezier(0.77,0,0.175,1);
+    }
+    @keyframes arrow-bounce {
+      0% {
+        transform: translateY(0);
+      }
+      20% {
+        transform: translateY(-8px);
+      }
+      40% {
+        transform: translateY(0);
+      }
+      60% {
+        transform: translateY(-4px);
+      }
+      80% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    .arrow-bounce {
+      animation: arrow-bounce 1.2s cubic-bezier(0.77,0,0.175,1) infinite;
+      will-change: transform;
+    }
+  </style>
+  <script>
+    // Story Data
+    const storyFrames = [
+      {
+        nav: 'The Spark',
+        heading: 'The <span class="font-bold text-[#0046FF]">Spark</span>',
+        icon: 'star',
+        content: 'It all began with a group of close friends and one shared goal — to fix the broken real estate experience. We weren’t experts, just passionate problem-solvers.',
+        crown: true
+      },
+      {
+        nav: 'Entering the Rental Jungle',
+        heading: 'Entering the Rental   <span class="font-bold text-[#0046FF]">Rental Jungle</span>',
+        icon: '',
+        content: 'We entered the rental world as agents. It felt like a jungle - outdated systems, confused andlords, frustrated tenants But we were ready to take it on.',
+        crown: false
+      },
+      {
+        nav: 'Chaos & Challenges',
+        heading: 'Chaos & <span class="font-bold text-[#0046FF]">Challenges</span>',
+        icon: '',
+        content: 'Every day brought new problems. No real solutions existed. Everyone - landlords tenants, agents - felt stuck in messy, inefficient system.',
+        crown: false
+      },
+      {
+        nav: 'The Shift',
+        heading: 'The <span class="font-bold text-[#0046FF]">Shift</span>',
+        icon: '',
+        content: ' we realized it was about people, not just property. Our approach changed forever.We realized one tool couldnt solve everything. So we broke it down - studied every part of the industry and built focused solutions to tackle each challenge.',
+        crown: false
+      },
+      {
+        nav: 'A Year of Learning',
+        heading: 'A Year of <span class="font-bold text-[#0046FF]">Learning</span>',
+        icon: '',
+        content: 'We failed, learned, andimproved - over and over. Each setback taught us something new. We got smarter stronger and closer to our vision.',
+        crown: false
+      },
+      {
+        nav: 'The Big Launch',
+        heading: 'The <span class="font-bold text-[#0046FF]">Big Launch</span>',
+        icon: '',
+        content: 'After a year of grinding, we launched Nextdeal - a smart, seamless platform connecting every piece of the real estate puzzle. Our dream became reality.',
+        crown: false
+      },
+      {
+        nav: 'From Friends to Founders',
+        heading: 'From Friends to <span class="font-bold text-[#0046FF]">Founders</span>',
+        icon: '',
+        content: 'We started as friends on a mission. Today, were founders transforming real estate - one smart solution at a time.',
+        crown: false
+      }
+    ];
+    let currentFrame = 0;
+    function renderStoryNavList() {
+      const navList = document.getElementById('story-nav-list');
+      navList.innerHTML = storyFrames.map((frame, i) => {
+        // Star is visible only on the currentFrame, no animation
+        const isCurrent = i === currentFrame;
+        // Only add fade-in class on initial load, not on click
+        const fadeClass = window.__storyNavAnimated ? '' : 'story-fadein-stagger';
+        const animDelay = window.__storyNavAnimated ? '' : `animation-delay:${0.2 + i * 0.12}s`;
+        // Add a data attribute for the star for later selection
+        return `
+            <div class="flex items-center gap-2 cursor-pointer group mb-4 ${fadeClass}" style="${animDelay}" onclick="showStoryFrame(${i})">
+              <img src="./images/star.jpg" alt="star" class="w-8 h-8 mr-2 ${isCurrent ? 'star-animate' : ''} ${isCurrent ? '' : 'opacity-0'}" style="${isCurrent ? '' : 'width:0;height:0;'}" id="star-img-${i}" />
+              <span class="${isCurrent ? 'font-bold text-[#0046FF]' : 'text-blue-300'} text-lg transition">${frame.nav}</span>
+            </div>
+          `;
+      }).join('');
+      // Only animate on first load
+      if (!window.__storyNavAnimated) {
+        setTimeout(() => {
+          document.querySelectorAll('#story-nav-list .story-fadein-stagger').forEach((el, idx) => {
+            el.style.animationDelay = `${0.2 + idx * 0.12}s`;
+            el.style.opacity = 1;
+          });
+          window.__storyNavAnimated = true;
+        }, 100);
+      }
+    }
+    function renderStoryContentArea() {
+      const frame = storyFrames[currentFrame];
+      const content = document.getElementById('story-content-area');
+      // For 'The Spark', add king icon on 'k' and remove SVG crown
+      let html = '';
+      if (frame.nav === 'The Spark') {
+        // Find the index of 'k' in 'Spark'
+        const sparkWord = 'Spark';
+        const kIndex = sparkWord.indexOf('k');
+        // Build the word with the king icon on 'k'
+        const sparkWithKing = sparkWord.substring(0, kIndex) +
+          '<span style="position:relative;display:inline-block;">k<img src="./images/king.png" alt="king" style="position:absolute;top:-32px;left:0;width:32px;height:32px;z-index:2;" /></span>';
+        html = `
+            <div class="flex flex-col items-start w-full">
+              <div class="flex items-center gap-2 mb-2">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight heading-animate">The <span class="font-bold text-[#0046FF]">${sparkWithKing}</span></h2>
+              </div>
+              <p class="text-[#1A2340] text-base md:text-lg mb-2 max-w-2xl content-animate">${frame.content}</p>
+              <div class="w-24 h-1 bg-blue-200 rounded-full mb-2 story-fadein-stagger" style="animation-delay:0.44s"></div>
+            </div>
+          `;
+      } else {
+        html = `
+            <div class="flex flex-col items-start w-full">
+              <div class="flex items-center gap-2 mb-2">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight heading-animate">The <span class="font-bold text-[#0046FF]">${frame.nav.split(' ').slice(-1)[0]}</span></h2>
+              </div>
+              <p class="text-[#1A2340] text-base md:text-lg mb-2 max-w-2xl content-animate">${frame.content}</p>
+              <div class="w-24 h-1 bg-blue-200 rounded-full mb-2 story-fadein-stagger" style="animation-delay:0.44s"></div>
+            </div>
+          `;
+      }
+      content.innerHTML = html;
+      // Animate heading and content in/out
+      setTimeout(() => {
+        const heading = content.querySelector('.heading-animate');
+        const para = content.querySelector('.content-animate');
+        if (heading) {
+          heading.style.opacity = 0;
+          heading.style.animation = 'headingSlideIn 0.7s cubic-bezier(0.77,0,0.175,1) forwards';
+        }
+        if (para) {
+          para.style.opacity = 0;
+          para.style.animation = 'contentSlideIn 0.7s cubic-bezier(0.77,0,0.175,1) 0.15s forwards';
+        }
+        // Animate the blue line as before
+        content.querySelectorAll('.story-fadein-stagger').forEach((el, idx) => {
+          el.style.animationDelay = el.style.animationDelay || `${0.44 + idx * 0.12}s`;
+          el.style.opacity = 1;
+        });
+      }, 10);
+    }
+    function showStoryFrame(idx) {
+      if (idx === currentFrame) return;
+      currentFrame = idx;
+      renderStoryNavList();
+      renderStoryContentArea();
+      // Animate the star rotation for the newly selected nav item
+      setTimeout(() => {
+        const star = document.getElementById(`star-img-${idx}`);
+        if (star) {
+          star.classList.remove('star-animate');
+          // Force reflow to restart animation
+          void star.offsetWidth;
+          star.classList.add('star-animate');
+        }
+      }, 10);
+    }
+    // Animation trigger for main element and fade-in children
+    function triggerOurStoryAnimation() {
+      const main = document.getElementById('our-story-main');
+      const nav = document.getElementById('our-story-nav');
+      const content = document.getElementById('our-story-content');
+      if (main) {
+        main.style.opacity = 1;
+        main.style.transform = 'translateX(0) scale(1)';
+      }
+      if (nav) {
+        nav.style.opacity = 1;
+        nav.style.transform = 'translateY(0)';
+      }
+      if (content) {
+        content.style.opacity = 1;
+        content.style.transform = 'translateY(0)';
+      }
+    }
+    // Initial render
+    renderStoryNavList();
+    renderStoryContentArea();
+    window.showStoryFrame = showStoryFrame;
+    // Animate on load and on every frame change
+    window.addEventListener('DOMContentLoaded', triggerOurStoryAnimation);
+    // Optionally, loop the animation by resetting and re-triggering after a delay
+    /* Uncomment to loop
+    setInterval(() => {
+      const main = document.getElementById('our-story-main');
+      if (main) {
+        main.classList.remove('animate-story-main');
+        void main.offsetWidth;
+        main.classList.add('animate-story-main');
+      }
+    }, 6000);
+    */
+  </script>
+  <footer class="py-8 text-center text-gray-400 text-sm" style="font-family: 'Outfit', sans-serif;">
+    &copy; 2025 Nextdeal. All rights reserved.
+  </footer>
+</body>
+
+</html>
