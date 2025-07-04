@@ -15,12 +15,14 @@ body {
   place-items: center;
   background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
+.outfit {
+  font-family: 'Outfit', sans-serif;
+}
 
 .wrapper .button {
   display: inline-block;
   height: 60px;
   width: 60px;
-  float: left;
   text-decoration: none;
   margin: 0 5px;
   overflow: hidden;
@@ -111,3 +113,127 @@ body {
       color: #000;
       background-color: red;
     }
+
+    /* Container wrapper */
+.downloadWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.mainBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  background-color: #0055F1;
+  width: 80px;
+  height: 40px;
+  border-radius: 999px;
+  padding: 0 6px;
+}
+
+.divider {
+  background-color: white;
+  width: 1px;
+  height: 10px;
+}
+
+.androidicon, .appleicon {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.androidimg {
+  height: 100%;
+  margin-left: 3px;
+}
+.appleimg {
+  height: 100%;
+  margin-right: 4px;
+}
+
+.playStore {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: #0055F1;
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: sans-serif;
+  padding: 0 6px;
+  text-align: center;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+
+.playStore.showPlay {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-63px);
+  border-radius: 999px 0 0 999px;
+}
+
+.appStore {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 125px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: #0055F1;
+  color: white;
+  font-size: 9px;
+  font-weight: 500;
+  font-family: sans-serif;
+  padding: 2px 6px;
+  text-align: center;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.downloadWrapper.hoverApple .mainBox {
+  transform: translateX(-63px);
+  transition: transform 0.3s ease;
+}
+
+.downloadWrapper.hoverApple .appStore {
+  border-radius: 0 999px 999px 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.visited-arrow:visited::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 0.5rem; 
+  background-image: url("/htmlLanding/Images/VectorArr.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+
+.navLink {
+  @apply relative inline-block text-[#595959] font-medium text-[16px] tracking-[0.04em] leading-[100%] font-[Outfit];
+}
+.navLink span {
+  @apply absolute left-1/2 -translate-x-1/2 bottom-[-15px] w-full h-[3px] bg-blue-600 rounded-[3px] opacity-0 transition-all duration-300 group-hover:opacity-100;
+}
