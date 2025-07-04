@@ -51,12 +51,12 @@
       <h1 class="text-white font-bold drop-shadow-lg mb-4"
         style="font-family: 'Outfit', sans-serif; font-weight: 700; font-style: bold; font-size: 48px; line-height: 100%; letter-spacing: 2%; text-align: center;">
         More Than Just Real Estate — It's Our Story</h1>
-      <p class="text-white text-base sm:text-lg md:text-2xl font-medium max-w-2xl mx-auto drop-shadow-md mb-4">
-        <span
-          style="font-family: 'Outfit', sans-serif; font-weight: 300; font-style: light; font-size: 20px; line-height: 100%; letter-spacing: 4%; text-align: center; display: block;">From
-          a shared vision to a growing movement—meet the people behind Nextdeal. Reshaping real estate with heart,
-          hustle, and innovation.</span>
-      </p>
+      <div
+        style="font-family: 'Outfit', sans-serif; font-weight: 300; font-style: light; font-size: 20px; line-height: 100%; letter-spacing: 4%; text-align: center; display: block; color: #fff;">
+        From a shared vision among friends to a growing movement—discover the people, passion, and<br> 
+        purpose behind Nextdeal.
+        Learn how we’re reshaping real estate with heart, hustle, and innovation.
+      </div>
       <div class="relative mt-6 flex items-center justify-center" style="width:370px; height:17px; opacity:1; top:4px;">
         <span class="text-gray-400 font-semibold flex items-center"
           style="font-family: 'Outfit', sans-serif; font-weight: 400; font-style: normal; font-size: 24px; /* leading-trim: CAP_HEIGHT; */ line-height: 100%; letter-spacing: 4%; white-space: nowrap; width: 370px; height: 17px; opacity: 1; top: 4px; display:inline-block; vertical-align:middle;">Meet the Minds Behind Nextdeal</span>
@@ -233,8 +233,8 @@
             <span class="font-bold text-base sm:text-lg text-[#003366] text-center">${member.name}</span>
             <p class="text-gray-600 text-center mt-2 text-sm sm:text-base">${member.desc}</p>
             <div class="flex gap-3 mt-3">
-              <a href="#" class="group linkedin-black-hover" aria-label="FontAwesome LinkedIn Blue" target="_blank">
-                <i class="fa-brands fa-linkedin fa-2x linkedin-black-icon" style="color: #0066FF;"></i>
+              <a href="#" class="linkedin-blue-hover" aria-label="LinkedIn" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:9999px;border:1px solid #0066FF;padding:12px;gap:10px;opacity:1;transition:background 0.2s, box-shadow 0.2s;">
+                <img src="./images/linkedin-02.svg" alt="LinkedIn" style="width:24px;height:24px;object-fit:contain;angle:0deg;opacity:1;" />
               </a>
             </div>
           </div>
@@ -260,6 +260,23 @@
       `;
       document.head.appendChild(style);
       window.__linkedinBlackHoverStyleInjected = true;
+    }
+    // Add hover effect for link.png (LinkedIn) icon background only
+    if (!window.__linkedinBlueHoverStyleInjected) {
+      const style = document.createElement('style');
+      style.innerHTML = `
+        .linkedin-blue-hover:hover {
+          background: #0066FF !important;
+          box-shadow: 0 2px 8px 0 #0A66C233;
+        }
+        .linkedin-blue-hover:hover img[alt="LinkedIn"] {
+          filter: none !important;
+          background: transparent !important;
+          opacity: 1 !important;
+        }
+      `;
+      document.head.appendChild(style);
+      window.__linkedinBlueHoverStyleInjected = true;
     }
     // Tab button logic
     function setActive(btnId) {
