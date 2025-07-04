@@ -106,7 +106,7 @@
 
   <!-- About Section -->
 
-  <div class="flex  justify-center items-center mt-20 gap-2  " style="height: 100%;">
+  <div class="flex  justify-center items-center mt-20 gap-2 hidden sm:inline-flex " style="height: 100%; ">
     <!-- Mobile Image -->
     <div class="min-h-screen flex items-center justify-center mt-20 " style="background: radial-gradient(circle at center, #e628dd4d 10%, rgba(255, 255, 255, 0.7) 30%, rgba(204, 231, 231, 0.3) 50%);  "  ">
       <img src="./Images/Adobe Express - file 1.png" alt="App Screenshot" style="float: left; width: 100%;  height: 100%; margin-top: 65%;" />
@@ -329,37 +329,37 @@
     <h2 class="text-3xl md:text-4xl font-semibold text-center mb-8">
       We provides solutions for everyone
     </h2>
+<!-- ////ssssssssssssss -->
+<div class="flex justify-center space-x-4 mb-12">
+  <button id="btn-agents" onclick="showTab('agents')" class="tab-btn bg-white text-[#0066ff] px-5 py-2 rounded-full font-medium shadow">
+    Solutions for Agents
+  </button>
+  <button id="btn-owners" onclick="showTab('owners')" class="tab-btn border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
+    Solutions for Owners
+  </button>
+  <button id="btn-investors" onclick="showTab('investors')" class="tab-btn border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
+    Solutions for Investors
+  </button>
+</div>
 
-    <!-- Tabs -->
-    <div class="flex justify-center space-x-4 mb-12">
-      <button class="bg-white text-[#0066ff] px-5 py-2 rounded-full font-medium shadow">
-        Solutions for Agents
-      </button>
-      <button
-        class="border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
-        Solutions for Owners
-      </button>
-      <button
-        class="border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
-        Solutions for Investors
-      </button>
+
+
+<!-- Tabs Container -->
+<div class="space-y-10 text-sm md:text-base">
+
+  <!-- Agents Tab -->
+  <div id="tab-agents" class="tab">
+    <div class="flex justify-between border-b border-white pb-4">
+      <div>
+        <p class="text-xs opacity-80">01</p>
+        <p class="text-white font-semibold mt-1">Sell your properties<br>quickly</p>
+      </div>
+      <p class="text-white text-sm max-w-sm opacity-80">
+        Enable machines to understand, interpret, and respond to human language with precision.
+      </p>
     </div>
 
-    <!-- List Items -->
-    <div class="space-y-10 text-sm md:text-base">
-      <!-- Item 1 -->
-      <div class="flex justify-between border-b border-white pb-4">
-        <div>
-          <p class="text-xs opacity-80">01</p>
-          <p class="text-white font-semibold mt-1">Sell your properties<br>quickly</p>
-        </div>
-        <p class="text-white text-sm max-w-sm opacity-80">
-          Enable machines to understand, interpret, and respond to human language with precision.
-        </p>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="flex justify-between border-b border-white pb-4">
+     <div class="flex justify-between border-b border-white pb-4">
         <div>
           <p class="text-xs opacity-80">02</p>
           <p class="text-white font-semibold mt-1">Verified agents to sell<br>your property</p>
@@ -401,7 +401,125 @@
           Enable machines to understand, interpret, and respond to human language with precision.
         </p>
       </div>
+
+    <!-- Add other items for Agents -->
+  </div>
+
+  <!-- Owners Tab -->
+  <div id="tab-owners" class="tab hidden">
+    <div class="flex justify-between border-b border-white pb-4">
+      <div>
+        <p class="text-xs opacity-80">01</p>
+        <p class="text-white font-semibold mt-1">Sell Your property quickly</p>
+      </div>
+      <p class="text-white text-sm max-w-sm opacity-80">
+        Enable machines to understand, interpret, and respond to human language with precision.
+      </p>
     </div>
+
+          <!-- Item 2 -->
+      <div class="flex justify-between border-b border-white pb-4">
+        <div>
+          <p class="text-xs opacity-80">02</p>
+          <p class="text-white font-semibold mt-1">Verified agents to sell<br>your property</p>
+        </div>
+        <p class="text-white text-sm max-w-sm opacity-80">
+          Enable machines to understand, interpret, and respond to human language with precision.
+        </p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="flex justify-between border-b border-white pb-4">
+        <div>
+          <p class="text-xs opacity-80">03</p>
+          <p class="text-white font-semibold mt-1">Unlimited Leads</p>
+        </div>
+        <p class="text-white text-sm max-w-sm opacity-80">
+          Enable machines to understand, interpret, and respond to human language with precision.
+        </p>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="flex justify-between border-b border-white pb-4">
+        <div>
+          <p class="text-xs opacity-80">04</p>
+          <p class="text-white font-semibold mt-1">Genuine Clients</p>
+        </div>
+        <p class="text-white text-sm max-w-sm opacity-80">
+          Enable machines to understand, interpret, and respond to human language with precision.
+        </p>
+      </div>
+
+
+    <!-- Add other items for Owners -->
+  </div>
+
+  <!-- Investors Tab -->
+  <div id="tab-investors" class="tab hidden">
+    <div class="flex justify-between border-b border-white pb-4">
+      <div>
+        <p class="text-xs opacity-80">01</p>
+        <p class="text-white font-semibold mt-1">Investment Planning Tools</p>
+      </div>
+      <p class="text-white text-sm max-w-sm opacity-80">
+        Dummy text for investor solutions. Add charts, returns, or guides.
+      </p>
+    </div>
+
+          <!-- Item 2 -->
+      <div class="flex justify-between border-b border-white pb-4">
+        <div>
+          <p class="text-xs opacity-80">02</p>
+          <p class="text-white font-semibold mt-1">Unlimited Leads</p>
+        </div>
+        <p class="text-white text-sm max-w-sm opacity-80">
+          Enable machines to understand, interpret, and respond to human language with precision.
+        </p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="flex justify-between border-b border-white pb-4">
+        <div>
+          <p class="text-xs opacity-80">03</p>
+          <p class="text-white font-semibold mt-1">Genuine Clients</p>
+        </div>
+        <p class="text-white text-sm max-w-sm opacity-80">
+          Enable machines to understand, interpret, and respond to human language with precision.
+        </p>
+      </div>
+
+
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+  function showTab(tabName) {
+    const tabs = ['agents', 'owners', 'investors'];
+
+    // Hide all tab contents
+    tabs.forEach(name => {
+      document.getElementById(`tab-${name}`).classList.add('hidden');
+    });
+
+    // Show selected tab
+    document.getElementById(`tab-${tabName}`).classList.remove('hidden');
+
+    // Update active button styling
+    tabs.forEach(name => {
+      const btn = document.getElementById(`btn-${name}`);
+      if (name === tabName) {
+        btn.classList.add('bg-white', 'text-[#0066ff]', 'shadow');
+        btn.classList.remove('border', 'hover:bg-white', 'hover:text-[#0066ff]');
+      } else {
+        btn.classList.remove('bg-white', 'text-[#0066ff]', 'shadow');
+        btn.classList.add('border', 'hover:bg-white', 'hover:text-[#0066ff]');
+      }
+    });
+  }
+</script>
+
+
   </section>
 
 
@@ -411,10 +529,10 @@
   <section class="max-w-7xl mx-auto px-6 py-16 text-center">
     <!-- Button -->
     <div class="flex justify-center mb-4">
-      <button
-        class="text-white bg-blue-600 text-sm font-medium px-4 py-2 rounded-full shadow hover:bg-blue-700 transition">
-        <img src="./Images/Star 1 (1).svg" class="c:\Users\hp\OneDrive\Star 1 (1).svg"> Why Choose us?
-      </button>
+         <button class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
+  <img src="../htmlLanding/Images/Star 1 (1).svg" alt="Star" class="w-4 h-4" />
+ Why Choose Us
+</button>
     </div>
 
     <!-- Heading -->
@@ -423,61 +541,72 @@
     </h2>
 
     <!-- Cards Grid -->
-    <div class="grid gap-6 md:grid-cols-3">
+    <div class="grid gap-6 md:grid-cols-3 ">
       <!-- Card 1 -->
-      <div class="bg-white border rounded-2xl shadow-sm p-6 text-left">
-        <div class="text-white bg-blue-600 w-10 h-10 flex items-center justify-center rounded-full mb-4">
-          <img src="./Images/cursor-02-solid-rounded 1.svg" alt="Icon" class="w-6 h-6" />
-        </div>
-        <h3 class="font-semibold mb-2">User-friendly Interface</h3>
-        <p class="text-gray-600 text-sm">
-          Nextdeal offers a clean, intuitive design that makes browsing, listing, and connecting effortless for all
-          users—no tech skills needed.
-        </p>
-      </div>
+<div class="group bg-white border rounded-2xl shadow-sm p-6 text-left transition-all duration-300 hover:bg-blue-600">
+
+  <!-- Icon (Inline SVG with dynamic color on hover) -->
+  <div class="bg-blue-600 w-10 h-10 flex items-center justify-center rounded-full mb-4 
+              transition-all duration-300 ">
+   <img src="./Images/cursor-02-solid-rounded 1.svg" alt="">
+  </div>
+
+  <!-- Title -->
+  <h3 class="font-semibold mb-2 transition-colors duration-300 group-hover:text-white">
+    User-friendly Interface
+  </h3>
+
+  <!-- Paragraph -->
+  <p class="text-gray-600 text-sm transition-colors duration-300 group-hover:text-white">
+    Nextdeal offers a clean, intuitive design that makes browsing, listing, and connecting effortless for all users.
+  </p>
+</div>
+
+
 
       <!-- Card 2 -->
-      <div class="bg-white border rounded-2xl shadow-sm p-6 text-left">
+      <div class="group bg-white border rounded-2xl shadow-sm p-6 text-left hover:bg-blue-600">
+
         <div class="text-white bg-blue-600 w-10 h-10 flex items-center justify-center rounded-full mb-4">
           <img src="./Images/user-group-03-solid-rounded.svg" alt="Icon" class="w-6 h-6" />
         </div>
-        <h3 class="font-semibold mb-2">Networking</h3>
-        <p class="text-gray-600 text-sm">
+        <h3 class="font-semibold mb-2 group-hover:text-white">Networking</h3>
+        <p class="text-gray-600 text-sm group-hover:text-white">
           Build meaningful connections with property owners, agents, and buyers through smart matchmaking and in-app
           messaging.
         </p>
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white border rounded-2xl shadow-sm p-6 text-left">
+      <div class="bg-white border rounded-2xl shadow-sm p-6 text-left group hover:bg-blue-600">
         <div class="text-white bg-blue-600 w-10 h-10 flex items-center justify-center rounded-full mb-4">
           <img src="./Images/ProfileVerification_tick.svg" alt="Icon" class="w-6 h-6" />
         </div>
-        <h3 class="font-semibold mb-2">Trusted & Verified Professionals</h3>
-        <p class="text-gray-600 text-sm">
+        <h3 class="font-semibold mb-2 group-hover:text-white">Trusted & Verified Professionals</h3>
+        <p class="text-gray-600 text-sm group-hover:text-white">
           Work with confidence—every agent and service provider on Nextdeal is thoroughly verified for trust and
           reliability.
         </p>
       </div>
 
       <!-- Card 4 -->
-      <div class="bg-white border rounded-2xl shadow-sm p-6 text-left">
+      <div class="bg-white border rounded-2xl shadow-sm p-6 text-left group hover:bg-blue-600">
         <div class="text-white bg-blue-600 w-10 h-10 flex items-center justify-center rounded-full mb-4">
           <img src="./Images/store-location-02-solid-rounded.svg" alt="Icon" class="w-6 h-6" />
         </div>
-        <h3 class="font-semibold mb-2">All-in-one Marketplace</h3>
-        <p class="text-gray-600 text-sm">
+        <h3 class="font-semibold mb-2 group-hover:text-white">All-in-one Marketplace</h3>
+        <p class="text-gray-600 text-sm group-hover:text-white">
           From buying and selling to renting and managing, access every real estate need in one seamless platform.
         </p>
       </div>
 
       <!-- Card 5 -->
-      <div class="bg-white border rounded-2xl shadow-sm p-6 text-left">
+      <div class="bg-white border rounded-2xl shadow-sm p-6 text-left group hover:bg-blue-600">
         <div class="text-white bg-blue-600 w-10 h-10 flex items-center justify-center rounded-full mb-4">
           <img src="./Images/customer-service-01-solid-rounded 1.svg" alt="Icon" class="w-6 h-6" />
         </div>
-        <h3 class="font-semibold mb-2">24*7 Customer Support</h3>
-        <p class="text-gray-600 text-sm">
+        <h3 class="font-semibold mb-2 group-hover:text-white">24*7 Customer Support</h3>
+        <p class="text-gray-600 text-sm group-hover:text-white">
           Got questions? Our support team is available around the clock to help you with any issue, anytime.
         </p>
       </div>
@@ -535,56 +664,76 @@
 
   <!-- Trusted and -->
 
-  <section class="py-16 px-4 text-center max-w-7xl mx-auto">
-    <!-- Button -->
-    <div class="mb-4">
-      <button class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm shadow">
-        <i class="fas fa-plus mr-1"></i> Testimonials
-      </button>
+<section class="py-16 px-4 max-w-7xl mx-auto">
+  <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+
+    <!-- Left Column: 4 Images -->
+    <div class="flex  gap-6">
+        <div class="">
+ <img src="https://randomuser.me/api/portraits/women/1.jpg" class="w-28 h-36 object-cover rounded-xl mt-10" />
+      <img src="https://randomuser.me/api/portraits/men/2.jpg" class="w-28 h-36 object-cover rounded-xl mt-4" />
+        </div>
+     <div  class="flex-col  mt-20 pt-10">
+    <img src="https://randomuser.me/api/portraits/women/3.jpg" class="w-28 h-36 object-cover rounded-xl  mt-4" />
+      <img src="https://randomuser.me/api/portraits/men/4.jpg" class="w-28 h-36 object-cover rounded-xl  mt-4" />
+     </div>
+  
     </div>
 
-    <!-- Title -->
-    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
-      Trusted by leading <span class="text-blue-500">Agents & Owners</span>
-    </h2>
+    <!-- Center Column -->
+    <div class="flex flex-col items-center text-center gap-8">
+      <!-- Text -->
+      <div>
+         <button class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
+  <img src="../htmlLanding/Images/Star 1 (1).svg" alt="Star" class="w-4 h-4" />
+Testimonials
+</button>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+          Trusted by leading <br><span class="text-blue-500">Agents <span class="text-gray-900">&</span> Owners</span>
+        </h2>
+      </div>
 
-    <!-- Grid of Images (Balanced top/bottom like screenshot) -->
-    <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-10 gap-x-4 justify-items-center">
-      <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Agent 1"
-        class="w-28 h-36 object-cover rounded-xl shadow-md">
-      <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Agent 2"
-        class="w-28 h-36 object-cover rounded-xl shadow-md">
-      <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Agent 3"
-        class="w-28 h-36 object-cover rounded-xl shadow-md">
-      <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Agent 4"
-        class="w-28 h-36 object-cover rounded-xl shadow-md">
-      <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="Agent 5"
-        class="w-28 h-36 object-cover rounded-xl shadow-md">
-
-      <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="Agent 6"
-        class="w-28 h-36 object-cover rounded-xl shadow-md">
-      <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="Agent 7"
-        class="w-28 h-36 object-cover rounded-xl shadow-md">
-      <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="Agent 8"
-        class="w-28 h-36 object-cover rounded-xl shadow-md">
-      <img src="https://randomuser.me/api/portraits/women/9.jpg" alt="Agent 9"
-        class="w-28 h-36 object-cover rounded-xl shadow-md">
-      <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Agent 10"
-        class="w-28 h-36 object-cover rounded-xl shadow-md">
+      <!-- 3 Center Bottom Images -->
+      <div class="flex gap-6 pt-4">
+        <img src="https://randomuser.me/api/portraits/men/5.jpg" class="w-28 h-36 object-cover rounded-xl " />
+        <img src="https://randomuser.me/api/portraits/women/6.jpg" class="w-28 h-36 object-cover rounded-xl mt-10" />
+        <img src="https://randomuser.me/api/portraits/men/7.jpg" class="w-28 h-36 object-cover rounded-xl " />
+      </div>
     </div>
-  </section>
+
+    <!-- Right Column: 4 Images -->
+    <div class="flex  gap-3">
+     <div class="flex-col  mt-20 pt-10">
+<img src="https://randomuser.me/api/portraits/women/8.jpg" class="w-28 h-36 object-cover rounded-xl mt-4" />
+      <img src="https://randomuser.me/api/portraits/men/9.jpg" class="w-28 h-36 object-cover rounded-xl mt-4 " />
+     </div> 
+     <div  class="flex-col">
+  <img src="https://randomuser.me/api/portraits/women/10.jpg" class="w-28 h-36 object-cover rounded-xl mt-10  " />
+      <img src="https://randomuser.me/api/portraits/men/11.jpg" class="w-28 h-36 object-cover rounded-xl mt-4 "  />
+     </div>
+    
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
 
 
 
   <!--  Frequency ask questions-->
 
 
-  <section class="max-w-3xl mx-auto px-4 py-16 text-center bg-white text-gray-900">
+  <section class=" w-full px-4 py-16 text-center bg-white text-gray-900">
     <!-- Button -->
     <div class="mb-4">
-      <button class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm shadow">
-        <i class="fas fa-plus mr-1"></i> FAQ
-      </button>
+     <button class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
+  <img src="../htmlLanding/Images/Star 1 (1).svg" alt="Star" class="w-4 h-4" />
+ FAQ
+</button>
     </div>
 
     <!-- Title -->
@@ -643,7 +792,7 @@
 
   <!--  playstore  -->
 
-  <div class="max-w-6xl mx-auto px-4 py-10">
+  <div class="max-w-6xl mx-auto px-4 py-10 hidden sm:inline-flex " >
     <div
       class="bg-gradient-to-r from-blue-700 to-blue-400 rounded-xl px-6 py-6 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
 
@@ -678,9 +827,8 @@
 
 
 
-  <!-- Footer -->
-  <footer id="footer" class="bg-black text-white pt-10 pb-6 px-4 md:px-20 ">
-    <div class="flex flex-col md:flex-row justify-between gap-10">
+    <footer id="footer" class="bg-black text-white pt-10 pb-6 px-4 md:px-20 ">
+    <div class="flex flex-col lg:flex-row justify-between gap-10">
 
       <!-- Left: Logo and description -->
       <div class="md:w-1/3 space-y-4">
@@ -694,9 +842,70 @@
           462011, India
         </p>
       </div>
+  <div style="padding-right: 80px;" class="inline-flex justify-start items-center gap-6 md:hidden ">
+  <!-- Facebook -->
 
+<div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer ">
+  <!-- Expanding background animation -->
+  <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+  <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+              group-hover:translate-x-0 group-hover:translate-y-0 
+              transition-transform duration-300 ease-in-out origin-top-left">
+  </div>
+
+  <!-- Icon (initial black, darker on hover) -->
+  <img src="../htmlLanding/Images/Socimg/facebook.svg"
+       alt="Facebook"
+       class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+              group-hover:brightness-0 transition-all duration-300 z-10" />
+</div>
+
+
+  <!-- Instagram -->
+
+<div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+  <!-- Expanding background animation -->
+  <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+  <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+              group-hover:translate-x-0 group-hover:translate-y-0 
+              transition-transform duration-300 ease-in-out origin-top-left">
+  </div>
+
+  <!-- Icon (initial black, darker on hover) -->
+  <img src="../htmlLanding/Images/Socimg/instagram.svg"
+       alt="Instagram"
+       class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+              group-hover:brightness-0 transition-all duration-300 z-10" />
+</div>
+
+
+  <!-- Twitter (X) -->
+
+
+<!-- Twitter (X) Icon Button with hover darken effect -->
+<div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+  <!-- Expanding background animation -->
+  <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+  <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+              group-hover:translate-x-0 group-hover:translate-y-0 
+              transition-transform duration-300 ease-in-out origin-top-left">
+  </div>
+
+  <!-- Icon (initial black, darker on hover) -->
+  <img src="../htmlLanding/Images/Socimg/twitter.svg"
+       alt="Twitter"
+       class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+              group-hover:brightness-0 transition-all duration-300 z-10" />
+</div>
+
+
+
+
+
+
+</div>
       <!-- Center: Company + Helpful -->
-      <div class="flex gap-16">
+      <div class="flex flex-col gap-8 lg:flex-row lg:gap-20 ">
         <div>
           <h3 class="font-normal text-2xl mb-2">Company</h3>
           <ul class="font-extralight space-y-1 text-xs text-gray-300">
@@ -719,17 +928,23 @@
 
       <!-- Right: CTA Buttons -->
       <div class="flex flex-col space-y-4 md:w-[25%]">
-        <a href="#" class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-6 rounded-lg text-center">
+        <img src="../htmlLanding/Images/footer/Frame 262.svg" alt="" class="hidden md:block">
+        <div class="flex  gap-2 md:hidden">
+
+          <img src="../htmlLanding/Images/footer/layers-01-solid-rounded.svg" alt="">
+          <img src="../htmlLanding/Images/footer/NextCRM-product.svg" alt="">
+        </div>
+        <!-- <a href="#" class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-6 rounded-lg text-center">
           <div class="text-sm">Also visit Nextopson.in :</div>
           <div class="text-3xl font-bold">NEXT.<span class="text-white">deals</span> 
            <i class="fa-solid fa-arrow-right"></i>
             </div>
-        </a>
-        <a href="#" class="bg-red-500 hover:bg-orange-600 text-white px-4 py-6 rounded-lg text-center">
+        </a> -->
+        <!-- <a href="#" class="bg-red-500 hover:bg-orange-600 text-white px-4 py-6 rounded-lg text-center">
           <div class="text-sm">Also visit NextCRM.in :</div>
           <div class="text-3xl font-bold">NEXT.<span class="text-white">deals</span> <i
               class="fas fa-arrow-right ml-1"></i></div>
-        </a>
+        </a> -->
       </div>
     </div>
 
@@ -737,10 +952,12 @@
     <div
       class="flex flex-col md:flex-row justify-between items-center mt-10  pt-4 text-sm font-medium text-gray-300 gap-3 ">
       <p>© 2025 Exson Proptech Private Limited. All rights reserved.</p>
-     <div style="padding-right: 80px;" class="inline-flex justify-start items-center gap-6 ">
+    
+    
+      <div style="padding-right: 80px;" class="inline-flex justify-start items-center gap-6 hidden sm:inline-flex">
   <!-- Facebook -->
 
-<div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+<div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer ">
   <!-- Expanding background animation -->
   <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
   <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
@@ -750,7 +967,7 @@
 
   <!-- Icon (initial black, darker on hover) -->
   <img src="../htmlLanding/Images/Socimg/facebook.svg"
-       alt="Twitter"
+       alt="Facebook"
        class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
               group-hover:brightness-0 transition-all duration-300 z-10" />
 </div>
@@ -768,7 +985,7 @@
 
   <!-- Icon (initial black, darker on hover) -->
   <img src="../htmlLanding/Images/Socimg/instagram.svg"
-       alt="Twitter"
+       alt="Instagram"
        class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
               group-hover:brightness-0 transition-all duration-300 z-10" />
 </div>
