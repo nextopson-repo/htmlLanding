@@ -146,10 +146,15 @@
 
  <!-- Background Image (behind everything) -->
   <div class="w-full bg-white overflow-hidden ">
-    <div class="absolute bottom-0 left-0 w-full h-[280px] z-0">
+  <div class="absolute bottom-0 left-0 w-full h-[280px] z-0 hidden md:block">
+  <img src="./Images/Group 3 (1).svg" alt="Background" class="w-full h-full object-cover" />
+</div>
 
-      <img src="./Images/Group 3 (1).svg" alt="Background" class="w-full h-full object-cover" />
-    </div>
+<!-- Mobile Image Row (visible only below md) -->
+<div class="absolute bottom-0 left-0 w-full flex justify-center gap-2 z-0 block  md:hidden">
+  <img src="./Images/mobile-img1.svg" alt="Mobile Image 1" class="h-24" />
+  <img src="./Images/mobile-img2.svg" alt="Mobile Image 2" class="h-24" />
+</div>
 <section id="heroSection" class="relative z-10 pt-[120px] pb-32 heroSection min-h-screen px-4">
   <!-- Badge -->
   <div class="text-center">
