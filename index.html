@@ -285,7 +285,7 @@
 
   <!-- mobilelogo -->
 
-    <div class="text-white p-8 rounded-3xl max-w-6xl mx-auto mt-20 mb-10 relative bg-blue-600 w-full h-[600px] lg:hidden">
+    <div class="text-white text-center p-8 rounded-3xl max-w-6xl mx-auto mt-20 mb-10 relative bg-blue-600 w-full h-[600px] lg:hidden">
     <!-- Category Tag -->
     <button class="mx-auto bg-white text-blue-600 px-4 py-1 text-sm rounded-full mt-4 mb-4 flex items-center  gap-2">
       <img src="./Images/Star 1.svg" alt="Star Icon" class="w-4 h-4" />
@@ -293,22 +293,22 @@
     </button>
   
     <!-- Title -->
-    <h2 class="text-3xl font-bold ml-[60px] mb-8">Categories that<br />we integrated</h2>
+    <h2 class="text-3xl font-bold  mb-8 ">Categories that<br />we integrated</h2>
   
     <!-- Category Grid -->
 
   <div class="flex justify-center mt-20">
     <div id="carousel1" class="w-screen max-w-xs flex flex-col items-center transition-all duration-500">
-      <img src="./Images/building-02-solid-rounded.svg" class="w-full h-24 object-contain" />
-      <span class="text-sm font-medium mt-2">Builder Floors</span>
+      <img src="./Images/building-02-solid-rounded.svg" class="w-16 h-16 object-contain" />
+      <span class="text-md font-medium mt-2">Builder Floors</span>
     </div>
   </div>
 
   <!-- Row 2 -->
   <div class="flex justify-center mt-10">
     <div id="carousel2" class="w-screen max-w-xs flex flex-col items-center transition-all duration-500">
-      <img src="./Images/layers-01-solid-rounded.svg" class="w-full h-24 object-contain" />
-      <span class="text-sm font-medium mt-2">Lands</span>
+      <img src="./Images/layers-01-solid-rounded.svg" class="w-16 h-16 object-contain" />
+      <span class="text-md font-medium mt-2">Lands</span>
     </div>
   </div>
 
@@ -339,8 +339,8 @@
       function showSlide(index) {
         const slide = slides[index];
         carousel.innerHTML = `
-          <img src="${slide.img}" class="w-full h-24 object-contain" />
-          <span class="text-sm font-medium mt-2">${slide.text}</span>
+          <img src="${slide.img}" class="w-16 h-16 object-contain" />
+          <span class="text-md font-medium mt-2">${slide.text}</span>
         `;
       }
 
