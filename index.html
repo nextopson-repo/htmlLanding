@@ -479,241 +479,204 @@
   <!-- We Provide Solution for EveryOne-->
 
 
-  <section class="max-w-6xl mx-auto px-6 py-16 bg-[#0066ff] text-white font-sans">
-    <!-- Heading -->
-    <h2 class="text-3xl md:text-4xl font-semibold text-center mb-8">
-      We provides solutions for everyone
-    </h2>
-<!-- ////ssssssssssssss -->
-<!-- mobile -->
- <style>
-  .scrollbar-hide{
-  
-    
-    scrollbar-width:none;
-  }
- </style>
+ <section class="w-full px-6 py-16 bg-[#0066ff] text-white font-sans">
+  <!-- Heading -->
+  <h2 class="text-3xl md:text-4xl font-semibold text-center mb-8">
+    We provide solutions for everyone
+  </h2>
 
-<div class="overflow-x-scroll scrollbar-hide  lg:bg-yellow-500 lg:hidden ">
-<div  class=" w-[200%]  flex  space-x-4 mb-12 ">
-  <button id="btn-agents" onclick="showTab('agents')" class="tab-btn bg-white text-[#0066ff] px-5 py-2 rounded-full font-medium shadow">
-    Solutions for Agents
-  </button>
-  <button id="btn-owners" onclick="showTab('owners')" class="tab-btn border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
-    Solutions for Owners
-  </button>
-  <button id="btn-investors" onclick="showTab('investors')" class="tab-btn border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
-    Solutions for Investors
-  </button>
-</div>
-</div>
+  <!-- Hide scrollbar style -->
+  <style>
+    .scrollbar-hide {
+      scrollbar-width: none;
+    }
+  </style>
 
-<!-- for desktop -->
-
-
-<div  class=" w-full  flex  space-x-4 mb-12 hidden sm:inline-flex">
-  <button id="btn-agents" onclick="showTab('agents')" class="tab-btn bg-white text-[#0066ff] px-5 py-2 rounded-full font-medium shadow">
-    Solutions for Agents
-  </button>
-  <button id="btn-owners" onclick="showTab('owners')" class="tab-btn border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
-    Solutions for Owners
-  </button>
-  <button id="btn-investors" onclick="showTab('investors')" class="tab-btn border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
-    Solutions for Investors
-  </button>
-</div>
-
-
-
-
-
-
-
-
-<!-- Tabs Container -->
-<div class="space-y-10 text-sm md:text-base">
-
-  <!-- Agents Tab -->
-  <div id="tab-agents" class="tab">
-<div class="flex flex-col  pb-4">
-  <!-- Top block -->
-  <div class="flex flex-col ">
-    <p class="text-sm opacity-80">01</p>
-    <p class="text-white text-2xl font-semibold mt-1">
-      Sell your properties<br>quickly
-    </p>
+  <!-- Mobile tab buttons -->
+  <div class="overflow-x-scroll scrollbar-hide lg:hidden">
+    <div class="w-[200%] flex space-x-4 mb-12">
+      <button id="btn-agents-mobile" onclick="showTab('agents')" class="tab-btn bg-white text-[#0066ff] px-5 py-2 rounded-full font-medium shadow">
+        Solutions for Agents
+      </button>
+      <button id="btn-owners-mobile" onclick="showTab('owners')" class="tab-btn border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
+        Solutions for Owners
+      </button>
+      <button id="btn-investors-mobile" onclick="showTab('investors')" class="tab-btn border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
+        Solutions for Investors
+      </button>
+    </div>
   </div>
 
-  <!-- Bottom paragraph -->
-  <p class="text-white text-sm max-w-sm opacity-80 mt-2">
-    Enable machines to understand, interpret, and respond to human language with precision.
-  </p>
-</div>
+  <!-- Desktop tab buttons -->
+  <div class="w-full flex space-x-4 mb-12 hidden sm:inline-flex justify-center">
+    <button id="btn-agents-desktop" onclick="showTab('agents')" class="tab-btn bg-white text-[#0066ff] px-5 py-2 rounded-full font-medium shadow">
+      Solutions for Agents
+    </button>
+    <button id="btn-owners-desktop" onclick="showTab('owners')" class="tab-btn border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
+      Solutions for Owners
+    </button>
+    <button id="btn-investors-desktop" onclick="showTab('investors')" class="tab-btn border border-white px-5 py-2 rounded-full font-medium hover:bg-white hover:text-[#0066ff] transition">
+      Solutions for Investors
+    </button>
+  </div>
 
+  <!-- Tab Content -->
+  <div class="space-y-10 text-sm md:text-base">
+    <!-- Agents Tab -->
+    <div id="tab-agents" class="tab">
+      <!-- Block 1 -->
+      <div class="flex flex-col pb-4 lg:border-b">
+        <div class="flex flex-col">
+          <p class="text-sm opacity-80">01</p>
+        </div>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Sell your properties<br>quickly</p>
+          <p class="text-white text-sm max-w-sm opacity-80 mt-2">Enable machines to understand, interpret, and respond to human language with precision.</p>
+        </div>
+      </div>
 
-     <div class="flex flex-col justify-between  pb-4">
+      <!-- Block 2 -->
+      <div class="flex flex-col pb-4 lg:border-b">
         <div class="flex flex-col">
           <p class="text-sm opacity-80">02</p>
-          <p class="text-white font-semibold text-2xl  mt-1">Verified agents to sell<br>your property</p>
         </div>
-        <p class="text-white text-sm max-w-sm opacity-80 mt-2">
-          Enable machines to understand, interpret, and respond to human language with precision.
-        </p>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Verified agents to sell<br>your property</p>
+          <p class="text-white text-sm max-w-sm opacity-80 mt-2">Enable machines to understand, interpret, and respond to human language with precision.</p>
+        </div>
       </div>
 
-      <!-- Item 3 -->
-      <div class="flex flex-col justify-between  pb-4">
+      <!-- Block 3 -->
+      <div class="flex flex-col pb-4 lg:border-b">
         <div class="flex flex-col">
           <p class="text-sm opacity-80">03</p>
-          <p class="text-white font-semibold text-2xl  mt-1">Unlimited Leads</p>
         </div>
-        <p class="text-white text-sm max-w-sm opacity-80">
-          Enable machines to understand, interpret, and respond to human language with precision.
-        </p>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Unlimited Leads</p>
+          <p class="text-white text-sm max-w-sm opacity-80">Enable machines to understand, interpret, and respond to human language with precision.</p>
+        </div>
       </div>
 
-      <!-- Item 4 -->
-      <div class="flex flex-col justify-between  pb-4">
+      <!-- Block 4 -->
+      <div class="flex flex-col pb-4 lg:border-b">
         <div class="flex flex-col">
           <p class="text-sm opacity-80">04</p>
-          <p class="text-white font-semibold text-2xl  mt-1">Genuine Clients</p>
         </div>
-        <p class="text-white text-sm max-w-sm opacity-80">
-          Enable machines to understand, interpret, and respond to human language with precision.
-        </p>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Genuine Clients</p>
+          <p class="text-white text-sm max-w-sm opacity-80">Enable machines to understand, interpret, and respond to human language with precision.</p>
+        </div>
       </div>
 
-      <!-- Item 5 -->
-      <div class="flex flex-col justify-between  pb-4">
+      <!-- Block 5 -->
+      <div class="flex flex-col pb-4">
         <div class="flex flex-col">
           <p class="text-sm opacity-80">05</p>
-          <p class="text-white font-semibold text-2xl  mt-1">Easy listing process</p>
         </div>
-        <p class="text-white text-sm max-w-sm opacity-80 mt-2">
-          Enable machines to understand, interpret, and respond to human language with precision.
-        </p>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Easy listing process</p>
+          <p class="text-white text-sm max-w-sm opacity-80 mt-2">Enable machines to understand, interpret, and respond to human language with precision.</p>
+        </div>
       </div>
-
-    <!-- Add other items for Agents -->
-  </div>
-
-  <!-- Owners Tab -->
-  <div id="tab-owners" class="tab hidden">
-    <div class="flex flex-col justify-between  pb-4">
-      <div class="flex flex-col">
-        <p class="text-sm opacity-80">01</p>
-        <p class="text-white font-semibold text-2xl  mt-1">Sell Your property <br> quickly</p>
-      </div>
-      <p class="text-white text-sm max-w-sm opacity-80">
-        Enable machines to understand, interpret, and respond to human language with precision.
-      </p>
     </div>
 
-          <!-- Item 2 -->
-      <div class="flex flex-col justify-between  pb-4">
-        <div class="flex flex-col">
-          <p class="text-sm opacity-80">02</p>
-          <p class="text-white font-semibold text-2xl  mt-1">Verified agents to sell<br>your property</p>
+    <!-- Owners Tab -->
+    <div id="tab-owners" class="tab hidden">
+      <div class="flex flex-col pb-4 lg:border-b">
+        <div class="flex flex-col"><p class="text-sm opacity-80">01</p></div>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Sell Your property<br>quickly</p>
+          <p class="text-white text-sm max-w-sm opacity-80 mt-2">Enable machines to understand, interpret, and respond to human language with precision.</p>
         </div>
-        <p class="text-white text-sm max-w-sm opacity-80">
-          Enable machines to understand, interpret, and respond to human language with precision.
-        </p>
       </div>
 
-      <!-- Item 3 -->
-      <div class="flex flex-col justify-between  pb-4">
-        <div class="flex flex-col">
-          <p class="text-sm opacity-80">03</p>
-          <p class="text-white font-semibold text-2xl  mt-1">Unlimited Leads</p>
+      <div class="flex flex-col pb-4 lg:border-b">
+        <div class="flex flex-col"><p class="text-sm opacity-80">02</p></div>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Verified agents to sell<br>your property</p>
+          <p class="text-white text-sm max-w-sm opacity-80">Enable machines to understand, interpret, and respond to human language with precision.</p>
         </div>
-        <p class="text-white text-sm max-w-sm opacity-80">
-          Enable machines to understand, interpret, and respond to human language with precision.
-        </p>
       </div>
 
-      <!-- Item 4 -->
-      <div class="flex flex-col justify-between  pb-4">
-        <div class="flex flex-col"> 
-          <p class="text-sm opacity-80">04</p>
-          <p class="text-white font-semibold text-2xl  mt-1">Genuine Clients</p>
+      <div class="flex flex-col pb-4 lg:border-b">
+        <div class="flex flex-col"><p class="text-sm opacity-80">03</p></div>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Unlimited Leads</p>
+          <p class="text-white text-sm max-w-sm opacity-80">Enable machines to understand, interpret, and respond to human language with precision.</p>
         </div>
-        <p class="text-white text-sm max-w-sm opacity-80">
-          Enable machines to understand, interpret, and respond to human language with precision.
-        </p>
       </div>
 
-
-    <!-- Add other items for Owners -->
-  </div>
-
-  <!-- Investors Tab -->
-  <div id="tab-investors" class="tab hidden">
-    <div class="flex flex-col justify-between  pb-4">
-      <div class="flex flex-col">
-        <p class="text-sm opacity-80">01</p>
-        <p class="text-white font-semibold text-2xl  mt-1">Investment Planningbr
-           Tools</p>
+      <div class="flex flex-col pb-4">
+        <div class="flex flex-col"><p class="text-sm opacity-80">04</p></div>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Genuine Clients</p>
+          <p class="text-white text-sm max-w-sm opacity-80">Enable machines to understand, interpret, and respond to human language with precision.</p>
+        </div>
       </div>
-      <p class="text-white text-sm max-w-sm opacity-80 mt-2">
-        Dummy text for investor solutions. Add charts, returns, or guides.
-      </p>
     </div>
 
-          <!-- Item 2 -->
-      <div class="flex flex-col justify-between  pb-4">
-        <div  class="flex flex-col">
-          <p class="text-sm opacity-80">02</p>
-          <p class="text-white font-semibold text-2xl  mt-1">Unlimited Leads</p>
+    <!-- Investors Tab -->
+    <div id="tab-investors" class="tab hidden">
+      <div class="flex flex-col pb-4 lg:border-b">
+        <div class="flex flex-col"><p class="text-sm opacity-80">01</p></div>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Investment Planning<br>Tools</p>
+          <p class="text-white text-sm max-w-sm opacity-80 mt-2">Dummy text for investor solutions. Add charts, returns, or guides.</p>
         </div>
-        <p class="text-white text-sm max-w-sm opacity-80 mt-2">
-          Enable machines to understand, interpret, and respond to human language with precision.
-        </p>
       </div>
 
-      <!-- Item 3 -->
-      <div class="flex flex-col justify-between  pb-4">
-        <div class="flex flex-col">
-          <p class="text-sm opacity-80">03</p>
-          <p class="text-white font-semibold text-2xl  mt-1">Genuine Clients</p>
+      <div class="flex flex-col pb-4 lg:border-b">
+        <div class="flex flex-col"><p class="text-sm opacity-80">02</p></div>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Unlimited Leads</p>
+          <p class="text-white text-sm max-w-sm opacity-80 mt-2">Enable machines to understand, interpret, and respond to human language with precision.</p>
         </div>
-        <p class="text-white text-sm max-w-sm opacity-80 mt-2">
-          Enable machines to understand, interpret, and respond to human language with precision.
-        </p>
       </div>
 
-
+      <div class="flex flex-col pb-4">
+        <div class="flex flex-col"><p class="text-sm opacity-80">03</p></div>
+        <div class="lg:flex lg:justify-between">
+          <p class="text-white text-2xl font-semibold mt-1">Genuine Clients</p>
+          <p class="text-white text-sm max-w-sm opacity-80 mt-2">Enable machines to understand, interpret, and respond to human language with precision.</p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
-<!-- Script -->
-<script>
-  function showTab(tabName) {
-    const tabs = ['agents', 'owners', 'investors'];
+  <!-- Script -->
+  <script>
+    function showTab(tabName) {
+      const tabs = ['agents', 'owners', 'investors'];
 
-    // Hide all tab contents
-    tabs.forEach(name => {
-      document.getElementById(`tab-${name}`).classList.add('hidden');
-    });
+      // Hide all content
+      tabs.forEach(name => {
+        document.getElementById(`tab-${name}`).classList.add('hidden');
+      });
 
-    // Show selected tab
-    document.getElementById(`tab-${tabName}`).classList.remove('hidden');
+      // Show selected tab
+      document.getElementById(`tab-${tabName}`).classList.remove('hidden');
 
-    // Update active button styling
-    tabs.forEach(name => {
-      const btn = document.getElementById(`btn-${name}`);
-      if (name === tabName) {
-        btn.classList.add('bg-white', 'text-[#0066ff]', 'shadow');
-        btn.classList.remove('border', 'hover:bg-white', 'hover:text-[#0066ff]');
-      } else {
-        btn.classList.remove('bg-white', 'text-[#0066ff]', 'shadow');
-        btn.classList.add('border', 'hover:bg-white', 'hover:text-[#0066ff]');
-      }
-    });
-  }
-</script>
+      // Update all buttons (both views)
+      tabs.forEach(name => {
+        ['mobile', 'desktop'].forEach(view => {
+          const btn = document.getElementById(`btn-${name}-${view}`);
+          if (btn) {
+            if (name === tabName) {
+              btn.classList.add('bg-white', 'text-[#0066ff]', 'shadow');
+              btn.classList.remove('border', 'hover:bg-white', 'hover:text-[#0066ff]');
+            } else {
+              btn.classList.remove('bg-white', 'text-[#0066ff]', 'shadow');
+              btn.classList.add('border', 'hover:bg-white', 'hover:text-[#0066ff]');
+            }
+          }
+        });
+      });
+    }
 
-
-  </section>
+    // Default to Agents
+    window.addEventListener('DOMContentLoaded', () => showTab('agents'));
+  </script>
+</section>
 
 
   <!--Why Choose  Us-->
