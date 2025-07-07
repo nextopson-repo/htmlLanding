@@ -7,7 +7,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', 'sans-serif' ,'Outfit';
+  /* font-family: 'Poppins', 'sans-serif' ,'Outfit'; */
+  font-family: 'Outfit', sans-serif;
 }
 
 html,
@@ -24,14 +25,40 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
+
+.faq-item:not(.open) .faq-answer {
+      display: none;
+      color: #000;
+      background-color: red;
+    } 
+
+ #footer, #footer * {
+  font-family: 'Outfit', sans-serif !important;
+ 
+          
+}
+
+#footer {
+ padding-right: 0%;
+  padding-top: 20px;
+  
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+
+/* //  new css   */
 .wrapper .button {
   display: inline-block;
   height: 60px;
   width: 60px;
-<<<<<<< HEAD
-  /* float: left; */
-=======
->>>>>>> 2007c9b628b08efbdd8cf3b3f77dd7e1f55dd4a6
   text-decoration: none;
   margin: 0 5px;
   overflow: hidden;
@@ -123,28 +150,6 @@ body {
       background-color: red;
     }
 
-<<<<<<< HEAD
- #footer, #footer * {
-  font-family: 'Outfit', sans-serif !important;
- 
-          
-}
-
-#footer {
- padding-right: 0%;
-  padding-top: 20px;
-  
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-
-=======
     /* Container wrapper */
 .downloadWrapper {
   position: relative;
@@ -268,4 +273,6 @@ body {
 .navLink span {
   @apply absolute left-1/2 -translate-x-1/2 bottom-[-15px] w-full h-[3px] bg-blue-600 rounded-[3px] opacity-0 transition-all duration-300 group-hover:opacity-100;
 }
->>>>>>> 2007c9b628b08efbdd8cf3b3f77dd7e1f55dd4a6
+
+
+

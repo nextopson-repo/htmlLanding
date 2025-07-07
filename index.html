@@ -22,8 +22,7 @@
     </style>
 </head>
 <body class="font-sans relative overflow-x-hidden">
-     <!-- Header -->
-    <header class="flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 bg-white fixed top-0 left-0 w-full z-50 shadow">
+ <header class="flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 bg-white fixed top-0 left-0 w-full z-50 shadow">
       <div class="w-[120px] sm:w-[140px] md:w-[170px] flex items-center">
         <img src="./Images/NextDeal-Logo 1.svg" alt="Logo" class="h-[28px] w-auto hidden md:block" />
         <img src="./Images/NextDealMobile.png" alt="Mobile Logo" class="h-[28px] w-auto block md:hidden" />
@@ -90,8 +89,8 @@
         </button>
       </div>
     </header>
-
-     <!-- Mobile Nav -->
+  
+   <!-- Mobile Nav -->
     <div id="mobileMenu" class="md:hidden fixed top-[62px] left-0 w-full h-full bg-white shadow-lg z-40 hidden">
       <nav class="flex flex-col space-y-4 p-6 text-[#595959] text-base font-medium outfit">
 <!-- Mobile Nav Product Dropdown -->
@@ -109,8 +108,8 @@
 >
   <path d="M9 5l7 7-7 7" />
 </svg>
-
-  </button>
+    
+</button>
 
   <!-- Dropdown Section -->
   <div id="productDropdownMobile"
@@ -143,7 +142,6 @@
         </div>
       </nav>
     </div>
-    
  
 
 
@@ -198,115 +196,146 @@
 
   <!-- About Section -->
 
-  <div class="flex  justify-center items-center mt-20 gap-2 hidden sm:inline-flex " style="height: 100%; ">
+  <div class="flex  justify-center items-center mt-1 gap-2" style="height: 100%; ">
     <!-- Mobile Image -->
-    <div class="min-h-screen flex items-center justify-center mt-20 "
-      style="background: radial-gradient(circle at center, #e628dd4d 10%, rgba(255, 255, 255, 0.7) 30%, rgba(204, 231, 231, 0.3) 50%);  " ">
+    <div class="min-h-screen flex items-center justify-center  hidden md:block"
+      style="background: radial-gradient(circle at center, #e628dd4d 10%, rgba(255, 255, 255, 0.7) 30%, rgba(204, 231, 231, 0.3) 50%);  ">
       <img src=" ./Images/Adobe Express - file 1.png" alt="App Screenshot"
-      style="float: left; width: 100%;  height: 100%; margin-top: 65%;" />
+      style="float: left; width: 100%;  height: 100%; " />
   </div>
 
   <!-- Right Content -->
-  <div style="width: 100%; margin-top: 10%;">
-    <button
-      class="bg-blue-600 w-30 text-white px-4 py-1 rounded-lg text-sm mt-20 mb-4 flex items-center justify-center gap-2">
+  <div style="width: 100%;">
+    <button 
+      class="bg-blue-600 w-30 text-white px-4 py-1 rounded-lg text-sm mt-20 mb-4 flex  ml-[120px] justify-center gap-2 lg:ml-[0px]">
       <img src="./Images/Star 1 (1).svg">AI Features
     </button>
 
-    <h1 class="text-3xl lg:text-4xl font-bold mb-8">Personalized Real Estate,<br />Powered by AI</h1>
+    <h1 style="color: #001a48;" class="text-3xl  lg:text-4xl font-bold mb-8 text-center lg:text-left">Personalized Real Estate,<br />Powered by AI</h1>
 
     <!-- Feature List -->
-    <div class="">
+   
       <!-- Feature Item -->
-      <div class="flex gap-4 items-start">
+     <div class="space-y-4 mx-10 lg:mx-0 gap-6">
         <!-- Icon and Description stacked -->
-        <div class="flex flex-col items-center w-[60px]">
-          <!-- Icon box -->
-          <div class="w-[52px] h-[52px] flex  items-center justify-center rounded-xl"
-            style="background: linear-gradient(180deg, #00F0FF 0%, #FC67FA 100%)">
-            <img src="./Images/ai-image-solid-rounded 1.svg" alt="AI Icon" class="w-6 h-6">
+      
+        <div class="flex gap-4" >
+					<!-- Icon box -->
+					<div class="w-[52px] h-[52px] flex items-center justify-center rounded-xl 
+							  transition-all duration-300 
+							  mobile-gradient-animate
+							  [background:linear-gradient(180deg,#00F0FF_0%,#FC67FA_100%)] 
+							  hover:[background:linear-gradient(180deg,#FC67FA_0%,#00F0FF_100%)]">
+						<img src="./Images/ai-image-solid-rounded 1.svg" alt="AI Icon" class="w-6 h-6">
+					</div>
+          
+
+					<!-- Text Content -->
+					<div class="flex items-start align-center ">
+						<h3 class="font-semibold text-lg text-gray-900 mt-[10px]">AI Image Categorization</h3>
+					
+					</div>
           </div>
-          <!-- Paragraph below icon -->
-          <p class="text-sm text-gray-600 pl-6 mt-3 relative flex-col " style="width:600px ; margin-left:500px;">
-            Our AI-powered image categorization system automatically categorizes your uploaded property images.
-          </p>
-        </div>
+          	<p class="text-sm text-gray-600 mt-4">
+							Our AI-powered image categorization system automatically categorizes your uploaded property
+							images.
+						</p>
+          
+				</div>
 
         <!-- Title aligned with icon -->
-        <div class="mt-2">
-          <h3 class="font-semibold text-lg text-gray-900">AI Image Categorization</h3>
-        </div>
-      </div>
-
-
-      <div class="flex gap-4 items-start mt-10">
+      
+      <div class="space-y-4 mx-10 lg:mx-0 gap-6 mt-4 mb-4">
         <!-- Icon and Description stacked -->
-        <div class="flex flex-col items-center w-[60px]">
-          <!-- Icon box -->
-          <div class="w-[52px] h-[52px] flex  items-center justify-center rounded-xl"
-            style="background: linear-gradient(180deg, #00F0FF 0%, #FC67FA 100%)">
-            <img src="./Images/ai-image-solid-rounded 1.svg" alt="AI Icon" class="w-6 h-6">
+      
+        <div class="flex gap-4 ">
+					<!-- Icon box -->
+					<div class="w-[52px] h-[52px] flex items-center justify-center rounded-xl 
+							  transition-all duration-300 
+							  mobile-gradient-2
+							  [background:linear-gradient(180deg,#6C63FF_0%,#FF6E91_100%)] 
+							  hover:[background:linear-gradient(180deg,#FF6E91_0%,#6C63FF_100%)]">
+						<img src="./Images/ai-content-generator-01-solid-rounded.svg" alt="AI Icon" class="w-6 h-6">
+					</div>
+          
+
+					<!--2 icon  -->
+					<div class="flex items-start align-center ">
+						<h3 class="font-semibold text-lg text-gray-900 mt-[10px]">AI Description</h3>
+					
+					</div>
           </div>
-          <!-- Paragraph below icon -->
-          <p class="text-sm text-gray-600 pl-6 mt-3 relative flex-col " style="width:600px ; margin-left:500px;">
-            Our AI-powered image categorization system automatically categorizes your uploaded property images.
-          </p>
-        </div>
+          	<p class="text-sm text-gray-600 mt-4">
+						Search results in Nextdeal app are personalised for each user, so that they can find the
+							right deal easily.
+						</p>
+          
+				</div>
 
-        <!-- Title aligned with icon -->
-        <div class="mt-2">
-          <h3 class="font-semibold text-lg text-gray-900">AI Image Categorization</h3>
-        </div>
-      </div>
-
-
-
-      <div class="flex gap-4 items-start mt-10">
+         <div class="space-y-4 mx-10 lg:mx-0 gap-6 mt-4 mb-4">
         <!-- Icon and Description stacked -->
-        <div class="flex flex-col items-center w-[60px]">
-          <!-- Icon box -->
-          <div class="w-[52px] h-[52px] flex  items-center justify-center rounded-xl"
-            style="background: linear-gradient(180deg, #00F0FF 0%, #FC67FA 100%)">
-            <img src="./Images/ai-image-solid-rounded 1.svg" alt="AI Icon" class="w-6 h-6">
+      
+        <div class="flex gap-4" >
+					<!-- Icon box -->
+					<div class="w-[52px] h-[52px] flex items-center justify-center rounded-xl 
+							  transition-all duration-300 
+							  mobile-gradient-3
+							  [background:linear-gradient(180deg,#2EE59D_0%,#6C63FF_100%)] 
+							  hover:[background:linear-gradient(180deg,#6C63FF_0%,#2EE59D_100%)]">
+						<img src="./Images/ai-search-02-solid-rounded.svg" alt="AI Icon" class="w-6 h-6">
+					</div>
+          
+
+					<!-- Text Content -->
+					<div class="flex items-start align-center ">
+						<h3 class="font-semibold text-lg text-gray-900 mt-[10px]">Personalized Search</h3>
+					
+					</div>
           </div>
-          <!-- Paragraph below icon -->
-          <p class="text-sm text-gray-600 pl-6 mt-3 relative flex-col " style="width:600px ; margin-left:500px;">
-            Our AI-powered image categorization system automatically categorizes your uploaded property images.
-          </p>
-        </div>
-
-        <!-- Title aligned with icon -->
-        <div class="mt-2">
-          <h3 class="font-semibold text-lg text-gray-900">AI Image Categorization</h3>
-        </div>
-      </div>
+          	<p class="text-sm text-gray-600 mt-4">
+							Search results in Nextdeal app are personalised for each user, so that they can find the
+							right deal easily.
+						</p>
+          
+				</div>
 
 
-      <div class="flex gap-4 items-start mt-10">
+
+         <div class="space-y-4 mx-10 lg:mx-0 gap-6 mt-4 mb-4">
         <!-- Icon and Description stacked -->
-        <div class="flex flex-col items-center w-[60px]">
-          <!-- Icon box -->
-          <div class="w-[52px] h-[52px] flex  items-center justify-center rounded-xl"
-            style="background: linear-gradient(180deg, #00F0FF 0%, #FC67FA 100%)">
-            <img src="./Images/ai-image-solid-rounded 1.svg" alt="AI Icon" class="w-6 h-6">
+      
+        <div class="flex gap-4" >
+					<!-- Icon box -->
+				<div class="w-[52px] h-[52px] flex items-center justify-center rounded-xl 
+							  transition-all duration-300 
+							  mobile-gradient-4
+							  [background:linear-gradient(180deg,#FFB86F_0%,#FC67FA_100%)] 
+							  hover:[background:linear-gradient(180deg,#FC67FA_0%,#FFB86F_100%)]">
+						<img src="./Images/user-ai-solid-rounded.svg" alt="AI Icon" class="w-6 h-6">
+					</div>
+          
+
+					<!-- Text Content -->
+					<div class="flex items-start align-center ">
+						<h3 class="font-semibold text-lg text-gray-900 mt-[10px]">Credibility Score</h3>
+					
+					</div>
           </div>
-          <!-- Paragraph below icon -->
-          <p class="text-sm text-gray-600 pl-6 mt-3 relative flex-col " style="width:600px ; margin-left:500px;">
-            Our AI-powered image categorization system automatically categorizes your uploaded property images.
-          </p>
-        </div>
-
-        <!-- Title aligned with icon -->
-        <div class="mt-2">
-          <h3 class="font-semibold text-lg text-gray-900">AI Image Categorization</h3>
-        </div>
-      </div>
+          	<p class="text-sm text-gray-600 mt-4">
+						Every agent on our platform gets a Credibility Score based on their deals, usage, ratings,
+							and reviews etc.
+						</p>
+          
+				</div>
 
 
-    </div>
+    
+
+
+   
   </div>
   </div>
-
+</div>
 
 
 
@@ -378,7 +407,36 @@
   </div>
   
 
+   <!-- mobilelogo -->
 
+    <div class="text-white text-center p-8 rounded-3xl max-w-6xl mx-auto mt-20 mb-10 relative bg-blue-600 w-full h-[600px] lg:hidden">
+    <!-- Category Tag -->
+    <button class="mx-auto bg-white text-blue-600 px-4 py-1 text-sm rounded-full mt-4 mb-4 flex items-center  gap-2">
+      <img src="./Images/Star 1.svg" alt="Star Icon" class="w-4 h-4" />
+      Categories
+    </button>
+  
+    <!-- Title -->
+    <h2 class="text-3xl font-bold  mb-8 ">Categories that<br />we integrated</h2>
+  
+    <!-- Category Grid -->
+
+  <div class="flex justify-center mt-20">
+    <div id="carousel1" class="w-screen max-w-xs flex flex-col items-center transition-all duration-500">
+      <img src="./Images/building-02-solid-rounded.svg" class="w-16 h-16 object-contain" />
+      <span class="text-md font-medium mt-2">Builder Floors</span>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="flex justify-center mt-10">
+    <div id="carousel2" class="w-screen max-w-xs flex flex-col items-center transition-all duration-500">
+      <img src="./Images/layers-01-solid-rounded.svg" class="w-16 h-16 object-contain" />
+      <span class="text-md font-medium mt-2">Lands</span>
+    </div>
+  </div>
+
+    </div>
   <!-- Video section s -->
 
   <div class=" max-w-7xl mx-auto p-10 ml-10 flex flex-col md:flex-row items-center gap-10 hidden sm:flex">
@@ -803,7 +861,7 @@
   <div class="flex flex-col md:flex-row items-center justify-center gap-10">
 
     <!-- Left Column: 4 Images -->
-    <div class="flex  gap-6">
+    <div class="flex  gap-6 hidden sm:flex">
         <div class="">
  <img src="https://randomuser.me/api/portraits/women/1.jpg" class="w-28 h-36 object-cover rounded-xl mt-10" />
       <img src="https://randomuser.me/api/portraits/men/2.jpg" class="w-28 h-36 object-cover rounded-xl mt-4" />
@@ -837,7 +895,8 @@ Testimonials
     </div>
 
     <!-- Right Column: 4 Images -->
-    <div class="flex  gap-3">
+    <div class="flex  gap-3 hidden sm:flex">
+    
      <div class="flex-col  mt-20 pt-10">
 <img src="https://randomuser.me/api/portraits/women/8.jpg" class="w-28 h-36 object-cover rounded-xl mt-4" />
       <img src="https://randomuser.me/api/portraits/men/9.jpg" class="w-28 h-36 object-cover rounded-xl mt-4 " />
@@ -1083,16 +1142,71 @@ Testimonials
       </div>
     </div>
 
-    <!-- Bottom -->
+  <!-- Bottom -->
     <div
       class="flex flex-col md:flex-row justify-between items-center mt-10  pt-4 text-sm font-medium text-gray-300 gap-3 ">
       <p>© 2025 Exson Proptech Private Limited. All rights reserved.</p>
-      <div class="flex space-x-4 mt-2 md:mt-0">
-        <a href="#" class="p-2 bg-gray-800 rounded-full hover:bg-gray-700"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="p-2 bg-gray-800 rounded-full hover:bg-gray-700"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="p-2 bg-gray-800 rounded-full hover:bg-gray-700"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
+    
+    
+      <div style="padding-right: 80px;" class="inline-flex justify-start items-center gap-6 hidden sm:inline-flex">
+  <!-- Facebook -->
+
+<div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer ">
+  <!-- Expanding background animation -->
+  <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+  <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+              group-hover:translate-x-0 group-hover:translate-y-0 
+              transition-transform duration-300 ease-in-out origin-top-left">
+  </div>
+
+  <!-- Icon (initial black, darker on hover) -->
+  <img src="../htmlLanding/Images/Socimg/facebook.svg"
+       alt="Facebook"
+       class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+              group-hover:brightness-0 transition-all duration-300 z-10" />
+</div>
+
+
+  <!-- Instagram -->
+
+<div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+  <!-- Expanding background animation -->
+  <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+  <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+              group-hover:translate-x-0 group-hover:translate-y-0 
+              transition-transform duration-300 ease-in-out origin-top-left">
+  </div>
+
+  <!-- Icon (initial black, darker on hover) -->
+  <img src="../htmlLanding/Images/Socimg/instagram.svg"
+       alt="Instagram"
+       class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+              group-hover:brightness-0 transition-all duration-300 z-10" />
+</div>
+
+
+  <!-- Twitter (X) -->
+
+
+<!-- Twitter (X) Icon Button with hover darken effect -->
+<div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+  <!-- Expanding background animation -->
+  <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+  <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+              group-hover:translate-x-0 group-hover:translate-y-0 
+              transition-transform duration-300 ease-in-out origin-top-left">
+  </div>
+
+  <!-- Icon (initial black, darker on hover) -->
+  <img src="../htmlLanding/Images/Socimg/twitter.svg"
+       alt="Twitter"
+       class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+              group-hover:brightness-0 transition-all duration-300 z-10" />
+</div>
+
+
+</div>
+
   </footer>
 
 

@@ -88,3 +88,49 @@ function alertCTA() {
       e.stopPropagation();
     });
   });
+
+
+  // Categery icons
+ 
+    // Slides for Row 1
+    const slides1 = [
+      { img: "./Images/building-02-solid-rounded.svg", text: "Builder Floors" },
+      { img: "./Images/house-03-solid-rounded.svg", text: "House/Villa" },
+      { img: "./Images/house-04-solid-rounded.svg", text: "Farmhouse" },
+      { img: "./Images/qq-plot-solid-rounded.svg", text: "Plots" }
+    ];
+
+    // Slides for Row 2
+    const slides2 = [
+     
+      { img: "./Images/store-03-solid-rounded.svg", text: "Shops/Showroom" },
+      { img: "./Images/office-solid-rounded.svg", text: "Office Spaces" },
+      { img: "./Images/hotel-01-solid-rounded.svg", text: "Hotels" },
+      { img: "./Images/hotel-02-solid-rounded.svg", text: "Hostel/PG" }
+    ];
+
+    // Set up each carousel
+    function setupCarousel(slides, containerId, delay = 2000) {
+      let current = 0;
+      const carousel = document.getElementById(containerId);
+
+      function showSlide(index) {
+        const slide = slides[index];
+        carousel.innerHTML = `
+          <img src="${slide.img}" class="w-16 h-16 object-contain" />
+          <span class="text-md font-medium mt-2">${slide.text}</span>
+        `;
+      }
+
+      // Start interval
+      setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }, delay);
+    }
+
+    // Start both carousels
+    setupCarousel(slides1, "carousel1");
+    setupCarousel(slides2, "carousel2");
+
+      
