@@ -25,7 +25,7 @@ body {
   display: inline-block;
   height: 60px;
   width: 60px;
-  float: left;
+  /* float: left; */
   text-decoration: none;
   margin: 0 5px;
   overflow: hidden;
