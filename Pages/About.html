@@ -42,8 +42,31 @@
 
 <body class="bg-gray-50">
   <!-- Hero Section with Image and Overlayed Content -->
+  <div id="headerComponent"></div>
+
+  <script>
+    fetch('../component/header.html')
+      .then(res => res.text())
+      .then(data => {
+        const container = document.getElementById('headerComponent');
+        container.innerHTML = data;
+  
+        // Run scripts manually
+        const scripts = container.querySelectorAll('script');
+        scripts.forEach(script => {
+          const newScript = document.createElement('script');
+          if (script.src) {
+            newScript.src = script.src;
+          } else {
+            newScript.textContent = script.textContent;
+          }
+          document.body.appendChild(newScript); // append to body so it executes
+        });
+      });
+  </script>
+
   <section
-    class="relative w-full min-h-[350px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[600px] flex items-center justify-center overflow-hidden">
+    class="relative w-full min-h-[350px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[600px] flex items-center justify-center overflow-hidden mt-[70px]">
     <img src="../Images/Frame_AboutUs-SectionHeading.png" alt="Frame_AboutUs-SectionHeading"
       class="absolute inset-0 w-full h-full object-cover object-center z-0" style="min-height:350px;" />
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent z-10"
