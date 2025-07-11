@@ -66,33 +66,35 @@
   </script>
 
   <section
-    class="relative w-full min-h-[350px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[600px] flex items-center justify-center overflow-hidden mt-[70px]">
+    class="relative w-full h-[90vh]  md:min-h-[520px] lg:min-h-[600px] flex items-center justify-center overflow-hidden mt-[70px]">
     <img src="../Images/Frame_AboutUs-SectionHeading.png" alt="Frame_AboutUs-SectionHeading"
       class="absolute inset-0 w-full h-full object-cover object-center z-0" style="min-height:350px;" />
-    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent z-10"
-      style="width:100vw; height:100%; min-width:100vw; left:0; top:0;"></div>
-    <div class="relative z-20 w-full flex flex-col items-center justify-center text-center px-4 py-12">
-      <h1 class="text-white font-bold drop-shadow-lg mb-4"
-        style="font-family: 'Outfit', sans-serif; font-weight: 700; font-style: bold; font-size: 48px; line-height: 100%; letter-spacing: 2%; text-align: center;">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent z-10 align-items-center justify-center"
+      style="width:100vw; height:100%; min-width:100vw; ">
+    <div class="relative z-20 w-full flex flex-col items-center justify-center text-center px-4 py-12 mt-[200px]">
+
+      <h1 class="text-white font-bold drop-shadow-lg mb-4 text-[38px] sm:text-[48px]"
+        style="font-family: 'Outfit', sans-serif; font-weight: 700; font-style: bold;  line-height: 100%; letter-spacing: 2%; text-align: center;">
         More Than Just Real Estate — It's Our Story</h1>
-      <div
-        style="font-family: 'Outfit', sans-serif; font-weight: 300; font-style: light; font-size: 20px; line-height: 100%; letter-spacing: 4%; text-align: center; display: block; color: #fff;">
+      <div class="mt-[20px]"
+        style="font-family: 'Outfit', sans-serif; font-weight: 300; font-style: light; font-size: 24px; line-height: 100%; letter-spacing: 4%; text-align: center; display: block; color: #fff;">
         From a shared vision among friends to a growing movement—discover the people, passion, and<br> 
         purpose behind Nextdeal.
         Learn how we’re reshaping real estate with heart, hustle, and innovation.
       </div>
-      <div class="relative mt-6 flex items-center justify-center" style="width:370px; height:17px; opacity:1; top:4px;">
-        <span class="text-gray-400 font-semibold flex items-center"
+      <div class="relative mt-6 flex items-center justify-center hidden sm:flex" style="width:370px; height:17px; opacity:1; top:4px;">
+        <span class="text-gray-400 font-semibold flex items-center "
           style="font-family: 'Outfit', sans-serif; font-weight: 400; font-style: normal; font-size: 24px; /* leading-trim: CAP_HEIGHT; */ line-height: 100%; letter-spacing: 4%; white-space: nowrap; width: 370px; height: 17px; opacity: 1; top: 4px; display:inline-block; vertical-align:middle;">Meet the Minds Behind Nextdeal</span>
         <img src="../Images/arrow.png" alt="arrow" class="arrow-bounce"
           style="width:24px; height:24px; margin-left:8px; display:inline-block; vertical-align:middle;" />
       </div>
     </div>
+    </div>
   </section>
 
   <!-- Founder's Message Section -->
   <section id="founder"
-    class="pt-0 pb-0 sm:pt-0 sm:pb-0 px-2 sm:px-4 min-h-[60vh] sm:min-h-[80vh] flex items-center bg-white">
+    class="pt-0 pb-0 sm:pt-0 sm:pb-0 px-2 sm:px-4 min-h-[60vh] sm:min-h-[80vh] flex items-center bg-white hidden sm:block">
     <div
       class="w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-col-reverse lg:flex-row items-center space-y-16 md:space-y-28 lg:space-y-40 lg:space-x-72">
       <!-- Founder Image -->
@@ -129,8 +131,49 @@
     </div>
   </section>
 
+<!-- Mobile-Only Founder's Message Section -->
+<section id="founder"
+  class="pt-0 pb-[100px] px-2 sm:px-4 min-h-[60vh] flex flex-col items-center bg-white lg:hidden mt-[100px]">
+  
+  <!-- Founder Image (First) -->
+  <div class="rounded-3xl p-4 w-full max-w-xs sm:max-w-sm md:max-w-md flex items-center justify-center mx-auto mt-[100px] ml-[40px]">
+    <img src="../Images/ceo.png" alt="Founder Image" />
+  </div>
+
+  <!-- Message Content -->
+  <div class="w-full max-w-xl mt-6 space-y-6 flex flex-col items-start">
+    
+    <!-- Logo Icon -->
+    <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl">
+      <img src="../Images/msg.png" alt="Message Icon" class="w-full h-full object-contain" />
+    </div>
+
+    <!-- Heading -->
+    <h2 class="text-[#1A2340] text-2xl font-semibold tracking-tight"
+      style="font-family: 'Outfit', sans-serif; line-height:100%; letter-spacing:4%;">
+      Founder’s Message
+    </h2>
+
+    <!-- Paragraph -->
+    <p class="text-[#1A2340] text-base font-medium leading-relaxed"
+      style="font-family: 'Outfit', sans-serif;">
+      We started Nextdeal to solve the real estate challenges we faced ourselves. What began as a small idea among friends is now a platform making property transactions easier, smarter, and more transparent for everyone.
+    </p>
+
+    <!-- Name and Title -->
+    <div>
+      <span class="block text-black font-semibold text-[20px] leading-[100%] tracking-[0.04em] mb-1"
+        style="font-family: 'Outfit', sans-serif;">Anurag Dubey</span>
+      <span class="block uppercase text-gray-400 tracking-widest font-light text-[14px] leading-[100%]"
+        style="font-family: 'Outfit', sans-serif;">Founder & CEO</span>
+    </div>
+  </div>
+</section>
+
+
+
   <!-- Team Section -->
-  <section class="py-0 sm:py-0 px-2 sm:px-4 bg-white">
+  <section class="py-0 sm:py-0 px-2 sm:px-4 bg-white mt-[100px]  pt-[50px]">
     <div class="w-full max-w-7xl mx-auto">
       <h2 id="team-title" class="text-center mb-6 sm:mb-8"
         style="font-family: 'Outfit', sans-serif; font-weight: 600; font-style: normal; font-size: 48px; line-height: 100%; letter-spacing: 4%;">
@@ -340,7 +383,7 @@
   <!-- Footer -->
 
   <!-- Our Story Section -->
-  <section id="our-story-section" class="w-full flex justify-center items-center py-12 bg-white min-h-screen"
+  <section id="our-story-section" class="w-full flex justify-center items-center py-12 bg-white min-h-screen hidden sm:flex"
     style="height:100vh;min-height:100vh; font-family: 'Outfit', sans-serif;">
     <div class="flex flex-row w-full max-w-6xl rounded-2xl shadow-lg overflow-hidden min-h-[400px] h-full">
       <!-- Sidebar -->
@@ -661,6 +704,80 @@
     }, 6000);
     */
   </script>
+
+  <!-- Mobile Version -->
+<section id="our-story-mobile" class="sm:hidden flex flex-col justify-start items-center px-4 py-8 bg-white w-full h-[70vh] gap-20 font-[Outfit] ">
+
+  <!-- Rotated Image with Centered Text -->
+  <div class="w-full h-[200px] relative flex items-center justify-center overflow-hidden">
+    <img src="../Images/our story.jpg" alt="Our Story"
+         class="absolute w-full  object-cover rotate-180" />
+    <span class="z-10 font-bold text-[#0046FF] tracking-widest select-none text-center"
+          style="letter-spacing: 0.15em; line-height: 1.1; font-size: 42px;">
+      Our Story
+    </span>
+  </div>
+
+  <!-- Content + Vertical Dash Buttons -->
+  <div class="flex w-full gap-4">
+    
+    <!-- Left: Content -->
+    <div id="mobile-story-content" class="flex-1"></div>
+
+    <!-- Right: Dashes as Buttons -->
+    <div id="mobile-dash-nav" class="flex flex-col items-center gap-2 pt-2">
+      
+      <!-- Dashes will be injected by JS -->
+    </div>
+    
+  </div>
+</section>
+<script>
+  let mobileFrameIndex = 0;
+
+  function renderMobileFrame() {
+    const frame = storyFrames[mobileFrameIndex];
+    const container = document.getElementById('mobile-story-content');
+
+    container.innerHTML = `
+      <div>
+        <h2 class="text-xl font-bold leading-tight mb-2 text-[#1A2340]">
+          ${frame.heading}
+          ${frame.crown ? '<img src="../Images/king.png" class="inline w-5 h-5 -mt-3 ml-1" />' : ''}
+        </h2>
+        <p class="text-sm text-[#1A2340]">${frame.content}</p>
+      </div>
+    `;
+
+    // Update active dash styling
+    const allDashes = document.querySelectorAll('.dash-btn');
+    allDashes.forEach((el, i) => {
+      el.classList.toggle('bg-blue-600', i === mobileFrameIndex);
+      el.classList.toggle('bg-blue-200', i !== mobileFrameIndex);
+    });
+  }
+
+  function renderMobileDashes() {
+    const nav = document.getElementById('mobile-dash-nav');
+    nav.innerHTML = '';
+    for (let i = 0; i < storyFrames.length; i++) {
+      const dash = document.createElement('div');
+      dash.className = `w-1 h-6 rounded-full dash-btn cursor-pointer transition-all duration-200 ${
+        i === mobileFrameIndex ? 'bg-blue-600' : 'bg-blue-200'
+      }`;
+      dash.onclick = () => {
+        mobileFrameIndex = i;
+        renderMobileFrame();
+      };
+      nav.appendChild(dash);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderMobileDashes();
+    renderMobileFrame();
+  });
+</script>
 <!-- Footer -->
 <footer id="footer" class="bg-black text-white pt-10 pb-6 px-4 md:px-20 ">
   <div class="flex flex-col lg:flex-row justify-between gap-10">
