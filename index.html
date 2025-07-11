@@ -509,6 +509,70 @@
   </div>
 
     </div>
+
+
+    <!-- mobilesection3 -->
+
+
+<!-- Mobile Category Section -->
+
+
+<!-- Carousel Script -->
+<script>
+  // Slide data
+  const slides1 = [
+   { img: "./Images/building-02-solid-rounded.svg", text: "Builder Floors" },
+      { img: "./Images/house-03-solid-rounded.svg", text: "House/Villa" },
+      { img: "./Images/house-04-solid-rounded.svg", text: "Farmhouse" },
+      { img: "./Images/qq-plot-solid-rounded.svg", text: "Plots" }
+  ];
+
+  const slides2 = [
+    { img: "./Images/store-03-solid-rounded.svg", text: "Shops/Showroom" },
+      { img: "./Images/office-solid-rounded.svg", text: "Office Spaces" },
+      { img: "./Images/hotel-01-solid-rounded.svg", text: "Hotels" },
+      { img: "./Images/hotel-02-solid-rounded.svg", text: "Hostel/PG" }
+  ];
+
+  // Function to set up carousel
+  function setupCarousel(slides, containerId, delay = 2000) {
+    let current = 0;
+    const carousel = document.getElementById(containerId);
+
+    function showSlide(index) {
+      const slide = slides[index];
+
+      // Fade-out
+      carousel.classList.remove("opacity-100");
+      carousel.classList.add("opacity-0");
+
+      setTimeout(() => {
+        carousel.innerHTML = `
+          <img src="${slide.img}" class="w-16 h-16 object-contain" />
+          <span class="text-md font-medium mt-2">${slide.text}</span>
+        `;
+        // Fade-in
+        carousel.classList.remove("opacity-0");
+        carousel.classList.add("opacity-100");
+      }, 200); // delay before updating content
+    }
+
+    showSlide(current); // initial render
+
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, delay);
+  }
+
+  // Start both carousels
+  setupCarousel(slides1, "carousel1");
+  setupCarousel(slides2, "carousel2");
+</script>
+
+
+
+
   <!-- Video section s -->
 
   <div class=" max-w-7xl mx-auto p-10 ml-10 flex flex-col md:flex-row items-center gap-10 hidden sm:flex">
