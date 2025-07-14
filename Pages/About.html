@@ -67,67 +67,72 @@
   </script>
 
   <section
-    class="relative w-full min-h-[350px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[600px] flex items-center justify-center overflow-hidden mt-[70px] ">
-    <img src="../Images/Frame_AboutUs-SectionHeading.png" alt="Frame_AboutUs-SectionHeading"
-      class="absolute inset-0 w-full h-full object-cover object-center z-0" style="min-height:350px;" />
-    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent z-10"
-      style="width:100vw; height:100%; min-width:100vw; left:0; top:0;"></div>
-    <div class="relative z-20 w-full flex flex-col items-center justify-center text-center px-4 py-12">
-      <h1 class="text-white font-bold drop-shadow-lg mb-4  "
-        style="font-family: 'Outfit', sans-serif; font-weight: 700; font-style: bold; font-size: 48px; line-height: 100%; letter-spacing: 2%; text-align: center;">
-        More Than Just Real Estate — It's Our Story</h1>
-      <div
-        style="font-family: 'Outfit', sans-serif; font-weight: 300; font-style: light; font-size: 20px; line-height: 100%; letter-spacing: 4%; text-align: center; display: block; color: #fff;">
-        From a shared vision among friends to a growing movement—discover the people, passion, and<br>
-        purpose behind Nextdeal.
-        Learn how we’re reshaping real estate with heart, hustle, and innovation.
-      </div>
-      <div class="relative mt-6 flex items-center justify-center" style="width:370px; height:17px; opacity:1; top:4px;">
-        <span class="text-gray-400 font-semibold flex items-center"
-          style="font-family: 'Outfit', sans-serif; font-weight: 400; font-style: normal; font-size: 24px; /* leading-trim: CAP_HEIGHT; */ line-height: 100%; letter-spacing: 4%; white-space: nowrap; width: 370px; height: 17px; opacity: 1; top: 4px; display:inline-block; vertical-align:middle;">Meet
-          the Minds Behind Nextdeal</span>
-        <img src="../Images/arrow.png" alt="arrow" class="arrow-bounce"
-          style="width:24px; height:24px; margin-left:8px; display:inline-block; vertical-align:middle;" />
+    class="relative w-full min-h-[350px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[600px] flex items-center justify-center overflow-hidden mt-[70px]">
+
+    <!-- Background Image -->
+    <img src="../Images/Frame_AboutUs-SectionHeading.png" alt="About Us Background"
+      class="absolute inset-0 w-full h-full object-cover object-center z-0" />
+
+    <!-- Dark Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent z-10 w-full h-full"></div>
+
+    <!-- Center Content -->
+    <div class="relative z-20 w-full max-w-[1200px] flex flex-col items-center justify-center text-center px-4 py-12">
+
+      <!-- Heading -->
+      <h1 class="text-white font-bold drop-shadow-lg mb-4 font-[Outfit]
+      text-[26px] sm:text-[34px] md:text-[40px] lg:text-[48px]
+      leading-tight tracking-wide">
+        More Than Just Real Estate — It's Our Story
+      </h1>
+
+      <!-- Sub Text -->
+      <p class="text-white font-light font-[Outfit]
+      text-[15px] sm:text-[17px] md:text-[19px] lg:text-[20px]
+      max-w-[900px] leading-relaxed tracking-wide">
+        From a shared vision among friends to a growing movement—discover the people, passion, and<br
+          class="hidden sm:block">
+        purpose behind Nextdeal. Learn how we’re reshaping real estate with heart, hustle, and innovation.
+      </p>
+
+      <!-- CTA with Arrow -->
+      <div class="relative mt-6 flex items-center justify-center text-center hidden md:flex">
+        <span class="text-gray-400 font-medium font-[Outfit]
+        text-[16px] sm:text-[20px] md:text-[22px] lg:text-[24px]
+        tracking-wider whitespace-nowrap">
+          Meet the Minds Behind Nextdeal
+        </span>
+        <img src="../Images/arrow.png" alt="arrow" class="ml-2 w-5 h-5 sm:w-6 sm:h-6 arrow-bounce" />
       </div>
     </div>
   </section>
 
-
-  <!-- Founder's Message Section -->
-  <section id="founder"
-    class=" w-full pt-0 pb-0 sm:pt-0 sm:pb-0 px-2 sm:px-4 min-h-[60vh] sm:min-h-[80vh] flex items-center bg-white">
-    <div
-      class="w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-col-reverse lg:flex-row items-center space-y-16 md:space-y-28 lg:space-y-40 lg:space-x-72">
-      <!-- Founder Image -->
-      <div
-        class="rounded-3xl p-2 xs:p-4 flex-shrink-0 w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:w-[22rem] lg:h-[30rem] flex items-center justify-center mx-auto">
-        <!-- <img src="../Images/ceo.png" alt=""> -->
+  <!-- Founder Image Card (Light BG, Mobile-First Figma Style) -->
+  <div class="w-full flex flex-col items-center pt-6 bg-white lg:bg-transparent lg:pt-0 lg:pl-20 lg:pr-0 lg:w-1/2">
+   
+  </div>
+  <!-- Founder Message Card (Left Aligned, Figma Style) -->
+  <section class="w-full bg-white py-12">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-center justify-center px-4">
+      <!-- Image Column -->
+      <div class="bg-[#FAF6EF] rounded-2xl flex items-center justify-center w-[320px] h-[400px] mb-8 lg:mb-0 lg:mr-12">
+        <img src="../Images/ceo.png" alt="Founder" class="w-full h-full object-cover rounded-2xl" />
       </div>
-      <!-- Message -->
-      <div
-        class="flex-1 flex flex-col justify-start h-auto md:h-[30rem] lg:h-[36rem] w-full space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-20">
-        <!-- Top: Icon -->
-        <div class="mb-4 flex flex-col items-start gap-6 sm:gap-8 md:gap-10 lg:gap-[36px]">
-          <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl mb-0">
-            <img src="../Images/msg.png" alt="" class="w-full h-full object-contain" />
+      <!-- Content Column -->
+      <div class="flex-1 flex flex-col justify-center items-start text-left max-w-[600px]">
+        <div class="flex flex-col items-start gap-4 mb-4">
+          <div class="w-12 h-12  rounded-xl flex items-center justify-center">
+            <img src="../Images/msg.png" alt="" class="w-12 h-12 object-contain" />
           </div>
-          <h2 class="text-[#1A2340] tracking-tight mb-0 text-2xl sm:text-3xl md:text-4xl lg:text-[64px] font-semibold"
-            style="font-family: 'Outfit', sans-serif; line-height:100%; letter-spacing:4%; vertical-align:middle; margin-bottom:0; max-width:100vw;">
-            Founder’s Message</h2>
-          <p class="text-[#1A2340] text-base sm:text-lg md:text-xl font-medium leading-relaxed w-full max-w-full sm:max-w-xl"
-            style="margin-bottom:0;">We started Nextdeal to solve the real estate challenges we faced ourselves. What
-            began as a small idea among friends is now a platform making property transactions easier, smarter, and more
-            transparent for everyone.</p>
+          <h2 class="text-[#1A2340] font-extrabold text-4xl leading-tight" style="font-family: 'Outfit', sans-serif;">
+            Founder’s Message
+          </h2>
         </div>
-        <!-- Bottom: Name and Title -->
-        <div class="mt-4 sm:mt-6">
-          <span
-            class="block text-black font-semibold text-[20px] sm:text-[24px] md:text-[28px] leading-[100%] tracking-[0.04em] mb-2"
-            style="font-family: 'Outfit', sans-serif;">Anurag Dubey</span>
-          <span
-            class="block uppercase text-gray-400 tracking-widest font-light text-[14px] sm:text-[16px] md:text-[18px] leading-[100%]"
-            style="font-family: 'Outfit', sans-serif;">Founder & CEO</span>
-        </div>
+        <p class="text-[#1A2340] text-base font-medium leading-relaxed mb-6">
+          We started Nextdeal to solve the real estate challenges we faced ourselves. What began as a small idea among friends is now a platform making property transactions easier, smarter, and more transparent for everyone.
+        </p>
+        <span class="block text-black font-bold text-xl mb-1" style="font-family: 'Outfit', sans-serif;">Anurag Dubey</span>
+        <span class="block uppercase text-gray-400 tracking-widest font-light text-xs" style="font-family: 'Outfit', sans-serif;">Founder & CEO</span>
       </div>
     </div>
   </section>
@@ -139,16 +144,13 @@
         style="font-family: 'Outfit', sans-serif; font-weight: 600; font-style: normal; font-size: 48px; line-height: 100%; letter-spacing: 4%;">
         Meet our <span class="text-[#0066FF]">Founding</span> Team</h2>
       <!-- Team Tabs -->
-      <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-10">
+      <div class="flex flex-row justify-center items-center gap-2 mb-6 sm:mb-10">
         <button id="founding-btn"
-          class="px-6 py-2 rounded-full font-semibold bg-[#0066FF] text-white shadow-md border-2 border-[#0066FF] focus:outline-none">Founding
-          Team</button>
+          class="w-auto min-w-0 px-4 py-2 rounded-full font-semibold bg-[#0066FF] text-white shadow-md border-2 border-[#0066FF] focus:outline-none whitespace-nowrap">Founding Team</button>
         <button id="tech-btn"
-          class="px-6 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none">Tech
-          Team</button>
+          class="w-auto min-w-0 px-4 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none whitespace-nowrap">Tech Team</button>
         <button id="marketing-btn"
-          class="px-6 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none">Marketing
-          Team</button>
+          class="w-auto min-w-0 px-4 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none whitespace-nowrap">Marketing Team</button>
       </div>
       <!-- Team Grid -->
       <div id="team-grid" class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
@@ -163,28 +165,28 @@
         title: 'Meet our <span class="text-[#0066FF]">Founding</span> Team',
         members: [
           {
-            // img: '../Images/ceo.png',
+          //  img: '../Images/ceo.png',
             role: 'FOUNDER & CEO',
             name: 'Anurag Dubey',
             desc: 'Technology expert innovating solution to propel growth',
-            linkedin: '#'
+            linkedin: '/Images/linkdinicon.png'
           },
           {
-            // img: '../Images/member.jpg',
+           // img: '../Images/member.jpg',
             role: 'CO-FOUNDER',
             name: 'Adarsh Verma',
             desc: 'Technology expert innovating solution to propel growth',
             linkedin: '#'
           },
           {
-            // img: '../Images/member.jpg',
+           // img: '../Images/member.jpg',
             role: 'Managing Director',
             name: 'vinay shakya',
             desc: 'Technology expert innovating solution to propel growth',
             linkedin: '#'
           },
           {
-            // img: '../Images/member.jpg',
+           // img: '../Images/member.jpg',
             role: 'Relationship Manager',
             name: 'Umesh Shakya',
             desc: 'Technology expert innovating solution to propel growth',
@@ -196,21 +198,21 @@
         title: 'Meet our <span class="text-[#0066FF]">Tech</span> Team',
         members: [
           {
-            // img: '../Images/member.jpg',
+           // img: '../Images/member.jpg',
             role: 'UX UI Designer',
             name: 'Aaditya kumar',
             desc: 'Technology expert innovating solution to propel growth',
             linkedin: '#'
           },
           {
-            // img: '../Images/member.jpg',
+          //  img: '../Images/member.jpg',
             role: 'Android Developer',
             name: 'Sachin Pandey',
             desc: 'Technology expert innovating solution to propel growth',
             linkedin: '#'
           },
           {
-            // img: '../Images/member.jpg',
+           // img: '../Images/member.jpg',
             role: 'BACKEND Developer',
             name: 'Yogesh Malvia',
             desc: 'Technology expert innovating solution to propel growth',
@@ -222,21 +224,21 @@
         title: 'Meet our <span class="text-[#0066FF]">Marketing</span> Team',
         members: [
           {
-            // img: '../Images/member.jpg',
+          //  img: '../Images/member.jpg',
             role: 'Team Management',
             name: 'Ashish Pandey',
             desc: 'Technology expert innovating solution to propel growth',
             linkedin: '#'
           },
           {
-            // img: '../Images/member.jpg',
+          //  img: '../Images/member.jpg',
             role: 'Supply Head',
             name: 'Hemant Mehra',
             desc: 'Technology expert innovating solution to propel growth',
             linkedin: '#'
           },
           {
-            // img: '../Images/member.jpg',
+            img: '../Images/member.jpg',
             role: 'Demand Head',
             name: 'Hemant Rajput',
             desc: 'Technology expert innovating solution to propel growth',
@@ -253,12 +255,13 @@
       const grid = document.getElementById('team-grid');
       grid.innerHTML = team.members.map(member => `
           <div class="bg-white rounded-xl shadow-md p-4 sm:p-6 md:p-8 flex flex-col items-center hover:shadow-lg transition w-full max-w-xs mx-auto">
-            <div class=" rounded-xl p-2 mb-4 w-[288px] h-[219.85px] flex items-center justify-center">
-              <img src="${member.img}" alt="Team Member" class="rounded-lg object-cover w-full h-full" style="width:288px;height:219.85px;object-fit:cover;" />
+            <div class=" rounded-2xl p-2 w-full max-w-xs mx-auto aspect-[4/5] flex items-center justify-center">
+              <img src="${member.img}" alt="Team Member" class="w-full h-full object-cover rounded-2xl" />
             </div>
             <span class="text-[#0066FF] text-xs sm:text-sm font-semibold mb-1">${member.role}</span>
             <span class="font-bold text-base sm:text-lg text-[#003366] text-center">${member.name}</span>
             <p class="text-gray-600 text-center mt-2 text-sm sm:text-base">${member.desc}</p>
+          
             <div class="flex gap-3 mt-3">
               <a href="#" class="linkedin-blue-hover" aria-label="LinkedIn" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:9999px;border:1px solid #0066FF;padding:12px;gap:10px;opacity:1;transition:background 0.2s, box-shadow 0.2s;">
                 <img src="../Images/linkedin-02.svg" alt="LinkedIn" style="width:24px;height:24px;object-fit:contain;angle:0deg;opacity:1;" />
@@ -307,10 +310,10 @@
     }
     // Tab button logic
     function setActive(btnId) {
-      document.getElementById('founding-btn').className = "px-6 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none";
-      document.getElementById('tech-btn').className = "px-6 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none";
-      document.getElementById('marketing-btn').className = "px-6 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none";
-      document.getElementById(btnId).className = "px-6 py-2 rounded-full font-semibold bg-[#0066FF] text-white shadow-md border-2 border-[#0066FF] focus:outline-none";
+      document.getElementById('founding-btn').className = "w-auto min-w-0 px-4 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none";
+      document.getElementById('tech-btn').className = "w-auto min-w-0 px-4 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none";
+      document.getElementById('marketing-btn').className = "w-auto min-w-0 px-4 py-2 rounded-full font-semibold border-2 border-[#0066FF] text-[#0066FF] bg-white hover:bg-blue-50 transition focus:outline-none";
+      document.getElementById(btnId).className = "w-auto min-w-0 px-4 py-2 rounded-full font-semibold bg-[#0066FF] text-white shadow-md border-2 border-[#0066FF] focus:outline-none";
     }
 
     document.getElementById('founding-btn').addEventListener('click', function () {
@@ -347,8 +350,9 @@
     style="height:100vh;min-height:100vh; font-family: 'Outfit', sans-serif;">
     <div class="flex flex-row w-full max-w-6xl  overflow-hidden min-h-[400px] h-full">
       <!-- Sidebar -->
-      <aside class="flex flex-col justify-center items-center w-40 md:w-56 lg:w-72 relative overflow-hidden bg-white">
-        <img src="../Images/ourstory.jpg" alt="Our Story" class="w-full h-full object-contain z-0"
+      <aside
+        class="flex flex-col justify-center items-center w-full md:w-56 lg:w-72 relative overflow-hidden bg-white mb-4 md:mb-0">
+        <img src="../Images/ourstory.jpg" alt="Our Story" class="w-full h-full object-contain z-0 hidden md:flex"
           style="position:absolute; left:0; top:0; width:100%; height:100%; object-fit:contain; background:white;" />
         <span class="font-bold text-[#0046FF] tracking-widest select-none whitespace-nowrap text-center z-10"
           style="writing-mode: vertical-rl; transform: rotate(-180deg); letter-spacing: 0.15em; line-height: 1.1; font-size:52px; position:relative; font-family: 'Outfit', sans-serif;">Our
@@ -701,7 +705,7 @@
 
       <!-- Left: Logo and description -->
       <div class="md:w-1/3 space-y-4">
-        <h1 class="text-xl font-bold">NEXT.<span class="text-blue-500">deals</span></h1>
+        <img src="/Images/NextDeals Logo 1.png" alt="Logo" class="h-[28px] w-auto " />
         <p class="font-extralight text-xs text-gray-300">
           Our platform facilitates high-value real estate transactions, specializing in the buying, selling, and leasing
           of hotels and lands for high-net-worth individuals and businesses.

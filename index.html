@@ -26,8 +26,8 @@
 <body class="font-sans relative overflow-x-hidden ">
  <header class="flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 bg-white  top-0 left-0 w-full z-50">
       <div class="w-[120px] sm:w-[140px] md:w-[170px] flex items-center">
-        <img src="./Images/NextDeal-Logo 1.svg" alt="Logo" class="h-[28px] w-auto hidden md:block" />
-        <img src="./Images/NextDealMobile.png" alt="Mobile Logo" class="h-[28px] w-auto block md:hidden" />
+        <img src="./Images/NextDeal-Logo 1.svg" alt="Logo" class="h-[28px] w-auto hidden md:block " />
+        <img src="./Images/app-icons.png" alt="Mobile Logo" class="h-[35px] w-auto md:hidden" />
       </div>
 
       <div class="hidden md:block">
@@ -412,6 +412,13 @@
 </div>
 
 
+  
+
+
+
+
+
+
 
   <!--Categories  and Integration -->
 
@@ -511,6 +518,69 @@
   </div>
 
     </div>
+
+
+ <script>
+  const slides1 = [
+    { img: "./Images/building-02-solid-rounded.svg", text: "Builder Floors" },
+    { img: "./Images/house-03-solid-rounded.svg", text: "House/Villa" },
+    { img: "./Images/house-04-solid-rounded.svg", text: "Farmhouse" },
+    { img: "./Images/qq-plot-solid-rounded.svg", text: "Plots" }
+  ];
+
+  const slides2 = [
+    { img: "./Images/store-03-solid-rounded.svg", text: "Shops/Showroom" },
+    { img: "./Images/office-solid-rounded.svg", text: "Office Spaces" },
+    { img: "./Images/hotel-01-solid-rounded.svg", text: "Hotels" },
+    { img: "./Images/hotel-02-solid-rounded.svg", text: "Hostel/PG" }
+  ];
+
+  function setupCarousel(slides, containerId, delay = 2000) {
+    let current = 0;
+    const carousel = document.getElementById(containerId);
+
+    function showSlide(index) {
+      const slide = slides[index];
+
+      // Slide out to left
+      carousel.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+      carousel.style.transform = "translateX(-100px)";
+      carousel.style.opacity = "0";
+
+      setTimeout(() => {
+        carousel.innerHTML = `
+          <img src="${slide.img}" class="w-16 h-16 object-contain" />
+          <span class="text-md font-medium mt-2">${slide.text}</span>
+        `;
+
+        // Instantly move new content to right and fade in
+        carousel.style.transition = "none";
+        carousel.style.transform = "translateX(100px)";
+        carousel.style.opacity = "0";
+
+        // Force reflow
+        void carousel.offsetWidth;
+
+        // Animate new content to center
+        carousel.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+        carousel.style.transform = "translateX(0)";
+        carousel.style.opacity = "1";
+      }, 400);
+    }
+
+    showSlide(current); // First slide
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, delay);
+  }
+
+  setupCarousel(slides1, "carousel1");
+  setupCarousel(slides2, "carousel2");
+</script>
+
+
+
   <!-- Video section s -->
 
   <div class=" max-w-7xl mx-auto p-10 ml-10 flex flex-col md:flex-row items-center gap-10 hidden sm:flex">
@@ -982,67 +1052,100 @@ Testimonials
   <!--  Frequency ask questions-->
 
 
-  <section class=" w-full px-4 py-16 text-center bg-white text-gray-900">
-    <!-- Button -->
-    <div class="mb-4">
-     <button class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
-  <img src="/Images/Star 1 (1).svg" alt="Star" class="w-4 h-4" />
- FAQ
-</button>
-    </div>
+<section class="w-full px-4 py-16 text-center bg-white text-gray-900">
+  <!-- Button -->
+  <div class="mb-4">
+    <button
+      class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
+      <img src="/Images/Star 1 (1).svg" alt="Star" class="w-4 h-4" />
+      FAQ
+    </button>
+  </div>
 
-    <!-- Title -->
-    <h2 class="text-3xl sm:text-4xl font-bold mb-8">Frequently Asked Questions</h2>
+  <!-- Title -->
+  <h2 class="text-3xl sm:text-4xl font-bold mb-8">Frequently Asked Questions</h2>
 
-    <!-- Accordion -->
-    <div class="space-y-4 text-left">
-      <!-- Item Template -->
-      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
-        <div class="flex justify-between items-center">
-          <p class="font-semibold">How do I start the process of buying a property?</p>
-          <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
-        </div>
-        <div class="faq-answer mt-2 text-sm text-gray-600">
-          Contact our agents or browse listings online. We'll guide you from search to paperwork.
-        </div>
+  <!-- Accordion -->
+  <div class="space-y-4 text-left">
+    <!-- FAQ Item -->
+    <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+      <div class="flex justify-between items-center">
+        <p class="font-semibold">How do I start the process of buying a property?</p>
+        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
       </div>
-
-      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer open"
-        onclick="toggleFaq(this)">
-        <div class="flex justify-between items-center">
-          <p class="font-semibold">What documents are required to sell my property?</p>
-          <i class="fas fa-chevron-up text-gray-500 transition-transform duration-300"></i>
-        </div>
-        <div class="faq-answer mt-2 text-sm text-gray-600">
-          You'll typically need property ownership proof, tax receipts, title deeds, and identity verification. Our team
-          will assist you with the complete documentation process.
-        </div>
-      </div>
-
-      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer open"
-        onclick="toggleFaq(this)">
-        <div class="flex justify-between items-center">
-          <p class="font-semibold">Do you assist with property financing options?</p>
-          <i class="fas fa-chevron-up text-gray-500 transition-transform duration-300"></i>
-        </div>
-        <div class="faq-answer mt-2 text-sm text-gray-600">
-          Yes, we work with trusted financial institutions to help you explore mortgage and loan options that best suit
-          your needs.
-        </div>
-      </div>
-
-      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer open"
-        onclick="toggleFaq(this)">
-        <div class="flex justify-between items-center">
-          <p class="font-semibold">Can I schedule a property visit before making a decision?</p>
-          <i class="fas fa-chevron-up text-gray-500 transition-transform duration-300"></i>
-        </div>
-        <div class="faq-answer mt-2 text-sm text-gray-600">
-          Absolutely! We arrange property viewings at your convenience to help you make an informed choice.
-        </div>
+      <div class="faq-answer mt-2 text-sm text-gray-600 hidden">
+        Contact our agents or browse listings online. We'll guide you from search to paperwork.
       </div>
     </div>
-  </section>
+
+    <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer open" onclick="toggleFaq(this)">
+      <div class="flex justify-between items-center">
+        <p class="font-semibold">What documents are required to sell my property?</p>
+        <i class="fas fa-chevron-up text-gray-500 transition-transform duration-300"></i>
+      </div>
+      <div class="faq-answer mt-2 text-sm text-gray-600">
+        You'll typically need property ownership proof, tax receipts, title deeds, and identity verification. Our team
+        will assist you with the complete documentation process.
+      </div>
+    </div>
+
+    <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+      <div class="flex justify-between items-center">
+        <p class="font-semibold">Do you assist with property financing options?</p>
+        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+      </div>
+      <div class="faq-answer mt-2 text-sm text-gray-600 hidden">
+        Yes, we work with trusted financial institutions to help you explore mortgage and loan options that best suit
+        your needs.
+      </div>
+    </div>
+
+    <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+      <div class="flex justify-between items-center">
+        <p class="font-semibold">Can I schedule a property visit before making a decision?</p>
+        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+      </div>
+      <div class="faq-answer mt-2 text-sm text-gray-600 hidden">
+        Absolutely! We arrange property viewings at your convenience to help you make an informed choice.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript Toggle -->
+<script>
+  function toggleFaq(el) {
+    const icon = el.querySelector('i');
+    const answer = el.querySelector('.faq-answer');
+    const isOpen = el.classList.toggle('open');
+
+    // Toggle icon
+    icon.classList.toggle('fa-chevron-down', !isOpen);
+    icon.classList.toggle('fa-chevron-up', isOpen);
+
+    // Toggle answer
+    if (isOpen) {
+      answer.classList.remove('hidden');
+    } else {
+      answer.classList.add('hidden');
+    }
+  }
+
+  // Optional: On page load, ensure only "open" items are visible
+  document.querySelectorAll('.faq-item').forEach(el => {
+    const answer = el.querySelector('.faq-answer');
+    const icon = el.querySelector('i');
+    if (el.classList.contains('open')) {
+      answer.classList.remove('hidden');
+      icon.classList.remove('fa-chevron-down');
+      icon.classList.add('fa-chevron-up');
+    } else {
+      answer.classList.add('hidden');
+      icon.classList.remove('fa-chevron-up');
+      icon.classList.add('fa-chevron-down');
+    }
+  });
+</script>
 
 
   <!--  playstore  -->
@@ -1060,7 +1163,7 @@ Testimonials
 
       <!-- Left: Logo and description -->
       <div class="md:w-1/3 space-y-4">
-        <h1 class="text-xl font-bold">NEXT.<span class="text-blue-500">deals</span></h1>
+        <img src="/Images/NextDeals Logo 1.png" alt="Logo" class="h-[28px] w-auto " />
         <p class="font-extralight text-xs text-gray-300">
           Our platform facilitates high-value real estate transactions, specializing in the buying, selling, and leasing
           of hotels and lands for high-net-worth individuals and businesses.

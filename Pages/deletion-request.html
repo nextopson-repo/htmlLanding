@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Account or Data Deletion – Nextdeal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            border-bottom: 2px solid #0055F1;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0055F1;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .content {
+            padding: 20px 0;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #0055F1;
+        }
+
+        .section h2 {
+            color: #0055F1;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .email-section {
+            background: linear-gradient(135deg, #0055F1 0%, #0041b3 100%);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: white;
+            color: #0055F1;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight strong {
+            color: #856404;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .steps {
+            list-style: none;
+            padding: 0;
+        }
+
+        .steps li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .steps li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0055F1;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .steps li:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                margin: 0;
+                box-shadow: none;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 1.5rem;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .email-section {
+                padding: 25px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px 0;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .title {
+                font-size: 1.3rem;
+            }
+
+            .section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+ 
+    <div class="container">
+        <header class="header">
+            <div class="logo">Nextdeal</div>
+            <h1 class="title">Request Account or Data Deletion</h1>
+            <p class="subtitle">We're here to help you with your privacy requests</p>
+        </header>
+
+        <main class="content">
+            <div class="section">
+                <h2>📧 Contact Us</h2>
+                <p>If you are a user of the Nextdeal mobile app and would like to request deletion of your account or
+                    personal data (such as mobile number or location history), please email us at:</p>
+
+                <div class="email-section">
+                    <span class="icon">📧</span>
+                    <a href="mailto:support@nextdeal.in" class="email-link">support@nextdeal.in</a>
+                </div>
+
+                <h3>What to include in your email:</h3>
+                <ul class="steps">
+                    <li>Your mobile number associated with the account</li>
+                    <li>Your name (if you'd like to provide it)</li>
+                    <li>Type of deletion request (account deletion or data deletion)</li>
+                    <li>Any specific data you want deleted</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>⏱️ Response Time</h2>
+                <p>We will respond within <strong>3–5 business days</strong> and confirm once your data has been
+                    deleted.</p>
+            </div>
+
+            <div class="section">
+                <h2>🔒 Data Privacy Commitment</h2>
+                <div class="highlight">
+                    <strong>Important:</strong> We do not store sensitive user data permanently. Inactive data is
+                    deleted automatically within 90 days.
+                </div>
+                <p>This deletion request process complies with:</p>
+                <ul class="steps">
+                    <li>Google Play Data Safety policies</li>
+                    <li>Indian privacy regulations</li>
+                    <li>GDPR requirements (where applicable)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>🛡️ What We Delete</h2>
+                <p>When you request deletion, we will remove:</p>
+                <ul class="steps">
+                    <li>Your account information</li>
+                    <li>Personal data (mobile number, email)</li>
+                    <li>Location history</li>
+                    <li>App usage data</li>
+                    <li>Any stored preferences</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Nextdeal. All rights reserved.</p>
+            <p>Your privacy is our priority.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
