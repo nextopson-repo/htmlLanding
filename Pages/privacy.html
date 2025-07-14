@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/Style.css">
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+    * {
+        font-family: 'Outfit', sans-serif;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .job p {
+        color: #949494;
+        font-weight: 200;
+    }
+
+    /* Hide scrollbar but allow scrolling */
+    .dropdown-list {
+        max-height: 240px;
+        /* or whatever you use */
+        overflow-y: auto;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .dropdown-list::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari */
+    }
+
+    /* Dropdown item hover effect */
+    .dropdown-list li {
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .dropdown-list li:hover {
+        padding-left: 8px;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        text-align: start;
+    }
+
+    .no-scrollbar {
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari */
+    }
+
+    #footer {
+        padding-right: 0%;
+        padding-top: 20px;
+
+    }
+</style>
+
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <!-- <div id="header-container"></div> -->
+
+    <!-- Placeholder for header -->
+    <div id="headerComponent"></div>
+
+    <script>
+        fetch('/component/header.html')
+            .then(res => res.text())
+            .then(data => {
+                const container = document.getElementById('headerComponent');
+                container.innerHTML = data;
+
+                // Run scripts manually
+                const scripts = container.querySelectorAll('script');
+                scripts.forEach(script => {
+                    const newScript = document.createElement('script');
+                    if (script.src) {
+                        newScript.src = script.src;
+                    } else {
+                        newScript.textContent = script.textContent;
+                    }
+                    document.body.appendChild(newScript); // append to body so it executes
+                });
+            });
+    </script>
+
+
+
+    <main class="w-full mx-auto mt-[120px] px-2 md:px-4 lg:px-6 pb-40">
+        <div class="text-center space-y-2 text-center  px-4">
+           
+            <h1
+                class=" text-3xl  sm:text-3xl leading-[4rem] font-bold  text-[#0e2a60] mx-auto px-1 py-1 antialiased     ">
+                Privacy Policy – Exson Proptech Pvt.
+                Ltd. (Nextdeal)
+            </h1>
+        </div>
+
+        <article class="text-lg mx-auto prose prose-sm mt-16 px-5 sm:px-20 sm:prose lg:prose-lg">
+            <ul class="space-y-6 pl-6">
+                
+
+                <li class="space-y-2">
+                
+                    <p class="text-gray-400">
+                        At <span class="font-medium text-black">Nextdeal,</span> operated and managed by <span class="font-medium text-black">Exson Proptech Pvt. Ltd.,</span> we take your privacy seriously and
+                        are committed to protecting the data you share with us. As <span class="font-medium text-black">India’s first comprehensive real estate
+                        marketplace and networking platform,</span> we aim to revolutionize the way real estate is bought, sold,
+                        leased, and managed. Our platform caters to a wide audience—<span class="font-medium text-black">property owners, agents, investors,
+                        and end-users</span>—providing seamless digital infrastructure that enhances discovery, communication,
+                        and transactions in the real estate ecosystem.
+                        In addition to being a property listing portal,<span class="font-medium text-black">Nextdeal is also a real estate networking platform,</span>
+                        enabling meaningful connections between stakeholders, encouraging partnerships, and streamlining
+                        real estate processes across India. We believe in empowering agents and property professionals by
+                        offering advanced dashboards and marketing tools, while also ensuring that property owners can list
+                        and sell or lease their assets quickly—either directly or with the help of trusted agents.
+                        We currently support listing and transactions in the following categories:<span class="font-medium text-black"> hotels, lands, residential
+                        plots, commercial plots, flats, houses, builder floors, hostels, PG accommodations, and office
+                        spaces,</span> strictly for the purpose of sale or lease. Our services are built to reduce the friction in
+                        property transactions, enhance visibility for all listings, and build strong agent-owner-user networks
+                        across geographies.
+                    </p>
+                </li>
+
+                <li class="space-y-2">
+                    <h1 class=" text-xl font-semibold">
+                        1. Who is Processing Your Data
+                    </h1>
+                    <p class="text-gray-400">
+                        All personal data submitted through the Nextdeal platform is collected, controlled, and processed by
+                    <span class="font-medium text-black"> Exson Proptech Pvt. Ltd.,</span> a private limited company registered under the Companies Act, 2013,
+                        Government of India. The processing is handled by our in-house teams, under secure protocols, and
+                        in collaboration with third-party service who are contractually bound to maintain strict data
+                        confidentiality. Only authorized personnel have access to your personal information, and we
+                        implement layered security controls to ensure that your data is not misused or accessed without
+                        consent.
+                    </p>
+                </li>
+
+                <li class="space-y-2">
+                    <h1 class="text-xl lg:text-xl font-semibold">2. Legal Basis for Data Collection</h1>
+                    <p class="text-gray-400">
+                        Our collection and use of your personal data is legally grounded on four key bases. First and
+                        foremost, we rely on <span class="font-medium text-black">your explicit consent</span>—obtained when you create an account, list a property, or
+                        interact with platform features. Second, we process data under <span class="font-medium text-black">contractual necessity,</span> which is
+                        required to provide services such as enabling communication between users, displaying property
+                        listings, or processing payments. Third, we pursue our <span class="font-medium text-black">legitimate business interests</span> such as
+                        improving platform features, understanding user needs, and preventing fraudulent behavior. Lastly,
+                        in some instances, we are legally obligated under <span class="font-medium text-black">Indian law </span>to collect or retain specific user data for
+                        compliance, audits, or investigations.
+                    </p>
+                </li>
+
+                <li class="space-y-2">
+                    <h1 class="text-xl lg:text-xl font-semibold">3. Purpose of Data Collection</h1>
+                    <p class="text-gray-400">
+                    We collect and process personal data for a variety of purposes, all centered around improving your
+                    experience and ensuring safe, secure, and successful real estate transactions. These purposes
+                    include:<span class="font-medium text-black">creating and maintaining your profile, enabling property listing uploads, supporting real
+                    time communication between buyers, sellers, and agents, verifying user identity (especially agents
+                    and owners),</span> and ensuring the security and authenticity of interactions on the platform. We also use
+                    this information to provide <span class="font-medium text-black">customized property suggestions, </span>deliver transactional alerts and
+                    marketing updates,<span class="font-medium text-black"> analyze platform usage patterns,</span> and detect or prevent fraudulent activity.
+                    Because<span class="font-medium text-black"> Nextdeal is also a networking platform, </span> we use data to help users find and connect with
+                    verified property professionals in their area.
+                </li>
+
+                <li class="space-y-2">
+                    <h1 class="text-xl lg:text-xl font-semibold">
+                        4. Types of Personal Data Collected
+                    </h1>
+                    <p class="text-gray-400">
+                    Depending on your role (agent, owner, buyer, or investor), we collect different categories of data.
+                    These may include <span class="font-medium text-black"> your name, phone number, email address, location, photographs, profile
+                    picture,</span> and <span class="font-medium text-black"> property-related details </span> such as images, descriptions, pricing, and ownership status. For
+                    agents and businesses, we may collect <span class="font-medium text-black">business registration details, agency name, license
+                    information,</span> and <span class="font-medium text-black">operational regions. </span>Technical data such as <span class="font-medium text-black">IP address, browser type, operating
+                    system, and device information </span> are also collected automatically to help us maintain security and
+                    track user behavior for analytical purposes. In compliance with regulations, we may collect <span class="font-medium text-black">KYC
+                    documents </span>(such as Aadhaar, PAN, or address proof) where required.
+                    </p>
+                </li>
+
+                <li class="space-y-2">
+                    <h1 class="text-xl lg:text-xl font-semibold">
+                        5. Duration of Data Storage
+                    </h1>
+                    <p class="text-gray-400">
+                        We retain your personal information <span class="font-medium text-black">for as long as your account remains active</span> on the platform, and
+                        for a limited time thereafter to ensure smooth deactivation or reactivation if needed. If your account
+                        is inactive or you request deletion, we anonymize or delete your data unless it is required for legal,
+                        tax, audit, or compliance reasons. Certain types of aggregated, anonymized data—which cannot be
+                        used to identify any individual—may be stored indefinitely for <span class="font-medium text-black">business intelligence, analytics, or
+                        improving our recommendation engines.</span>
+                    </p>
+                </li>
+
+                <li class="space-y-2">
+                    <h1 class="text-xl lg:text-xl font-semibold">
+                        6.International Data Transfers
+                    </h1>
+                    <p class="text-gray-400">
+                    As of now, <span class="font-medium text-black">all user data is stored and processed on secure servers located within India.</span> If in the
+                    future we begin using international service providers or cloud infrastructure located outside India,
+                    any cross-border transfer of your personal data will be governed by strict international transfer
+                    agreements and in compliance with the <span class="font-medium text-black">Information Technology Act, 2000</span> <a href="https://www.meity.gov.in/" class="text-blue-600 underline">(Ministry of Electronics &
+                    IT, Government of India)</a> and applicable rules. You will be informed of such changes if they occur, and
+                    all transfers will be executed only when appropriate security and legal safeguards are in place.
+                    </p>
+                </li>
+
+                <li class="space-y-2">
+                    <h1 class="text-xl lg:text-xl font-semibold">
+                        7. Automated Decision-Making
+                    </h1>
+                    <p class="text-gray-500">
+                    To provide faster and more personalized services, we may use <span class="font-medium text-black">automated algorithms</span> to analyze your
+                    behavior on the platform—such as recent searches, viewed listings, or engagement history. This
+                    helps us <span class="font-medium text-black">suggest properties</span> that match your preferences, <span class="font-medium text-black">detect suspicious activity, </span>or <span class="font-medium text-black">optimize
+                    your browsing experience.</span> However, any decisions that could significantly impact you—such as
+                    deactivating accounts, blocking users, or approving property listings—are always <span class="font-medium text-black">reviewed by human
+                    moderators.</span> We do <span class="font-medium text-black">not rely solely on automated decision-making </span> for any critical action.
+                    </p>
+                </li>
+
+                <li class="space-y-2">
+                    <h1 class="text-xl lg:text-xl font-semibold">
+                        8.Sharing Personal Data with Third Parties
+                    </h1>
+                    <p class="text-gray-400">
+                        We only share personal data with<span class="font-medium text-black"> third-party service providers</span> when absolutely necessary for
+                        business operations. This includes <span class="font-medium text-black"> email/SMS gateway providers, cloud hosting partners, payment
+                        processors, legal consultants, customer support vendors, and government or law enforcement
+                        authorities </span> when required. Additionally, when an owner expresses interest in selling through an
+                        agent or when users connect for business purposes, we may—with explicit user consent—<span class="font-medium text-black">share
+                        relevant contact details</span> to facilitate networking. All vendors and partners are selected carefully and
+                        are required to adhere to our <span class="font-medium text-black"> data protection standards and contractual privacy clauses.
+                    </p>
+                </li>
+
+                <li class="space-y-2">
+                    <h1 class="text-xl lg:text-xl font-semibold">9. Your Data Rights</h1>
+                    <p class="text-gray-400">
+                    Under applicable laws, you have the full right to <span class="font-medium text-black">access, review, correct,</span> or <span class="font-medium text-black">delete</span> your personal data
+                    held with us. You may also <span class="font-medium text-black">withdraw your consent, object to processing,</span> or request a <span class="font-medium text-black">portable copy</span>
+                    of your data in machine-readable format. In the event that you feel your data rights are being
+                    violated, you may also file a complaint with the relevant data protection authority. We aim to
+                    respond to all data access or modification requests within <span class="font-medium text-black"> 15 working days.</span> Your data belongs to
+                    you, and we are committed to honoring that ownership.
+                        </a>
+
+                    </p>
+                </li>
+
+                <li class="space-y-2">
+                    <h1 class="text-xl lg:text-xl font-semibold">
+                        10. Updates to This Privacy Policy
+                    </h1>
+                    <p class="text-gray-400">
+                        As our services grow and legal regulations evolve, this Privacy Policy may be updated from time to
+                        time. <span class="font-medium text-black">All policy updates will be clearly communicated to users</span> via email notifications, app messages,
+                        banners on the website, or other relevant channels. Each updated policy will include a <span class="font-medium text-black">version date</span>
+                        to make it easier for you to track changes. Continued use of the platform after updates implies your
+                        acknowledgment of the revised terms, but you may always reach out for clarification.
+                    </p>
+                </li>
+
+                <li class="space-y-2">
+                    <h1 class="text-xl lg:text-xl font-semibold">
+                        11. Use of Cookies and Tracking Technologies
+                    </h1>
+                    <p class="text-gray-400">
+                    Our platform uses <span class="font-medium text-black">cookies, web beacons, tracking pixels, and similar technologies </span>to enhance
+                    functionality, remember your preferences, and provide a customized experience. These tools help us
+                    maintain session continuity, analyze traffic sources, measure advertising effectiveness, and prevent
+                    unauthorized access. You can control the use of cookies via your browser settings, although disabling
+                    them may reduce your ability to fully use the platform features.
+                    </p>
+
+
+                </li>
+
+
+                <li class="space-y-2">
+                    <h1 class="text-xl lg:text-xl font-semibold">
+                        12. How to Contact Us
+                    </h1>
+                    <p class="text-gray-400">
+                        If you have questions, suggestions, complaints, or requests related to your personal data or this
+                        privacy policy, please don’t hesitate to contact us. We take all inquiries seriously and strive to resolve
+                        them quickly.
+                    </p>
+
+
+                </li>
+
+<li class="space-y-2">
+    <h2 class="text-xl lg:text-xl font-semibold">
+    Email: <a href="mailto:support@nextopson.in" class="text-blue-600 underline">support@nextopson.in</a>
+    </h2>
+    <h2 class="text-xl lg:text-xl font-semibold">
+        Phone: <span class="text-black font-normal">+91-9770949466</span>
+    </h2>
+    <h2 class="text-xl lg:text-xl font-semibold">
+    Registered Office Address: <span class="text-black font-normal">C1 Indus Apartment, Bawadiya Kalan, Bhopal, MP.</span>
+    Exson Proptech Pvt. Ltd (nextdeal.in).
+    </h2>
+    
+
+
+</li>
+
+                
+            </ul>
+        </article>
+    </main>
+
+    <footer id="footer" class="bg-black text-white pt-10 pb-6 px-4 md:px-20 ">
+        <div class="flex flex-col lg:flex-row justify-between gap-10">
+
+            <!-- Left: Logo and description -->
+            <div class="md:w-1/3 space-y-4">
+                <h1 class="text-xl font-bold">NEXT.<span class="text-blue-500">deals</span></h1>
+                <p class="font-extralight text-xs text-gray-300">
+                    Our platform facilitates high-value real estate transactions, specializing in the buying, selling,
+                    and
+                    leasing
+                    of hotels and lands for high-net-worth individuals and businesses.
+                </p>
+                <p class="font-extralight text-xs text-gray-300">
+                    <strong class="font-bold">Office Address:</strong> XYZ Corporate Tower, 4th Floor, MP Nagar, Zone-1,
+                    Bhopal, Madhya Pradesh -
+                    462011, India
+                </p>
+            </div>
+            <div style="padding-right: 80px;" class="inline-flex justify-start items-center gap-6 md:hidden ">
+                <!-- Facebook -->
+
+                <div
+                    class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer ">
+                    <!-- Expanding background animation -->
+                    <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+                    <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+                      group-hover:translate-x-0 group-hover:translate-y-0 
+                      transition-transform duration-300 ease-in-out origin-top-left">
+                    </div>
+
+                    <!-- Icon (initial black, darker on hover) -->
+                    <img src="/Images/Socimg/facebook.svg" alt="Facebook" class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                      group-hover:brightness-0 transition-all duration-300 z-10" />
+                </div>
+
+
+                <!-- Instagram -->
+
+                <div
+                    class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+                    <!-- Expanding background animation -->
+                    <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+                    <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+                      group-hover:translate-x-0 group-hover:translate-y-0 
+                      transition-transform duration-300 ease-in-out origin-top-left">
+                    </div>
+
+                    <!-- Icon (initial black, darker on hover) -->
+                    <img src="/Images/Socimg/instagram.svg" alt="Instagram" class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                      group-hover:brightness-0 transition-all duration-300 z-10" />
+                </div>
+
+
+                <!-- Twitter (X) -->
+
+
+                <!-- Twitter (X) Icon Button with hover darken effect -->
+                <div
+                    class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+                    <!-- Expanding background animation -->
+                    <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+                    <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+                      group-hover:translate-x-0 group-hover:translate-y-0 
+                      transition-transform duration-300 ease-in-out origin-top-left">
+                    </div>
+
+                    <!-- Icon (initial black, darker on hover) -->
+                    <img src="/Images/Socimg/twitter.svg" alt="Twitter" class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                      group-hover:brightness-0 transition-all duration-300 z-10" />
+                </div>
+
+
+
+
+
+
+            </div>
+            <!-- Center: Company + Helpful -->
+            <div class="flex flex-col gap-8 lg:flex-row lg:gap-20 ">
+                <div>
+                    <h3 class="font-normal text-2xl mb-2">Company</h3>
+                    <ul class="font-extralight space-y-1 text-xs text-gray-300">
+                        <li><a href="/Pages/About.html">About Us</a></li>
+                        <li><a href="/Pages/Careers.html">Careers</a></li>
+                        <li><a href="/Pages/our-team.html">Our Team</a></li>
+                        <li><a href="/Pages/terms-useges.html">Terms of Usage</a></li>
+                        <li><a href="/Pages/privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-normal mb-2 text-2xl">Helpful</h3>
+                    <ul class=" font-extralight space-y-1 text-xs  text-gray-300">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/#Categorie">Services</a></li>
+                        <li><a href="/Pages/Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right: CTA Buttons -->
+            <div class="flex flex-col space-y-4 md:w-[15%]">
+                <img src="/Images/footer/Frame 262.svg" alt="" class="hidden md:block">
+                <div class="flex  gap-2 md:hidden">
+
+                    <img src="/Images/footer/layers-01-solid-rounded.svg" alt="">
+                    <img src="/Images/footer/NextCRM-product.svg" alt="">
+                </div>
+                <!-- <a href="#" class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-6 rounded-lg text-center">
+                  <div class="text-sm">Also visit Nextopson.in :</div>
+                  <div class="text-3xl font-bold">NEXT.<span class="text-white">deals</span> 
+                   <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a> -->
+                <!-- <a href="#" class="bg-red-500 hover:bg-orange-600 text-white px-4 py-6 rounded-lg text-center">
+                  <div class="text-sm">Also visit NextCRM.in :</div>
+                  <div class="text-3xl font-bold">NEXT.<span class="text-white">deals</span> <i
+                      class="fas fa-arrow-right ml-1"></i></div>
+                </a> -->
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <div
+            class="flex flex-col md:flex-row justify-between items-center mt-10  pt-4 text-sm font-medium text-gray-300 gap-3 ">
+            <p>© 2025 Exson Proptech Private Limited. All rights reserved.</p>
+
+
+            <div style="padding-right: 40px;"
+                class="inline-flex justify-start items-center gap-6 hidden sm:inline-flex">
+                <!-- Facebook -->
+
+                <div
+                    class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer ">
+                    <!-- Expanding background animation -->
+                    <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+                    <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+                      group-hover:translate-x-0 group-hover:translate-y-0 
+                      transition-transform duration-300 ease-in-out origin-top-left">
+                    </div>
+
+                    <!-- Icon (initial black, darker on hover) -->
+                    <img src="/Images/Socimg/facebook.svg" alt="Facebook" class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                      group-hover:brightness-0 transition-all duration-300 z-10" />
+                </div>
+
+
+                <!-- Instagram -->
+
+                <div
+                    class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+                    <!-- Expanding background animation -->
+                    <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+                    <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+                      group-hover:translate-x-0 group-hover:translate-y-0 
+                      transition-transform duration-300 ease-in-out origin-top-left">
+                    </div>
+
+                    <!-- Icon (initial black, darker on hover) -->
+                    <img src="/Images/Socimg/instagram.svg" alt="Instagram" class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                      group-hover:brightness-0 transition-all duration-300 z-10" />
+                </div>
+
+
+                <!-- Twitter (X) -->
+
+
+                <!-- Twitter (X) Icon Button with hover darken effect -->
+                <div
+                    class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+                    <!-- Expanding background animation -->
+                    <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+                    <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full 
+                      group-hover:translate-x-0 group-hover:translate-y-0 
+                      transition-transform duration-300 ease-in-out origin-top-left">
+                    </div>
+
+                    <!-- Icon (initial black, darker on hover) -->
+                    <img src="/Images/Socimg/twitter.svg" alt="Twitter" class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                      group-hover:brightness-0 transition-all duration-300 z-10" />
+                </div>
+
+
+            </div>
+
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
