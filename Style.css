@@ -26,6 +26,8 @@ body {
 }
 
 
+
+
 .faq-item:not(.open) .faq-answer {
       display: none;
       color: #000;
@@ -434,3 +436,5 @@ body {
 .navLink span {
   @apply absolute left-1/2 -translate-x-1/2 bottom-[-15px] w-full h-[3px] bg-blue-600 rounded-[3px] opacity-0 transition-all duration-300 group-hover:opacity-100;
 }
+
+
