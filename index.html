@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  
+
 
 
 
@@ -21,14 +21,12 @@
     }
 
     html,
-    body {  
-      
+    body {
+
       max-width: 100%;
       overflow-x: hidden;
     }
-
- 
-</style>
+  </style>
   </style>
 </head>
 
@@ -38,7 +36,7 @@
       <img src="./Images/NextDeal-Logo 1.svg" alt="Logo" class="h-[20px] w-auto hidden md:block" />
       <img src="./Images/NextDealMobile.png" alt="Mobile Logo" class="h-[20px] w-auto block md:hidden" />
     </div>
-  
+
     <!-- Desktop Nav -->
     <div class="hidden md:block">
       <nav class="flex space-x-8 text-sm font-medium text-gray-700">
@@ -50,7 +48,7 @@
             style="clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
                     box-shadow: 0 -12px 14px rgba(195, 221, 253, 0.9);"></span>
         </a>
-  
+
         <a href="/Pages/About.html" class="shadow-wrap relative text-[#595959] text-[16px] group outfit">
           About Us
           <span
@@ -58,7 +56,7 @@
             style="clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
                     box-shadow: 0 0 0 14px rgba(61, 104, 156, 0.9);"></span>
         </a>
-  
+
         <a href="/#Categorie" class="relative text-[#595959] text-[16px] group outfit overflow-visible ">
           Services
           <span
@@ -66,7 +64,7 @@
             style="clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
                     box-shadow: 0 -12px 14px rgba(195, 221, 253, 0.9);"></span>
         </a>
-  
+
         <a href="/Pages/Careers.html" class="relative text-[#595959] text-[16px] group outfit">
           Careers
           <span
@@ -74,7 +72,7 @@
             style="clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
                     box-shadow: 0 -12px 14px rgba(195, 221, 253, 0.9);"></span>
         </a>
-  
+
         <a href="/Pages/Contact.html" class="relative text-[#595959] text-[16px] group outfit">
           Contact Us
           <span
@@ -84,7 +82,7 @@
         </a>
       </nav>
     </div>
-  
+
     <!-- Download Buttons -->
     <div id="downloadWrapper" class="downloadWrapper hidden sm:hidden md:flex ml-4 relative mr-3">
 
@@ -100,15 +98,16 @@
       <div class="playStore outfit">Download for</div>
       <div class="appStore outfit">Download on AppStore</div>
     </div>
-  
+
     <!-- Hamburger Menu -->
-    <div class="md:hidden flex items-center">
-      <button id="menuToggle" class="text-gray-700 focus:outline-none">
-        <img id="menuIcon" src="/Images/menu-11 copy.svg" alt="menu icon" class="h-7 max-w-7" />
-      </button>
-    </div>
+  <div class="md:hidden flex items-center px-2">
+    <button id="menuToggle" class="text-gray-700 focus:outline-none">
+      <img id="menuIcon" src="/Images/menu-11 copy.svg" alt="menu icon" class="h-7 max-w-7" />
+    </button>
+  </div>
+
   </header>
-  
+
   <!-- Mobile Menu -->
   <div id="mobileMenu" class="md:hidden fixed top-[62px] left-0 w-full h-full bg-white shadow-lg z-40 hidden">
     <nav
@@ -122,13 +121,13 @@
             <path d="M9 5l7 7-7 7" />
           </svg>
         </button>
-  
+
         <div id="productDropdownMobile" class="mt-3 hidden flex-col items-center space-y-3 transition-all duration-300">
           <img src="/Images/Nextopson-product.svg" class="w-40 rounded-lg max-[360px]:w-32" />
           <img src="/Images/NextCRM-product.svg" class="w-40 rounded-lg max-[360px]:w-32" />
         </div>
       </div>
-  
+
       <img src="/Images/Line 4.png" class="w-full" />
       <a href="/Pages/About.html">About Us</a>
       <img src="/Images/Line 4.png" class="w-full" />
@@ -138,21 +137,26 @@
       <img src="/Images/Line 4.png" class="w-full" />
       <a href="/Pages/Contact.html">Contact Us</a>
       <img src="/Images/Line 4.png" class="w-full" />
-  
-      <div class="mt-8 p-3 bg-white pt-[96px]">
+
+      <!-- Move this block right after the first menu links, not at the bottom -->
+      <div class="p-2 bg-white pt-2 -mt-4">
         <div class="text-[18px] font-semibold leading-tight tracking-wide text-black mb-4">
           Let's start exploring deals
         </div>
         <div class="flex flex-col gap-3">
           <img src="/Images/Frame 286.png"
-            class="w-[200px] h-[58px] p-2 rounded-full max-[360px]:w-[160px] max-[360px]:h-[50px]" />
+            class="w-[200px] h-[58px] p-2 rounded-full max-[360px]:w-[150px] max-[360px]:h-[50px]" />
           <img src="/Images/Frame 287.png"
             class="w-[150px] h-[58px] p-2 rounded-full max-[360px]:w-[130px] max-[360px]:h-[50px]" />
         </div>
       </div>
+
+
+
     </nav>
+    </header>
   </div>
-  
+
   <!-- Background Image -->
   <div class="w-full bg-white overflow-hidden">
     <div class="absolute bottom-0 left-0 w-full z-0 hidden md:block">
@@ -163,30 +167,31 @@
         class="w-full h-[250px] max-[360px]:h-[180px] translate-y-24" />
     </div>
   </div>
-  
+
   <!-- Hero Section -->
   <section id="heroSection" class="relative z-10 pt-[80px] pb-32 heroSection min-h-screen px-4">
-  <div class="text-center">
-    <div
-      class="inline-flex items-center justify-center whitespace-nowrap overflow-hidden w-full max-[360px]:w-[280px] max-[360px]:text-[13px] sm:w-[380px] h-[46px] px-4 py-3 border border-[#CCDDFC] rounded-full text-blue-600 font-semibold mb-8 gap-2 bg-white shadow hover:bg-blue-600 hover:text-white transition group">
-  
-      <img src="/Images/Vector 1.svg" class="w-5 h-5 shrink-0 transition group-hover:invert group-hover:brightness-0" />
-  
-      <span class="truncate">Introducing Nextdeals to the world!</span>
-    </div>
-  </div>
+    <div class="text-center">
+      <div
+        class="inline-flex items-center justify-center whitespace-nowrap overflow-hidden w-full max-[360px]:w-[280px] max-[360px]:text-[13px] sm:w-[380px] h-[46px] px-4 py-3 border border-[#CCDDFC] rounded-full text-blue-600 font-semibold mb-8 gap-2 bg-white shadow hover:bg-blue-600 hover:text-white transition group">
 
-  
+        <img src="/Images/Vector 1.svg"
+          class="w-5 h-5 shrink-0 transition group-hover:invert group-hover:brightness-0" />
+
+        <span class="truncate">Introducing Nextdeals to the world!</span>
+      </div>
+    </div>
+
+
     <h1
       class="text-center text-2xl max-[360px]:text-2xl sm:text-4xl md:text-6xl font-bold text-[#001A48] max-w-12xl mx-auto">
       AI-Powered Marketplace for Real Estate
     </h1>
-  
+
     <p class="text-center max-w-4xl mx-auto mt-4 text-md sm:text-base text-[#002260] max-[360px]:text-sm">
       Welcome to Nextdeal – the smart real estate marketplace connecting buyers, sellers, renters,
       and agents for faster, simpler, and more transparent transactions.
     </p>
-  
+
     <div class="mt-14 flex justify-center flex-wrap gap-4">
       <a href="#"><img src="/Images/Google Play Blue.svg"
           class="h-16 bg-white hover:scale-105 transition-transform duration-300 max-[360px]:h-12" /></a>
@@ -194,7 +199,7 @@
           class="h-16 bg-white hover:scale-105 transition-transform duration-300 max-[360px]:h-12" /></a>
     </div>
   </section>
-  
+
   <!-- Scripts -->
   <script>
     const androidIcon = document.querySelector('.androidicon');
@@ -429,34 +434,34 @@
 
 
   <!-- mobilelogo -->
-<div id="Categorie"
-  class="text-white text-center px-4 py-8 rounded-3xl max-w-[90%] mx-auto mt-20 mb-10 relative bg-blue-600 w-full h-[600px] lg:hidden">
-  
-  <!-- Category Tag -->
-  <button class="mx-auto bg-white text-blue-600 px-4 py-1 text-sm rounded-full mt-4 mb-4 flex items-center gap-2">
-    <img src="/Images/Star 1.svg" alt="Star Icon" class="w-4 h-4" />
-    Categories
-  </button>
+  <div id="Categorie"
+    class="text-white text-center px-4 py-8 rounded-3xl max-w-[90%] mx-auto mt-20 mb-10 relative bg-blue-600 w-full h-[600px] lg:hidden">
 
-  <!-- Title -->
-  <h2 class="text-3xl font-bold mb-8">Categories that<br />we integrated</h2>
+    <!-- Category Tag -->
+    <button class="mx-auto bg-white text-blue-600 px-4 py-1 text-sm rounded-full mt-4 mb-4 flex items-center gap-2">
+      <img src="/Images/Star 1.svg" alt="Star Icon" class="w-4 h-4" />
+      Categories
+    </button>
 
-  <!-- Category Grid - Row 1 -->
-  <div class="flex justify-center mt-20">
-    <div id="carousel1" class="w-screen max-w-xs flex flex-col items-center transition-all duration-500">
-      <img src="/Images/building-02-solid-rounded.svg" class="w-16 h-16 object-contain" />
-      <span class="text-md font-medium mt-2">Builder Floors</span>
+    <!-- Title -->
+    <h2 class="text-3xl font-bold mb-8">Categories that<br />we integrated</h2>
+
+    <!-- Category Grid - Row 1 -->
+    <div class="flex justify-center mt-20">
+      <div id="carousel1" class="w-screen max-w-xs flex flex-col items-center transition-all duration-500">
+        <img src="/Images/building-02-solid-rounded.svg" class="w-16 h-16 object-contain" />
+        <span class="text-md font-medium mt-2">Builder Floors</span>
+      </div>
+    </div>
+
+    <!-- Category Grid - Row 2 -->
+    <div class="flex justify-center mt-10">
+      <div id="carousel2" class="w-screen max-w-xs flex flex-col items-center transition-all duration-500">
+        <img src="/Images/layers-01-solid-rounded.svg" class="w-16 h-16 object-contain" />
+        <span class="text-md font-medium mt-2">Lands</span>
+      </div>
     </div>
   </div>
-
-  <!-- Category Grid - Row 2 -->
-  <div class="flex justify-center mt-10">
-    <div id="carousel2" class="w-screen max-w-xs flex flex-col items-center transition-all duration-500">
-      <img src="/Images/layers-01-solid-rounded.svg" class="w-16 h-16 object-contain" />
-      <span class="text-md font-medium mt-2">Lands</span>
-    </div>
-  </div>
-</div>
 
 
 
@@ -1003,69 +1008,70 @@
 
   <!-- Trusted and -->
 
-<section class="py-16 px-4 max-w-7xl mx-auto">
-  <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+  <section class="py-16 px-4 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-10">
 
-    <!-- Left Column: 4 Images -->
-    <div class="flex  gap-6 hidden sm:flex">
-      <div class="">
-        <img src="https://randomuser.me/api/portraits/women/1.jpg" class="w-28 h-36 object-cover rounded-xl mt-10" />
-        <img src="https://randomuser.me/api/portraits/men/2.jpg" class="w-28 h-36 object-cover rounded-xl mt-4" />
+      <!-- Left Column: 4 Images -->
+      <div class="flex  gap-6 hidden sm:flex">
+        <div class="">
+          <img src="https://randomuser.me/api/portraits/women/1.jpg" class="w-28 h-36 object-cover rounded-xl mt-10" />
+          <img src="https://randomuser.me/api/portraits/men/2.jpg" class="w-28 h-36 object-cover rounded-xl mt-4" />
+        </div>
+        <div class="flex-col  mt-20 pt-10">
+          <img src="https://randomuser.me/api/portraits/women/3.jpg" class="w-28 h-36 object-cover rounded-xl  mt-4" />
+          <img src="https://randomuser.me/api/portraits/men/4.jpg" class="w-28 h-36 object-cover rounded-xl  mt-4" />
+        </div>
+
       </div>
-      <div class="flex-col  mt-20 pt-10">
-        <img src="https://randomuser.me/api/portraits/women/3.jpg" class="w-28 h-36 object-cover rounded-xl  mt-4" />
-        <img src="https://randomuser.me/api/portraits/men/4.jpg" class="w-28 h-36 object-cover rounded-xl  mt-4" />
+
+      <!-- Center Column -->
+      <div class="flex flex-col items-center text-center gap-8">
+        <!-- Text -->
+        <div>
+          <button
+            class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
+            <img src="/Images/Star 1 (1).svg" alt="Star" class="w-4 h-4" />
+            Testimonials
+          </button>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+            Trusted by leading <br><span class="text-blue-500">Agents <span class="text-gray-900">&</span> Owners</span>
+          </h2>
+        </div>
+
+        <!-- 3 Center Bottom Images -->
+        <div class="flex gap-6 pt-4 hidden sm:flex">
+          <img src="https://randomuser.me/api/portraits/men/5.jpg" class="w-28 h-36 object-cover rounded-xl " />
+          <img src="https://randomuser.me/api/portraits/women/6.jpg" class="w-28 h-36 object-cover rounded-xl mt-10" />
+          <img src="https://randomuser.me/api/portraits/men/7.jpg" class="w-28 h-36 object-cover rounded-xl " />
+        </div>
+      </div>
+      <!-- ✅ This div will only be visible on mobile and hidden on desktop -->
+      <div class="flex gap-6 pt-4 sm:hidden">
+        <img src="https://randomuser.me/api/portraits/men/5.jpg" class="w-20 h-36 object-cover rounded-xl" />
+        <img src="https://randomuser.me/api/portraits/women/6.jpg" class="w-20 h-36 object-cover rounded-xl mt-10" />
+        <img src="https://randomuser.me/api/portraits/men/7.jpg" class="w-20 h-36 object-cover rounded-xl" />
+      </div>
+
+
+
+
+      <!-- Right Column: 4 Images -->
+      <div class="flex  gap-3 hidden sm:flex">
+
+        <div class="flex-col  mt-20 pt-10">
+          <img src="https://randomuser.me/api/portraits/women/8.jpg" class="w-28 h-36 object-cover rounded-xl mt-4" />
+          <img src="https://randomuser.me/api/portraits/men/9.jpg" class="w-28 h-36 object-cover rounded-xl mt-4 " />
+        </div>
+        <div class="flex-col">
+          <img src="https://randomuser.me/api/portraits/women/10.jpg"
+            class="w-28 h-36 object-cover rounded-xl mt-10  " />
+          <img src="https://randomuser.me/api/portraits/men/11.jpg" class="w-28 h-36 object-cover rounded-xl mt-4 " />
+        </div>
+
       </div>
 
     </div>
-
-    <!-- Center Column -->
-    <div class="flex flex-col items-center text-center gap-8">
-      <!-- Text -->
-      <div>
-        <button
-          class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
-          <img src="/Images/Star 1 (1).svg" alt="Star" class="w-4 h-4" />
-          Testimonials
-        </button>
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
-          Trusted by leading <br><span class="text-blue-500">Agents <span class="text-gray-900">&</span> Owners</span>
-        </h2>
-      </div>
-
-      <!-- 3 Center Bottom Images -->
-      <div class="flex gap-6 pt-4 hidden sm:flex">
-        <img src="https://randomuser.me/api/portraits/men/5.jpg" class="w-28 h-36 object-cover rounded-xl " />
-        <img src="https://randomuser.me/api/portraits/women/6.jpg" class="w-28 h-36 object-cover rounded-xl mt-10" />
-        <img src="https://randomuser.me/api/portraits/men/7.jpg" class="w-28 h-36 object-cover rounded-xl " />
-      </div>
-    </div>
-<!-- ✅ This div will only be visible on mobile and hidden on desktop -->
-<div class="flex gap-6 pt-4 sm:hidden">
-  <img src="https://randomuser.me/api/portraits/men/5.jpg" class="w-20 h-36 object-cover rounded-xl" />
-  <img src="https://randomuser.me/api/portraits/women/6.jpg" class="w-20 h-36 object-cover rounded-xl mt-10" />
-  <img src="https://randomuser.me/api/portraits/men/7.jpg" class="w-20 h-36 object-cover rounded-xl" />
-</div>
-
-
-
-
-    <!-- Right Column: 4 Images -->
-    <div class="flex  gap-3 hidden sm:flex">
-
-      <div class="flex-col  mt-20 pt-10">
-        <img src="https://randomuser.me/api/portraits/women/8.jpg" class="w-28 h-36 object-cover rounded-xl mt-4" />
-        <img src="https://randomuser.me/api/portraits/men/9.jpg" class="w-28 h-36 object-cover rounded-xl mt-4 " />
-      </div>
-      <div class="flex-col">
-        <img src="https://randomuser.me/api/portraits/women/10.jpg" class="w-28 h-36 object-cover rounded-xl mt-10  " />
-        <img src="https://randomuser.me/api/portraits/men/11.jpg" class="w-28 h-36 object-cover rounded-xl mt-4 " />
-      </div>
-
-    </div>
-
-  </div>
-</section>
+  </section>
 
 
 
@@ -1089,65 +1095,69 @@
 
 
   <!--  Frequency ask questions-->
-<section class="w-full px-4 py-16 text-center bg-white text-gray-900">
-  <!-- Button -->
-  <div class="mb-4">
-    <button class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
-      <img src="/Images/Star 1 (1).svg" alt="Star" class="w-4 h-4" />
-      FAQ
-    </button>
-  </div>
-
-  <!-- Title -->
-  <h2 class="text-3xl sm:text-4xl font-bold mb-8">Frequently Asked Questions</h2>
-
-  <!-- FAQ Container -->
-  <div class="max-w-7xl w-full mx-auto px-4 space-y-4 text-left">
-    <!-- FAQ Item -->
-    <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
-      <div class="flex justify-between items-center">
-        <p class="font-semibold">How do I start the process of buying a property?</p>
-        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
-      </div>
-      <div class="faq-answer mt-2 text-sm text-gray-600 hidden">
-        Contact our agents or browse listings online. We'll guide you from search to paperwork.
-      </div>
+  <section class="w-full px-4 py-16 text-center bg-white text-gray-900">
+    <!-- Button -->
+    <div class="mb-4">
+      <button
+        class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
+        <img src="/Images/Star 1 (1).svg" alt="Star" class="w-4 h-4" />
+        FAQ
+      </button>
     </div>
 
-    <!-- FAQ Item -->
-    <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer open" onclick="toggleFaq(this)">
-      <div class="flex justify-between items-center">
-        <p class="font-semibold">What documents are required to sell my property?</p>
-        <i class="fas fa-chevron-up text-gray-500 transition-transform duration-300"></i>
-      </div>
-      <div class="faq-answer mt-2 text-sm text-gray-600">
-        You'll typically need property ownership proof, tax receipts, title deeds, and identity verification. Our team will assist you with the complete documentation process.
-      </div>
-    </div>
+    <!-- Title -->
+    <h2 class="text-3xl sm:text-4xl font-bold mb-8">Frequently Asked Questions</h2>
 
-    <!-- FAQ Item -->
-    <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
-      <div class="flex justify-between items-center">
-        <p class="font-semibold">Do you assist with property financing options?</p>
-        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+    <!-- FAQ Container -->
+    <div class="max-w-7xl w-full mx-auto px-4 space-y-4 text-left">
+      <!-- FAQ Item -->
+      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+        <div class="flex justify-between items-center">
+          <p class="font-semibold">How do I start the process of buying a property?</p>
+          <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+        </div>
+        <div class="faq-answer mt-2 text-sm text-gray-600 hidden">
+          Contact our agents or browse listings online. We'll guide you from search to paperwork.
+        </div>
       </div>
-      <div class="faq-answer mt-2 text-sm text-gray-600 hidden">
-        Yes, we work with trusted financial institutions to help you explore mortgage and loan options that best suit your needs.
-      </div>
-    </div>
 
-    <!-- FAQ Item -->
-    <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
-      <div class="flex justify-between items-center">
-        <p class="font-semibold">Can I schedule a property visit before making a decision?</p>
-        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+      <!-- FAQ Item -->
+      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer open"
+        onclick="toggleFaq(this)">
+        <div class="flex justify-between items-center">
+          <p class="font-semibold">What documents are required to sell my property?</p>
+          <i class="fas fa-chevron-up text-gray-500 transition-transform duration-300"></i>
+        </div>
+        <div class="faq-answer mt-2 text-sm text-gray-600">
+          You'll typically need property ownership proof, tax receipts, title deeds, and identity verification. Our team
+          will assist you with the complete documentation process.
+        </div>
       </div>
-      <div class="faq-answer mt-2 text-sm text-gray-600 hidden">
-        Absolutely! We arrange property viewings at your convenience to help you make an informed choice.
+
+      <!-- FAQ Item -->
+      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+        <div class="flex justify-between items-center">
+          <p class="font-semibold">Do you assist with property financing options?</p>
+          <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+        </div>
+        <div class="faq-answer mt-2 text-sm text-gray-600 hidden">
+          Yes, we work with trusted financial institutions to help you explore mortgage and loan options that best suit
+          your needs.
+        </div>
+      </div>
+
+      <!-- FAQ Item -->
+      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+        <div class="flex justify-between items-center">
+          <p class="font-semibold">Can I schedule a property visit before making a decision?</p>
+          <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+        </div>
+        <div class="faq-answer mt-2 text-sm text-gray-600 hidden">
+          Absolutely! We arrange property viewings at your convenience to help you make an informed choice.
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -1197,52 +1207,66 @@
 
   <!-- Footer Section -->
 
- <footer id="footer" class="bg-black text-white pt-10 pb-6 px-4 md:px-20">
-  <div class="flex flex-col lg:flex-row justify-between gap-10">
+<footer id="footer" class="w-full bg-black text-white pt-10 pb-6 px-4 sm:px-6 md:px-10">
+  <div class="w-full flex flex-col lg:flex-row justify-between gap-10">
 
     <!-- Left: Logo and description -->
-<div class="w-full md:w-1/3 space-y-4 px-1">
-  <!-- Logo -->
-  <img src="/Images/NextDeals Logo 1.png" alt="Logo" class="h-[28px] w-auto max-w-full" />
+    <div class="w-full md:w-1/3 space-y-4">
+      <!-- Logo -->
+      <img src="/Images/NextDeals Logo 1.png" alt="Logo" class="h-[28px] w-auto max-w-full" />
 
-  <!-- Description -->
-  <p class="text-xs text-gray-300 font-extralight text-justify leading-relaxed break-words">
-    Our platform facilitates high-value real estate transactions, specializing in the buying, selling,
-    and leasing of hotels and lands for high-net-worth individuals and businesses.
-  </p>
-
-  <!-- Address -->
-  <p class="text-xs text-gray-300 font-extralight text-justify leading-relaxed break-words">
-    <span class="font-bold">Office Address:</span> XYZ Corporate Tower, 4th Floor, MP Nagar, Zone-1,
-    Bhopal, Madhya Pradesh - 462011, India
-  </p>
-</div>
+      <!-- Description -->
+<p
+  class="text-xs text-gray-300 font-extralight leading-relaxed break-words whitespace-normal w-full max-w-full overflow-hidden px-1">
+  Our platform facilitates high-value real estate transactions, specializing in the buying, selling,
+  and leasing of hotels and lands for high-net-worth individuals and businesses.
+</p>
 
 
 
+      <!-- Address -->
+    <p
+      class="text-xs text-gray-300 font-extralight leading-relaxed break-words whitespace-normal w-full max-w-full overflow-hidden px-1">
+      <span class="font-bold">Office Address:</span> XYZ Corporate Tower, 4th Floor, MP Nagar, Zone-1,
+      Bhopal, Madhya Pradesh - 462011, India
+    </p>
 
+
+    </div>
 
     <!-- Mobile Social Icons -->
-    <div style="padding-right: 80px;" class="inline-flex justify-start items-center gap-6 md:hidden">
+    <div class="inline-flex justify-start items-center gap-6 md:hidden pr-10">
       <!-- Facebook -->
-      <div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+      <div
+        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
         <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-        <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left"></div>
-        <img src="/Images/Socimg/facebook.svg" alt="Facebook" class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
+        <div
+          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+        </div>
+        <img src="/Images/Socimg/facebook.svg" alt="Facebook"
+          class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
       </div>
 
       <!-- Instagram -->
-      <div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+      <div
+        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
         <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-        <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left"></div>
-        <img src="/Images/Socimg/instagram.svg" alt="Instagram" class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
+        <div
+          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+        </div>
+        <img src="/Images/Socimg/instagram.svg" alt="Instagram"
+          class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
       </div>
 
       <!-- Twitter -->
-      <div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+      <div
+        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
         <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-        <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left"></div>
-        <img src="/Images/Socimg/twitter.svg" alt="Twitter" class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
+        <div
+          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+        </div>
+        <img src="/Images/Socimg/twitter.svg" alt="Twitter"
+          class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
       </div>
     </div>
 
@@ -1271,66 +1295,81 @@
     <!-- Right: CTA Buttons -->
     <div class="flex flex-col space-y-4 md:w-[15%]">
       <img src="/Images/footer/Frame 262.svg" alt="" class="hidden md:block">
-      <div class="flex gap-2 md:hidden">
+      <!-- <div class="flex gap-2 md:hidden">
         <img src="/Images/footer/layers-01-solid-rounded.svg" alt="">
         <img src="/Images/footer/NextCRM-product.svg" alt="">
-      </div>
+      </div> -->
     </div>
   </div>
 
   <!-- Bottom Section -->
-  <div class="flex flex-col md:flex-row justify-between items-center mt-10 pt-4 text-sm font-medium text-gray-300 gap-3">
-    <p class="break-words max-w-full whitespace-normal text-center md:text-left">© 2025 Exson Proptech Private Limited. All rights reserved.</p>
+  <div
+    class="w-full flex flex-col md:flex-row justify-between items-center mt-10 pt-4 text-sm font-medium text-gray-300 gap-3">
+    <p class="break-words max-w-full whitespace-normal text-center md:text-left">© 2025 Exson Proptech Private Limited.
+      All rights reserved.</p>
 
     <!-- Desktop Social Icons -->
-    <div style="padding-right: 40px;" class="inline-flex justify-start items-center gap-6 hidden sm:inline-flex">
+    <div class="inline-flex justify-start items-center gap-6 hidden sm:inline-flex pr-10">
       <!-- Facebook -->
-      <div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+      <div
+        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
         <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-        <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left"></div>
-        <img src="/Images/Socimg/facebook.svg" alt="Facebook" class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
+        <div
+          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+        </div>
+        <img src="/Images/Socimg/facebook.svg" alt="Facebook"
+          class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
       </div>
 
       <!-- Instagram -->
-      <div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+      <div
+        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
         <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-        <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left"></div>
-        <img src="/Images/Socimg/instagram.svg" alt="Instagram" class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
+        <div
+          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+        </div>
+        <img src="/Images/Socimg/instagram.svg" alt="Instagram"
+          class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
       </div>
 
       <!-- Twitter -->
-      <div class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+      <div
+        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
         <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-        <div class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left"></div>
-        <img src="/Images/Socimg/twitter.svg" alt="Twitter" class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
+        <div
+          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+        </div>
+        <img src="/Images/Socimg/twitter.svg" alt="Twitter"
+          class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
       </div>
     </div>
   </div>
 </footer>
 
-<script>
-  const dropdownBtn = document.getElementById('dropdownButton');
-  const dropdownMenu = document.getElementById('dropdownMenu');
 
-  dropdownBtn?.addEventListener('click', () => {
-    dropdownMenu.classList.toggle('hidden');
-  });
+  <script>
+    const dropdownBtn = document.getElementById('dropdownButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
 
-  function scrollToSection(id) {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      dropdownMenu.classList.add('hidden');
+    dropdownBtn?.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+    });
+
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        dropdownMenu.classList.add('hidden');
+      }
     }
-  }
 
-  // Close dropdown if clicked outside
-  window.addEventListener('click', function (e) {
-    if (!dropdownBtn?.contains(e.target) && !dropdownMenu?.contains(e.target)) {
-      dropdownMenu?.classList.add('hidden');
-    }
-  });
-</script>
+    // Close dropdown if clicked outside
+    window.addEventListener('click', function (e) {
+      if (!dropdownBtn?.contains(e.target) && !dropdownMenu?.contains(e.target)) {
+        dropdownMenu?.classList.add('hidden');
+      }
+    });
+  </script>
 
 
 
