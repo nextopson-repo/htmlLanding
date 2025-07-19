@@ -361,395 +361,232 @@
 
 
   <!-- Our Story Section -->
-  <section id="our-story-section" class="w-full flex justify-center items-center py-20 min-h-screen bg-white hidden md:flex mt-0."
-    style="height:100vh;min-height:100vh; font-family: 'Outfit';">
-    <div class="flex flex-row w-full max-w-6xl  overflow-hidden min-h-[400px] h-full">
-      <!-- Sidebar -->
-      <aside
-        class="flex flex-col justify-center items-center w-full md:w-56 lg:w-72 relative overflow-hidden bg-white mb-4 md:mb-0">
-        <img src="../Images/ourstory.jpg" alt="Our Story" class="w-full h-full object-contain z-0 hidden md:flex"
-          style="position:absolute; left:0; top:0; width:100%; height:100%; object-fit:contain; background:white;" />
-        <span class="font-bold text-[#0046FF] tracking-widest select-none whitespace-nowrap text-center z-10 , hidden md:flex"
-          style="writing-mode: vertical-rl; transform: rotate(-180deg); letter-spacing: 0.15em; line-height: 1.1; font-size:52px; position:relative; font-family: Outfit" >Our
-          Story</span>
-      </aside>
-      <!-- Main Content -->
-      <div id="our-story-main" class="flex-1 flex flex-row bg-white z-10 animate-story-main"
-        style="font-family: Outfit; opacity:0; transform:translateX(-80px) scale(0.95);">
-        <!-- Navigation List -->
-        <nav id="our-story-nav"
-          class="flex flex-col justify-center items-start w-48 md:w-56 lg:w-64 px-4 py-8 gap-2 border-r border-blue-100 bg-white animate-story-fadein"
-          style="position:relative; z-index:20; font-family: 'Outfit'; opacity:0; transform:translateY(30px);">
-          <div id="story-nav-list" class="flex flex-col gap-2 w-full"></div>
-        </nav>
-        <!-- Content Area -->
-        <section id="our-story-content"
-          class="flex-1 flex flex-col justify-center items-start px-6 py-8 bg-white animate-story-fadein"
-          style="position:relative; z-index:20; font-family: 'Outfit'; opacity:0; transform:translateY(30px);">
-          <div id="story-content-area" class="w-full"></div>
-        </section>
-      </div>
-    </div>
-  </section>
+<!-- Our Story Section -->
+<section id="our-story-section" class="w-full flex justify-center items-center py-20 min-h-screen bg-white md:flex mt-0"
+  style="height:100vh;min-height:100vh;">
+  <div class="flex flex-col md:flex-row w-full max-w-6xl overflow-hidden min-h-[400px] h-full">
 
-  <style>
-    @keyframes storyMainIn {
-      0% {
-        opacity: 0;
-        transform: translateX(-80px) scale(0.95);
-      }
-
-      60% {
-        opacity: 1;
-        transform: translateX(0) scale(1.04);
-      }
-
-      80% {
-        transform: translateX(0) scale(0.98);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-      }
-    }
-
-    @keyframes storyFadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-story-main {
-      animation: storyMainIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0.1s both;
-    }
-
-    .animate-story-fadein {
-      animation: storyFadeInUp 0.7s cubic-bezier(0.77, 0, 0.175, 1) 0.7s both;
-    }
-
-    .story-fadein-stagger {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: storyFadeInUp 0.7s cubic-bezier(0.77, 0, 0.175, 1) both;
-    }
-
-    @keyframes headingSlideIn {
-      0% {
-        opacity: 0;
-        transform: translateX(80px);
-      }
-
-      60% {
-        opacity: 1;
-        transform: translateX(-10px);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes contentSlideIn {
-      0% {
-        opacity: 0;
-        transform: translateX(-80px);
-      }
-
-      60% {
-        opacity: 1;
-        transform: translateX(10px);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    .heading-animate {
-      opacity: 0;
-      animation: headingSlideIn 0.7s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    }
-
-    .content-animate {
-      opacity: 0;
-      animation: contentSlideIn 0.7s cubic-bezier(0.77, 0, 0.175, 1) 0.15s forwards;
-    }
-
-    @keyframes star-rotate {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    .star-animate {
-      animation: star-rotate 1s cubic-bezier(0.77, 0, 0.175, 1);
-    }
-
-    @keyframes arrow-bounce {
-      0% {
-        transform: translateY(0);
-      }
-
-      20% {
-        transform: translateY(-8px);
-      }
-
-      40% {
-        transform: translateY(0);
-      }
-
-      60% {
-        transform: translateY(-4px);
-      }
-
-      80% {
-        transform: translateY(0);
-      }
-
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    .arrow-bounce {
-      animation: arrow-bounce 1.2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
-      will-change: transform;
-    }
-  </style>
-
-
-<!-- //Mobile Version of Our Story Section -->
-<section id="our-story-section" class="block md:hidden w-full bg-white pt-4" style="font-family: Outfit;">
-  <div class="flex flex-col w-full max-w-[360px] mx-auto overflow-hidden">
-
-    <!-- Smaller Image with Text -->
-    <aside class="w-full relative flex justify-center items-center overflow-hidden h-[110px]">
-      <!-- Smaller image: reduced height and width -->
-      <img src="../Images/rotateimgs.png" alt="Our Story" class="w-[280px] h-[110px] object-cover rounded-md" />
-
-      <!-- Centered Text -->
-      <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl font-bold text-[#0046FF] z-10">
+    <!-- Mobile View Image -->
+    <div class="md:hidden relative w-full h-64">
+      <img src="../Images/ourstory.jpg" alt="Our Story" class="absolute top-0 left-0 w-full h-full object-cover" />
+      <span class="absolute inset-0 flex items-center justify-center font-bold text-white text-4xl tracking-widest"
+        style="text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">
         Our Story
       </span>
+    </div>
 
-
+    <!-- Desktop Sidebar -->
+    <aside
+      class="hidden md:flex flex-col justify-center items-center w-full md:w-56 lg:w-72 relative overflow-hidden bg-white">
+      <img src="../Images/ourstory.jpg" alt="Our Story" class="w-full h-full object-contain z-0"
+        style="position:absolute; left:0; top:0; width:100%; height:100%; object-fit:contain;" />
+      <span class="font-bold text-[#0046FF] tracking-widest select-none whitespace-nowrap text-center z-10"
+        style="writing-mode: vertical-rl; transform: rotate(-180deg); letter-spacing: 0.15em; line-height: 1.1; font-size:52px; position:relative;">
+        Our Story
+      </span>
     </aside>
 
-    <!-- Main Content -->
-    <div id="our-story-main" class="flex flex-col bg-white px-4 py-4"
-      style="opacity: 0; transform: translateX(-80px) scale(0.95);">
+    <!-- Main Content Area -->
+    <div id="our-story-main" class="flex-1 flex flex-row bg-white z-10 animate-story-main">
 
-      <!-- Navigation -->
-      <nav id="our-story-nav" class="w-full flex flex-col gap-2 py-3 border-b border-blue-100"
-        style="opacity: 0; transform: translateY(30px);">
+      <!-- Navigation (Desktop Only) -->
+      <nav id="our-story-nav"
+        class="hidden md:flex flex-col justify-center items-start w-48 md:w-56 lg:w-64 px-4 py-8 gap-2 border-r border-blue-100 bg-white animate-story-fadein">
         <div id="story-nav-list" class="flex flex-col gap-2 w-full"></div>
       </nav>
 
-      <!-- Content -->
-      <section id="our-story-content" class="flex-1 flex flex-col justify-start items-start py-3"
-        style="opacity: 0; transform: translateY(30px);">
+      <!-- Story Content Area -->
+      <section id="our-story-content"
+        class="flex-1 flex flex-col justify-center items-start px-6 py-8 bg-white animate-story-fadein">
         <div id="story-content-area" class="w-full"></div>
       </section>
     </div>
   </div>
 </section>
 
+<style>
+  /* === Desktop & Shared Animations === */
+  @keyframes storyMainIn {
+    0% { opacity: 0; transform: translateX(-80px) scale(0.95); }
+    60% { opacity: 1; transform: translateX(0) scale(1.04); }
+    80% { transform: translateX(0) scale(0.98); }
+    100% { opacity: 1; transform: translateX(0) scale(1); }
+  }
 
+  @keyframes storyFadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
 
+  .animate-story-main { animation: storyMainIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0.1s both; }
+  .animate-story-fadein { animation: storyFadeInUp 0.7s cubic-bezier(0.77, 0, 0.175, 1) 0.7s both; }
 
+  .story-fadein-stagger {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: storyFadeInUp 0.7s cubic-bezier(0.77, 0, 0.175, 1) both;
+  }
 
+  @keyframes headingSlideIn {
+    0% { opacity: 0; transform: translateX(80px); }
+    60% { opacity: 1; transform: translateX(-10px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
 
+  @keyframes contentSlideIn {
+    0% { opacity: 0; transform: translateX(-80px); }
+    60% { opacity: 1; transform: translateX(10px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
 
+  .heading-animate { opacity: 0; animation: headingSlideIn 0.7s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+  .content-animate { opacity: 0; animation: contentSlideIn 0.7s cubic-bezier(0.77, 0, 0.175, 1) 0.15s forwards; }
 
+  @keyframes star-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
-  <script>
-    // Story Data
-    const storyFrames = [
-      {
-        nav: 'The Spark',
-        heading: 'The <span class="font-bold text-[#0046FF]">Spark</span>',
-        icon: 'star',
-        content: 'It all began with a group of close friends and one shared goal — to fix the broken real estate experience. We weren’t experts, just passionate problem-solvers.',
-        crown: true
-      },
-      {
-        nav: 'Entering the Rental Jungle',
-        heading: 'Entering the Rental   <span class="font-bold text-[#0046FF]">Rental Jungle</span>',
-        icon: '',
-        content: 'We entered the rental world as agents. It felt like a jungle - outdated systems, confused andlords, frustrated tenants But we were ready to take it on.',
-        crown: false
-      },
-      {
-        nav: 'Chaos & Challenges',
-        heading: 'Chaos & <span class="font-bold text-[#0046FF]">Challenges</span>',
-        icon: '',
-        content: 'Every day brought new problems. No real solutions existed. Everyone - landlords tenants, agents - felt stuck in messy, inefficient system.',
-        crown: false
-      },
-      {
-        nav: 'The Shift',
-        heading: 'The <span class="font-bold text-[#0046FF]">Shift</span>',
-        icon: '',
-        content: ' we realized it was about people, not just property. Our approach changed forever.We realized one tool couldnt solve everything. So we broke it down - studied every part of the industry and built focused solutions to tackle each challenge.',
-        crown: false
-      },
-      {
-        nav: 'A Year of Learning',
-        heading: 'A Year of <span class="font-bold text-[#0046FF]">Learning</span>',
-        icon: '',
-        content: 'We failed, learned, andimproved - over and over. Each setback taught us something new. We got smarter stronger and closer to our vision.',
-        crown: false
-      },
-      {
-        nav: 'The Big Launch',
-        heading: 'The <span class="font-bold text-[#0046FF]">Big Launch</span>',
-        icon: '',
-        content: 'After a year of grinding, we launched Nextdeal - a smart, seamless platform connecting every piece of the real estate puzzle. Our dream became reality.',
-        crown: false
-      },
-      {
-        nav: 'From Friends to Founders',
-        heading: 'From Friends to <span class="font-bold text-[#0046FF]">Founders</span>',
-        icon: '',
-        content: 'We started as friends on a mission. Today, were founders transforming real estate - one smart solution at a time.',
-        crown: false
-      }
-    ];
-    let currentFrame = 0;
-    function renderStoryNavList() {
-      const navList = document.getElementById('story-nav-list');
-      navList.innerHTML = storyFrames.map((frame, i) => {
-        // Star is visible only on the currentFrame, no animation
-        const isCurrent = i === currentFrame;
-        // Only add fade-in class on initial load, not on click
-        const fadeClass = window.__storyNavAnimated ? '' : 'story-fadein-stagger';
-        const animDelay = window.__storyNavAnimated ? '' : `animation-delay:${0.2 + i * 0.12}s`;
-        // Add a data attribute for the star for later selection
-        return `
-            <div class="flex items-center gap-2 cursor-pointer group mb-4 ${fadeClass}" style="${animDelay}" onclick="showStoryFrame(${i})">
-              <img src="../Images/star.jpg" alt="star" class="w-8 h-8 mr-2 ${isCurrent ? 'star-animate' : ''} ${isCurrent ? '' : 'opacity-0'}" style="${isCurrent ? '' : 'width:0;height:0;'}" id="star-img-${i}" />
-              <span class="${isCurrent ? 'font-bold text-[#0046FF]' : 'text-blue-300'} text-lg transition">${frame.nav}</span>
-            </div>
-          `;
-      }).join('');
-      // Only animate on first load
-      if (!window.__storyNavAnimated) {
-        setTimeout(() => {
-          document.querySelectorAll('#story-nav-list .story-fadein-stagger').forEach((el, idx) => {
-            el.style.animationDelay = `${0.2 + idx * 0.12}s`;
-            el.style.opacity = 1;
-          });
-          window.__storyNavAnimated = true;
-        }, 100);
-      }
-    }
-    function renderStoryContentArea() {
-      const frame = storyFrames[currentFrame];
-      const content = document.getElementById('story-content-area');
-      // For 'The Spark', add king icon on 'k' and remove SVG crown
-      let html = '';
-      if (frame.nav === 'The Spark') {
-        // Find the index of 'k' in 'Spark'
-        const sparkWord = 'Spark';
-        const kIndex = sparkWord.indexOf('k');
-        // Build the word with the king icon on 'k'
-        const sparkWithKing = sparkWord.substring(0, kIndex) +
-          '<span style="position:relative;display:inline-block;">k<img src="../Images/kingimg.png" alt="king" style="position:absolute;top:-32px;left:0;width:32px;height:32px;z-index:2;" /></span>';
-        html = `
-            <div class="flex flex-col items-start w-full">
-              <div class="flex items-center gap-2 mb-2">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight heading-animate">The <span class="font-bold text-[#0046FF]">${sparkWithKing}</span></h2>
-              </div>
-              <p class="text-[#1A2340] text-base md:text-lg mb-2 max-w-2xl content-animate">${frame.content}</p>
-              <div class="w-24 h-1 bg-blue-200 rounded-full mb-2 story-fadein-stagger" style="animation-delay:0.44s"></div>
-            </div>
-          `;
-      } else {
-        html = `
-            <div class="flex flex-col items-start w-full">
-              <div class="flex items-center gap-2 mb-2">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight heading-animate">The <span class="font-bold text-[#0046FF]">${frame.nav.split(' ').slice(-1)[0]}</span></h2>
-              </div>
-              <p class="text-[#1A2340] text-base md:text-lg mb-2 max-w-2xl content-animate">${frame.content}</p>
-              <div class="w-24 h-1 bg-blue-200 rounded-full mb-2 story-fadein-stagger" style="animation-delay:0.44s"></div>
-            </div>
-          `;
-      }
-      content.innerHTML = html;
-      // Animate heading and content in/out
+  .star-animate {
+    animation: star-rotate 1s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  /* === Mobile Star Animation === */
+  @keyframes star-slide-in {
+    0% { transform: translateX(60px) rotate(0deg); opacity: 0; }
+    100% { transform: translateX(0) rotate(360deg); opacity: 1; }
+  }
+
+  .mobile-star-animate {
+    animation: star-slide-in 0.8s ease forwards;
+  }
+</style>
+
+<script>
+  const storyFrames = [
+    { nav: 'The Spark', heading: 'The <span class="font-bold text-[#0046FF]">Spark</span>', icon: 'star', content: 'It all began with a group of close friends and one shared goal — to fix the broken real estate experience. We weren’t experts, just passionate problem-solvers.', crown: true },
+    { nav: 'Entering the Rental Jungle', heading: 'Entering the Rental   <span class="font-bold text-[#0046FF]">Rental Jungle</span>', icon: '', content: 'We entered the rental world as agents. It felt like a jungle - outdated systems, confused landlords, frustrated tenants. But we were ready to take it on.', crown: false },
+    { nav: 'Chaos & Challenges', heading: 'Chaos & <span class="font-bold text-[#0046FF]">Challenges</span>', icon: '', content: 'Every day brought new problems. No real solutions existed. Everyone - landlords, tenants, agents - felt stuck in a messy, inefficient system.', crown: false },
+    { nav: 'The Shift', heading: 'The <span class="font-bold text-[#0046FF]">Shift</span>', icon: '', content: 'We realized it was about people, not just property. Our approach changed forever. We realized one tool couldn’t solve everything. So we broke it down - studied every part of the industry and built focused solutions to tackle each challenge.', crown: false },
+    { nav: 'A Year of Learning', heading: 'A Year of <span class="font-bold text-[#0046FF]">Learning</span>', icon: '', content: 'We failed, learned, and improved - over and over. Each setback taught us something new. We got smarter, stronger and closer to our vision.', crown: false },
+    { nav: 'The Big Launch', heading: 'The <span class="font-bold text-[#0046FF]">Big Launch</span>', icon: '', content: 'After a year of grinding, we launched Nextdeal - a smart, seamless platform connecting every piece of the real estate puzzle. Our dream became reality.', crown: false },
+    { nav: 'From Friends to Founders', heading: 'From Friends to <span class="font-bold text-[#0046FF]">Founders</span>', icon: '', content: 'We started as friends on a mission. Today, we’re founders transforming real estate - one smart solution at a time.', crown: false }
+  ];
+
+  let currentFrame = 0;
+
+  function renderStoryNavList() {
+    const navList = document.getElementById('story-nav-list');
+    const isMobile = window.innerWidth <= 390;
+
+    navList.innerHTML = storyFrames.map((frame, i) => {
+      const isCurrent = i === currentFrame;
+      const fadeClass = window.__storyNavAnimated ? '' : 'story-fadein-stagger';
+      const animDelay = window.__storyNavAnimated ? '' : `animation-delay:${0.2 + i * 0.12}s`;
+      return `
+        <div class="flex items-center gap-2 cursor-pointer group mb-4 ${fadeClass}" style="${animDelay}" onclick="showStoryFrame(${i})">
+          <img 
+            src="../Images/star.jpg" 
+            alt="star" 
+            class="w-8 h-8 mr-2 ${isCurrent ? (isMobile ? 'mobile-star-animate' : 'star-animate') : ''} ${isCurrent ? '' : 'opacity-0'}" 
+            style="${isCurrent ? '' : 'width:0;height:0;'}" 
+            id="star-img-${i}" 
+          />
+          <span class="${isCurrent ? 'font-bold text-[#0046FF]' : 'text-blue-300'} text-lg transition">${frame.nav}</span>
+        </div>
+      `;
+    }).join('');
+
+    if (!window.__storyNavAnimated) {
       setTimeout(() => {
-        const heading = content.querySelector('.heading-animate');
-        const para = content.querySelector('.content-animate');
-        if (heading) {
-          heading.style.opacity = 0;
-          heading.style.animation = 'headingSlideIn 0.7s cubic-bezier(0.77,0,0.175,1) forwards';
-        }
-        if (para) {
-          para.style.opacity = 0;
-          para.style.animation = 'contentSlideIn 0.7s cubic-bezier(0.77,0,0.175,1) 0.15s forwards';
-        }
-        // Animate the blue line as before
-        content.querySelectorAll('.story-fadein-stagger').forEach((el, idx) => {
-          el.style.animationDelay = el.style.animationDelay || `${0.44 + idx * 0.12}s`;
+        document.querySelectorAll('#story-nav-list .story-fadein-stagger').forEach((el, idx) => {
+          el.style.animationDelay = `${0.2 + idx * 0.12}s`;
           el.style.opacity = 1;
         });
-      }, 10);
+        window.__storyNavAnimated = true;
+      }, 100);
     }
-    function showStoryFrame(idx) {
-      if (idx === currentFrame) return;
-      currentFrame = idx;
-      renderStoryNavList();
-      renderStoryContentArea();
-      // Animate the star rotation for the newly selected nav item
-      setTimeout(() => {
-        const star = document.getElementById(`star-img-${idx}`);
-        if (star) {
-          star.classList.remove('star-animate');
-          // Force reflow to restart animation
-          void star.offsetWidth;
-          star.classList.add('star-animate');
-        }
-      }, 10);
+  }
+
+  function renderStoryContentArea() {
+    const frame = storyFrames[currentFrame];
+    const content = document.getElementById('story-content-area');
+    let html = '';
+
+    if (frame.nav === 'The Spark') {
+      const sparkWord = 'Spark';
+      const kIndex = sparkWord.indexOf('k');
+      const sparkWithKing = sparkWord.substring(0, kIndex) +
+        '<span style="position:relative;display:inline-block;">k<img src="../Images/kingimg.png" alt="king" style="position:absolute;top:-32px;left:0;width:32px;height:32px;z-index:2;" /></span>';
+
+      html = `
+        <div class="flex flex-col items-start w-full">
+          <div class="flex items-center gap-2 mb-2">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight heading-animate">The <span class="font-bold text-[#0046FF]">${sparkWithKing}</span></h2>
+          </div>
+          <p class="text-[#1A2340] text-base md:text-lg mb-2 max-w-2xl content-animate">${frame.content}</p>
+          <div class="w-24 h-1 bg-blue-200 rounded-full mb-2 story-fadein-stagger" style="animation-delay:0.44s"></div>
+        </div>
+      `;
+    } else {
+      html = `
+        <div class="flex flex-col items-start w-full">
+          <div class="flex items-center gap-2 mb-2">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight heading-animate">The <span class="font-bold text-[#0046FF]">${frame.nav.split(' ').slice(-1)[0]}</span></h2>
+          </div>
+          <p class="text-[#1A2340] text-base md:text-lg mb-2 max-w-2xl content-animate">${frame.content}</p>
+          <div class="w-24 h-1 bg-blue-200 rounded-full mb-2 story-fadein-stagger" style="animation-delay:0.44s"></div>
+        </div>
+      `;
     }
-    // Animation trigger for main element and fade-in children
-    function triggerOurStoryAnimation() {
-      const main = document.getElementById('our-story-main');
-      const nav = document.getElementById('our-story-nav');
-      const content = document.getElementById('our-story-content');
-      if (main) {
-        main.style.opacity = 1;
-        main.style.transform = 'translateX(0) scale(1)';
-      }
-      if (nav) {
-        nav.style.opacity = 1;
-        nav.style.transform = 'translateY(0)';
-      }
-      if (content) {
-        content.style.opacity = 1;
-        content.style.transform = 'translateY(0)';
-      }
-    }
-    // Initial render
+
+    content.innerHTML = html;
+
+    setTimeout(() => {
+      const heading = content.querySelector('.heading-animate');
+      const para = content.querySelector('.content-animate');
+      if (heading) heading.style.animation = 'headingSlideIn 0.7s cubic-bezier(0.77,0,0.175,1) forwards';
+      if (para) para.style.animation = 'contentSlideIn 0.7s cubic-bezier(0.77,0,0.175,1) 0.15s forwards';
+      content.querySelectorAll('.story-fadein-stagger').forEach((el, idx) => {
+        el.style.animationDelay = el.style.animationDelay || `${0.44 + idx * 0.12}s`;
+        el.style.opacity = 1;
+      });
+    }, 10);
+  }
+
+  function showStoryFrame(idx) {
+    if (idx === currentFrame) return;
+    currentFrame = idx;
     renderStoryNavList();
     renderStoryContentArea();
-    window.showStoryFrame = showStoryFrame;
-    // Animate on load and on every frame change
-    window.addEventListener('DOMContentLoaded', triggerOurStoryAnimation);
-    
-  </script>
+    setTimeout(() => {
+      const star = document.getElementById(`star-img-${idx}`);
+      if (star) {
+        star.classList.remove('star-animate', 'mobile-star-animate');
+        void star.offsetWidth;
+        star.classList.add(window.innerWidth <= 390 ? 'mobile-star-animate' : 'star-animate');
+      }
+    }, 10);
+  }
+
+  function triggerOurStoryAnimation() {
+    const main = document.getElementById('our-story-main');
+    const nav = document.getElementById('our-story-nav');
+    const content = document.getElementById('our-story-content');
+    if (main) main.style.opacity = 1;
+    if (nav) nav.style.opacity = 1;
+    if (content) content.style.opacity = 1;
+  }
+
+  // Initial render
+  renderStoryNavList();
+  renderStoryContentArea();
+  window.showStoryFrame = showStoryFrame;
+  window.addEventListener('DOMContentLoaded', triggerOurStoryAnimation);
+</script>
+
+
+
 
 
 
@@ -858,8 +695,8 @@
         <img src="/Images/footer/Frame 262.svg" alt="" class="hidden md:block">
         <div class="flex  gap-2 md:hidden">
   
-          <!-- <img src="/Images/footer/layers-01-solid-rounded.svg" alt="">
-          <img src="/Images/footer/NextCRM-product.svg" alt=""> -->
+          <img src="/Images/Google Play Blue.png" alt="" class="w-40 h-15">
+          <img src="/Images/AppStoreBlue.png" alt="" class="w-40 h-15">
         </div>
         <!-- <a href="#" class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-6 rounded-lg text-center">
               <div class="text-sm">Also visit Nextopson.in :</div>
