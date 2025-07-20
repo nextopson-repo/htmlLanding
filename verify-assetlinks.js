@@ -2,6 +2,7 @@
 
 const https = require('https');
 const http = require('http');
+const fs = require('fs');
 
 const url = 'https://nextdeal.in/.well-known/assetlinks.json';
 
@@ -33,7 +34,42 @@ function testUrl(testUrl) {
   });
 }
 
+function testLocalFile() {
+  try {
+    const localData = fs.readFileSync('.well-known/assetlinks.json', 'utf8');
+    const jsonData = JSON.parse(localData);
+    return {
+      success: true,
+      data: jsonData,
+      rawData: localData
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error.message
+    };
+  }
+}
+
 async function verifyAssetLinks() {
+  console.log('📁 Testing local file...');
+  const localResult = testLocalFile();
+  
+  if (localResult.success) {
+    console.log('✅ Local file is valid JSON');
+    console.log('📱 Package Name:', localResult.data[0]?.target?.package_name);
+    console.log('🔗 Relations:', localResult.data[0]?.relation);
+    console.log('🔐 Certificate Fingerprints:', localResult.data[0]?.target?.sha256_cert_fingerprints?.length || 0, 'fingerprints found');
+    if (localResult.data[0]?.target?.sha256_cert_fingerprints) {
+      localResult.data[0].target.sha256_cert_fingerprints.forEach((fp, index) => {
+        console.log(`   ${index + 1}. ${fp}`);
+      });
+    }
+  } else {
+    console.log('❌ Local file error:', localResult.error);
+  }
+  
+  console.log('\n🌐 Testing live URL...');
   try {
     const result = await testUrl(url);
     
@@ -61,6 +97,12 @@ async function verifyAssetLinks() {
         console.log('✅ Valid JSON format');
         console.log('📱 Package Name:', jsonData[0]?.target?.package_name);
         console.log('🔗 Relations:', jsonData[0]?.relation);
+        console.log('🔐 Certificate Fingerprints:', jsonData[0]?.target?.sha256_cert_fingerprints?.length || 0, 'fingerprints found');
+        if (jsonData[0]?.target?.sha256_cert_fingerprints) {
+          jsonData[0].target.sha256_cert_fingerprints.forEach((fp, index) => {
+            console.log(`   ${index + 1}. ${fp}`);
+          });
+        }
       } catch (e) {
         console.log('❌ Invalid JSON format');
       }
