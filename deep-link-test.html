@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Link Test - Nextdeal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="font-outfit bg-gray-50">
+    <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-[#001A48] mb-4">Deep Link Test Page</h1>
+                <p class="text-lg text-gray-600">Test your Nextdeal app deep linking functionality</p>
+            </div>
+
+            <!-- Test Links Section -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-6">Test Deep Links</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Property Details -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Property Details</h3>
+                        <div class="space-y-3">
+                            <a href="nextdeal://property/123" class="block w-full bg-blue-600 text-white py-3 px-4 rounded-lg text-center hover:bg-blue-700 transition-colors">
+                                Open Property #123
+                            </a>
+                            <a href="https://nextdeal.in/property/456" class="block w-full bg-green-600 text-white py-3 px-4 rounded-lg text-center hover:bg-green-700 transition-colors">
+                                Property #456 (Web URL)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Search Results -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Search Results</h3>
+                        <div class="space-y-3">
+                            <a href="nextdeal://search?location=mumbai&type=apartment" class="block w-full bg-purple-600 text-white py-3 px-4 rounded-lg text-center hover:bg-purple-700 transition-colors">
+                                Search Mumbai Apartments
+                            </a>
+                            <a href="https://nextdeal.in/search?location=delhi&type=villa" class="block w-full bg-indigo-600 text-white py-3 px-4 rounded-lg text-center hover:bg-indigo-700 transition-colors">
+                                Search Delhi Villas (Web URL)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- User Profile -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">User Profile</h3>
+                        <div class="space-y-3">
+                            <a href="nextdeal://profile" class="block w-full bg-orange-600 text-white py-3 px-4 rounded-lg text-center hover:bg-orange-700 transition-colors">
+                                Open Profile
+                            </a>
+                            <a href="nextdeal://profile/settings" class="block w-full bg-red-600 text-white py-3 px-4 rounded-lg text-center hover:bg-red-700 transition-colors">
+                                Profile Settings
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Favorites -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Favorites & Bookmarks</h3>
+                        <div class="space-y-3">
+                            <a href="nextdeal://favorites" class="block w-full bg-pink-600 text-white py-3 px-4 rounded-lg text-center hover:bg-pink-700 transition-colors">
+                                My Favorites
+                            </a>
+                            <a href="nextdeal://bookmarks" class="block w-full bg-teal-600 text-white py-3 px-4 rounded-lg text-center hover:bg-teal-700 transition-colors">
+                                My Bookmarks
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instructions -->
+            <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+                <h3 class="text-lg font-semibold text-blue-900 mb-3">How to Test</h3>
+                <div class="text-blue-800 text-sm space-y-2">
+                    <p><strong>1.</strong> Make sure you have the Nextdeal app installed on your device</p>
+                    <p><strong>2.</strong> Click on any of the test links above</p>
+                    <p><strong>3.</strong> If deep linking is properly configured, the app should open automatically</p>
+                    <p><strong>4.</strong> If the app doesn't open, you'll be redirected to the web version</p>
+                </div>
+            </div>
+
+            <!-- Back to Main -->
+            <div class="text-center mt-8">
+                <a href="index.html" class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back to Main Page
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click tracking for analytics
+        document.querySelectorAll('a[href^="nextdeal://"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                console.log('Deep link clicked:', this.href);
+                // You can add analytics tracking here
+            });
+        });
+
+        // Check if app is installed
+        function checkAppInstalled() {
+            const testLink = document.createElement('a');
+            testLink.href = 'nextdeal://test';
+            testLink.style.display = 'none';
+            document.body.appendChild(testLink);
+            
+            let appInstalled = false;
+            const timeout = setTimeout(() => {
+                appInstalled = false;
+            }, 1000);
+            
+            testLink.click();
+            
+            setTimeout(() => {
+                clearTimeout(timeout);
+                document.body.removeChild(testLink);
+                if (!appInstalled) {
+                    console.log('Nextdeal app may not be installed');
+                }
+            }, 1500);
+        }
+
+        // Run check on page load
+        window.addEventListener('load', checkAppInstalled);
+    </script>
+</body>
+</html> 
