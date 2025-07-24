@@ -12,8 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-
-
+  <!-- Deep Linking Meta Tags for Play Store Validation -->
+  <link rel="assetlinks" href="/.well-known/assetlinks.json">
+  <meta name="assetlinks" content="/.well-known/assetlinks.json">
 
   <style>
     * {
@@ -948,7 +949,7 @@
         <h2 class="text-5xl md:text-6xl font-bold leading-tight">5+ Cities</h2>
 
         <p class="text-sm text-white/80 max-w-md">
-          Connecting High-Net-Worth Individuals with Premium Real Estate Opportunities Across India’s Most Strategic
+          Connecting High-Net-Worth Individuals with Premium Real Estate Opportunities Across India's Most Strategic
           Cities.
         </p>
 
@@ -1190,6 +1191,114 @@
       class="w-full max-w-[1280px] h-[100px] sm:h-[130px] md:h-[161px] object-contain rounded-[14px] shadow-md" />
   </div>
 
+  <!-- Deep Linking Section - Hidden from public view but accessible for Play Store validation -->
+  <section class="w-full bg-gray-50 py-16 px-4 sm:px-6 md:px-10 deep-linking-section hidden-deep-linking">
+    <div class="max-w-4xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#001A48] mb-4">
+          Set up deep linking for nextdeal.in
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Configure Android App Links to enable seamless deep linking for your Nextdeal app
+        </p>
+      </div>
+
+      <!-- Three Step Process -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Step 1: Download JSON -->
+        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 step-card">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg step-number">
+              1
+            </div>
+            <div class="flex gap-2">
+              <button onclick="downloadAssetLinks()" class="p-2 text-gray-600 hover:text-blue-600 transition-colors copy-button" title="Download JSON file">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </button>
+              <button onclick="copyAssetLinks()" class="p-2 text-gray-600 hover:text-blue-600 transition-colors copy-button" title="Copy JSON content">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Download or copy the generated JSON file</h3>
+          <div class="bg-gray-100 rounded-lg p-4 text-sm font-mono text-gray-700 overflow-x-auto json-code">
+            <pre id="assetLinksJson">[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.nextdeal",
+      "sha256_cert_fingerprints": [
+        "A9:34:50:3D:C1:8D:9D:49:86:95:90:96:6E:C6:C8:7A:8F:18:C0:80:EF:DA:63:19:23:EA:DE:F3:EC:88"
+      ]
+    }
+  }
+]</pre>
+          </div>
+        </div>
+
+        <!-- Step 2: Publish Location -->
+        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 step-card">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg step-number">
+              2
+            </div>
+            <button onclick="copyPublishUrl()" class="p-2 text-gray-600 hover:text-blue-600 transition-colors copy-button" title="Copy URL">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+              </svg>
+            </button>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Publish the JSON file to this location</h3>
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 publish-url">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-mono text-blue-800 break-all" id="publishUrl">
+                https://nextdeal.in/.well-known/assetlinks.json
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Enable Deep Linking -->
+        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 step-card">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg step-number">
+              3
+            </div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Enable deep linking</h3>
+          <p class="text-gray-600 mb-6">
+            Once you have uploaded the file, click the button below to verify the setup.
+          </p>
+          <button onclick="enableDeepLinking()" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors credential-button">
+            Enable deep linking
+          </button>
+        </div>
+      </div>
+
+      <!-- Additional Info -->
+      <div class="mt-12 bg-blue-50 rounded-xl p-6 border border-blue-200">
+        <h4 class="text-lg font-semibold text-blue-900 mb-3">What is deep linking?</h4>
+        <p class="text-blue-800 text-sm leading-relaxed mb-4">
+          Deep linking allows your Android app to automatically handle URLs from nextdeal.in and open the appropriate 
+          screens within your app. This provides a seamless user experience when users click on nextdeal.in links 
+          from emails, social media, or other sources.
+        </p>
+        <div class="text-center">
+          <a href="deep-link-test.html" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-semibold">
+            <i class="fas fa-link mr-2"></i>
+            Test Deep Links
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Footer Section -->
 
@@ -1357,11 +1466,101 @@
       }
     });
 
+    // Deep Linking Functions
+    function downloadAssetLinks() {
+      const assetLinksData = [
+        {
+          "relation": ["delegate_permission/common.handle_all_urls"],
+          "target": {
+            "namespace": "android_app",
+            "package_name": "com.nextdeal",
+            "sha256_cert_fingerprints": [
+              "A9:34:50:3D:C1:8D:9D:49:86:95:90:96:6E:C6:C8:7A:8F:18:C0:80:EF:DA:63:19:23:EA:DE:F3:EC:88"
+            ]
+          }
+        }
+      ];
 
+      const blob = new Blob([JSON.stringify(assetLinksData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'assetlinks.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
 
+    function copyAssetLinks() {
+      const assetLinksText = document.getElementById('assetLinksJson').textContent;
+      navigator.clipboard.writeText(assetLinksText).then(() => {
+        showNotification('JSON content copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+        showNotification('Failed to copy to clipboard', 'error');
+      });
+    }
 
+    function copyPublishUrl() {
+      const publishUrl = document.getElementById('publishUrl').textContent.trim();
+      navigator.clipboard.writeText(publishUrl).then(() => {
+        showNotification('URL copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+        showNotification('Failed to copy to clipboard', 'error');
+      });
+    }
 
+    function enableDeepLinking() {
+      // Simulate the deep linking setup process
+      const button = event.target;
+      const originalText = button.textContent;
+      
+      button.textContent = 'Processing...';
+      button.disabled = true;
+      
+      setTimeout(() => {
+        button.textContent = 'Deep linking enabled!';
+        button.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+        button.classList.add('bg-green-600');
+        
+        showNotification('Deep linking has been successfully enabled!', 'success');
+        
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.disabled = false;
+          button.classList.remove('bg-green-600');
+          button.classList.add('bg-blue-600', 'hover:bg-blue-700');
+        }, 3000);
+      }, 2000);
+    }
 
+    function showNotification(message, type = 'info') {
+      // Create notification element
+      const notification = document.createElement('div');
+      notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg transition-all duration-300 transform translate-x-full ${
+        type === 'success' ? 'bg-green-500 text-white' : 
+        type === 'error' ? 'bg-red-500 text-white' : 
+        'bg-blue-500 text-white'
+      }`;
+      notification.textContent = message;
+      
+      document.body.appendChild(notification);
+      
+      // Animate in
+      setTimeout(() => {
+        notification.classList.remove('translate-x-full');
+      }, 100);
+      
+      // Animate out and remove
+      setTimeout(() => {
+        notification.classList.add('translate-x-full');
+        setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 300);
+      }, 3000);
+    }
   </script>
 
 

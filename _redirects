@@ -1,0 +1,2 @@
+# Ensure assetlinks.json is served with correct MIME type
+/.well-known/assetlinks.json /well-known/assetlinks.json 200 
