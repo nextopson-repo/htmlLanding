@@ -11,10 +11,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-
+  <link rel="icon" type="image/svg+xml" href="/Images/app-icons.svg" />
   <!-- Deep Linking Meta Tags for Play Store Validation -->
   <link rel="assetlinks" href="/.well-known/assetlinks.json">
   <meta name="assetlinks" content="/.well-known/assetlinks.json">
+
+  
 
   <style>
     * {
@@ -28,7 +30,7 @@
       overflow-x: hidden;
     }
   </style>
-  </style>
+
 </head>
 
 <body class="font-outfit relative overflow-x-hidden  max-[360px]:text-[14px]">
@@ -101,11 +103,11 @@
     </div>
 
     <!-- Hamburger Menu -->
-  <div class="md:hidden flex items-center px-2">
-    <button id="menuToggle" class="text-gray-700 focus:outline-none">
-      <img id="menuIcon" src="/Images/menu-11 copy.svg" alt="menu icon" class="h-7 max-w-7" />
-    </button>
-  </div>
+    <div class="md:hidden flex items-center px-2">
+      <button id="menuToggle" class="text-gray-700 focus:outline-none">
+        <img id="menuIcon" src="/Images/menu-11 copy.svg" alt="menu icon" class="h-7 max-w-7" />
+      </button>
+    </div>
 
   </header>
 
@@ -128,6 +130,7 @@
           <img src="/Images/NextCRM-product.svg" class="w-40 rounded-lg max-[360px]:w-32" />
         </div>
       </div>
+      
 
       <img src="/Images/Line 4.png" class="w-full" />
       <a href="/Pages/About.html">About Us</a>
@@ -146,9 +149,9 @@
         </div>
         <div class="flex flex-col gap-3">
           <img src="/Images/Frame 286.png"
-            class="w-[200px] h-[58px] p-2 rounded-full max-[360px]:w-[150px] max-[360px]:h-[50px]" />
+            class="w-[200px] h-[58px] p-2 rounded-full max-[360px]:w-[180px] max-[360px]:h-[50px]" />
           <img src="/Images/Frame 287.png"
-            class="w-[150px] h-[58px] p-2 rounded-full max-[360px]:w-[130px] max-[360px]:h-[50px]" />
+            class="w-[150px] h-[58px] p-2 rounded-full max-[360px]:w-[160px] max-[360px]:h-[50px]" />
         </div>
       </div>
 
@@ -171,16 +174,20 @@
 
   <!-- Hero Section -->
   <section id="heroSection" class="relative z-10 pt-[80px] pb-32 heroSection min-h-screen px-4">
-    <div class="text-center">
-      <div
-        class="inline-flex items-center justify-center whitespace-nowrap overflow-hidden w-full max-[360px]:w-[280px] max-[360px]:text-[13px] sm:w-[380px] h-[46px] px-4 py-3 border border-[#CCDDFC] rounded-full text-blue-600 font-semibold mb-8 gap-2 bg-white shadow hover:bg-blue-600 hover:text-white transition group">
+<div class="text-center">
+    <div
+      class="inline-flex items-center justify-center whitespace-nowrap overflow-hidden w-full max-[360px]:w-[280px] max-[360px]:text-[13px] sm:w-[380px] h-[46px] px-4 py-3 border border-[#CCDDFC] rounded-full text-blue-600 font-semibold mb-8 gap-2 bg-white shadow hover:bg-blue-600 hover:text-white transition group">
 
-        <img src="/Images/Vector 1.svg"
-          class="w-5 h-5 shrink-0 transition group-hover:invert group-hover:brightness-0" />
+      <img src="/Images/Vector 1.svg" class="w-5 h-5 shrink-0 transition group-hover:invert group-hover:brightness-0" />
 
-        <span class="truncate">Introducing Nextdeals to the world!</span>
-      </div>
+      <span class="truncate">Introducing Nextdeals to the world!</span>
     </div>
+    </div> 
+
+
+
+
+
 
 
     <h1
@@ -1076,25 +1083,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!--  Frequency ask questions-->
   <section class="w-full px-4 py-16 text-center bg-white text-gray-900">
     <!-- Button -->
@@ -1316,144 +1304,145 @@
 
   <!-- Footer Section -->
 
-<footer id="footer" class="w-full bg-black text-white pt-10 pb-6 px-4 sm:px-6 md:px-10">
-  <div class="w-full flex flex-col lg:flex-row justify-between gap-10">
+  <footer id="footer" class="w-full bg-black text-white pt-10 pb-6 px-4 sm:px-6 md:px-10">
+    <div class="w-full flex flex-col lg:flex-row justify-between gap-10">
 
-    <!-- Left: Logo and description -->
-    <div class="w-full md:w-1/3 space-y-4">
-      <!-- Logo -->
-      <img src="/Images/NextDeals Logo 1.png" alt="Logo" class="h-[28px] w-auto max-w-full" />
+      <!-- Left: Logo and description -->
+      <div class="w-full md:w-1/3 space-y-4">
+        <!-- Logo -->
+        <img src="/Images/NextDeals Logo 1.png" alt="Logo" class="h-[28px] w-auto max-w-full" />
 
-      <!-- Description -->
-<p
-  class="text-xs text-gray-300 font-extralight leading-relaxed break-words whitespace-normal w-full max-w-full overflow-hidden px-1">
-  Our platform facilitates high-value real estate transactions, specializing in the buying, selling,
-  and leasing of hotels and lands for high-net-worth individuals and businesses.
-</p>
-
-
-
-      <!-- Address -->
-    <p
-      class="text-xs text-gray-300 font-extralight leading-relaxed break-words whitespace-normal w-full max-w-full overflow-hidden px-1">
-      <span class="font-bold">Office Address:</span> XYZ Corporate Tower, 4th Floor, MP Nagar, Zone-1,
-      Bhopal, Madhya Pradesh - 462011, India
-    </p>
+        <!-- Description -->
+        <p
+          class="text-xs text-gray-300 font-extralight leading-relaxed break-words whitespace-normal w-full max-w-full overflow-hidden px-1">
+          Our platform facilitates high-value real estate transactions, specializing in the buying, selling,
+          and leasing of hotels and lands for high-net-worth individuals and businesses.
+        </p>
 
 
+
+        <!-- Address -->
+        <p
+          class="text-xs text-gray-300 font-extralight leading-relaxed break-words whitespace-normal w-full max-w-full overflow-hidden px-1">
+          <span class="font-bold">Office Address:</span> XYZ Corporate Tower, 4th Floor, MP Nagar, Zone-1,
+          Bhopal, Madhya Pradesh - 462011, India
+        </p>
+
+
+      </div>
+
+      <!-- Mobile Social Icons -->
+      <div class="inline-flex justify-start items-center gap-6 md:hidden pr-10">
+        <!-- Facebook -->
+        <div
+          class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+          <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+          <div
+            class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+          </div>
+          <img src="/Images/Socimg/facebook.svg" alt="Facebook"
+            class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
+        </div>
+
+        <!-- Instagram -->
+        <div
+          class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+          <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+          <div
+            class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+          </div>
+          <img src="/Images/Socimg/instagram.svg" alt="Instagram"
+            class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
+        </div>
+
+        <!-- Twitter -->
+        <div
+          class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+          <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+          <div
+            class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+          </div>
+          <img src="/Images/Socimg/twitter.svg" alt="Twitter"
+            class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
+        </div>
+      </div>
+
+      <!-- Center: Company + Helpful -->
+      <div class="flex flex-col gap-8 lg:flex-row lg:gap-20">
+        <div>
+          <h3 class="font-normal text-2xl mb-2">Company</h3>
+          <ul class="font-extralight space-y-1 text-xs text-gray-300">
+            <li><a href="/Pages/About.html">About Us</a></li>
+            <li><a href="/Pages/Careers.html">Careers</a></li>
+            <li><a href="/Pages/our-team.html">Our Team</a></li>
+            <li><a href="/Pages/terms-useges.html">Terms of Usage</a></li>
+            <li><a href="/Pages/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-normal mb-2 text-2xl">Helpful</h3>
+          <ul class="font-extralight space-y-1 text-xs text-gray-300">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#Categorie">Services</a></li>
+            <li><a href="/Pages/Contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right: CTA Buttons -->
+      <div class="flex flex-col space-y-4 md:w-[15%]">
+        <img src="/Images/footer/Frame 262.svg" alt="" class="hidden md:block">
+        <div class="flex gap-2 md:hidden">
+          <img src="/Images/Google Play Blue.png" alt="" class="w-40 h-15">
+          <img src="/Images/AppStoreBlue.png" alt="" class="w-40 h-15">
+        </div>
+      </div>
     </div>
 
-    <!-- Mobile Social Icons -->
-    <div class="inline-flex justify-start items-center gap-6 md:hidden pr-10">
-      <!-- Facebook -->
-      <div
-        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
-        <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-        <div
-          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
-        </div>
-        <img src="/Images/Socimg/facebook.svg" alt="Facebook"
-          class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
-      </div>
+    <!-- Bottom Section -->
+    <div
+      class="w-full flex flex-col md:flex-row justify-between items-center mt-10 pt-4 text-sm font-medium text-gray-300 gap-3">
+      <p class="break-words max-w-full whitespace-normal text-center md:text-left">© 2025 Exson Proptech Private
+        Limited.
+        All rights reserved.</p>
 
-      <!-- Instagram -->
-      <div
-        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
-        <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+      <!-- Desktop Social Icons -->
+      <div class="inline-flex justify-start items-center gap-6 hidden sm:inline-flex pr-10">
+        <!-- Facebook -->
         <div
-          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+          class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+          <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+          <div
+            class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+          </div>
+          <img src="/Images/Socimg/facebook.svg" alt="Facebook"
+            class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
         </div>
-        <img src="/Images/Socimg/instagram.svg" alt="Instagram"
-          class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
-      </div>
 
-      <!-- Twitter -->
-      <div
-        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
-        <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+        <!-- Instagram -->
         <div
-          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+          class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+          <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+          <div
+            class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+          </div>
+          <img src="/Images/Socimg/instagram.svg" alt="Instagram"
+            class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
         </div>
-        <img src="/Images/Socimg/twitter.svg" alt="Twitter"
-          class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
+
+        <!-- Twitter -->
+        <div
+          class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
+          <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
+          <div
+            class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
+          </div>
+          <img src="/Images/Socimg/twitter.svg" alt="Twitter"
+            class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
+        </div>
       </div>
     </div>
-
-    <!-- Center: Company + Helpful -->
-    <div class="flex flex-col gap-8 lg:flex-row lg:gap-20">
-      <div>
-        <h3 class="font-normal text-2xl mb-2">Company</h3>
-        <ul class="font-extralight space-y-1 text-xs text-gray-300">
-          <li><a href="/Pages/About.html">About Us</a></li>
-          <li><a href="/Pages/Careers.html">Careers</a></li>
-          <li><a href="/Pages/our-team.html">Our Team</a></li>
-          <li><a href="/Pages/terms-useges.html">Terms of Usage</a></li>
-          <li><a href="/Pages/privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-normal mb-2 text-2xl">Helpful</h3>
-        <ul class="font-extralight space-y-1 text-xs text-gray-300">
-          <li><a href="/">Home</a></li>
-          <li><a href="/#Categorie">Services</a></li>
-          <li><a href="/Pages/Contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Right: CTA Buttons -->
-    <div class="flex flex-col space-y-4 md:w-[15%]">
-      <img src="/Images/footer/Frame 262.svg" alt="" class="hidden md:block">
-      <div class="flex gap-2 md:hidden">
-        <img src="/Images/Google Play Blue.png" alt="" class="w-40 h-15">
-        <img src="/Images/AppStoreBlue.png" alt="" class="w-40 h-15">
-      </div>
-    </div>
-  </div>
-
-  <!-- Bottom Section -->
-  <div
-    class="w-full flex flex-col md:flex-row justify-between items-center mt-10 pt-4 text-sm font-medium text-gray-300 gap-3">
-    <p class="break-words max-w-full whitespace-normal text-center md:text-left">© 2025 Exson Proptech Private Limited.
-      All rights reserved.</p>
-
-    <!-- Desktop Social Icons -->
-    <div class="inline-flex justify-start items-center gap-6 hidden sm:inline-flex pr-10">
-      <!-- Facebook -->
-      <div
-        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
-        <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-        <div
-          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
-        </div>
-        <img src="/Images/Socimg/facebook.svg" alt="Facebook"
-          class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
-      </div>
-
-      <!-- Instagram -->
-      <div
-        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
-        <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-        <div
-          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
-        </div>
-        <img src="/Images/Socimg/instagram.svg" alt="Instagram"
-          class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
-      </div>
-
-      <!-- Twitter -->
-      <div
-        class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
-        <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-        <div
-          class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
-        </div>
-        <img src="/Images/Socimg/twitter.svg" alt="Twitter"
-          class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 
   <script>
