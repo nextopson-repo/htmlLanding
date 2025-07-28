@@ -278,8 +278,8 @@ body {
 
 
 /* 🔄 Gradient Animation Keyframes */
-/* @keyframes gradient-shift { */
-  /* 0% {
+ /* @keyframes gradient-shift { 
+  0% {
     background-position: 0% 50%;
   }
 
@@ -290,10 +290,10 @@ body {
   100% {
     background-position: 0% 50%;
   }
-} */
+}   */
 
 /* ✅ Mobile-only continuous animation */
-/* @media (max-width: 1023px) {
+ /* @media (max-width: 1023px) {
 
   .mobile-gradient-animate,
   .mobile-gradient-2,
@@ -302,10 +302,10 @@ body {
     background-size: 200% 200%;
     animation: gradient-shift 5s ease infinite;
   }
-} */
+}  */
 
 /* ❌ Disable animation on desktop */
-/* @media (min-width: 1024px) {
+ /* @media (min-width: 1024px) {
 
   .mobile-gradient-animate,
   .mobile-gradient-2,
@@ -313,7 +313,27 @@ body {
   .mobile-gradient-4 {
     animation: none;
   }
-}  */
+}   */
+
+
+
+
+ @keyframes bounce {
+
+   0%,
+   100% {
+     transform: translateY(0);
+   }
+
+   50% {
+     transform: translateY(-5px);
+   }
+ }
+
+ .arrow-bounce {
+   animation: bounce 1s infinite;
+ }
+
 
 /* Container wrapper */
 .downloadWrapper {

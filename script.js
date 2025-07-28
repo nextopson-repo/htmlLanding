@@ -18,6 +18,9 @@ fetch(headerPath)
     setupHeaderScripts();
   });
 
+
+
+
 function setupHeaderScripts() {
   // Android icon hover effect
   const androidIcon = document.querySelector('.androidicon');
