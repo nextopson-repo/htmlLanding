@@ -94,5 +94,32 @@ function alertCTA() {
 
 
    
-  
-      
+ // Highlight current vertical line in mobile view
+function updateMobileLineHighlight(current) {
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    for (let i = 0; i < 7; i++) {
+      const line = document.getElementById(`line-${i}`);
+      if (!line) continue;
+
+      // Clear old star
+      const existingStar = line.querySelector('.mobile-star');
+      if (existingStar) existingStar.remove();
+
+      // Apply color & star to current
+      if (i === current) {
+        line.style.backgroundColor = '#0046FF';
+        const img = document.createElement('img');
+        img.src = '../Images/star.jpg';
+        img.alt = 'star';
+        img.classList.add('mobile-star');
+        line.appendChild(img);
+      } else {
+        line.style.backgroundColor = '#B3CCFB';
+      }
+    }
+  }
+}
+
+

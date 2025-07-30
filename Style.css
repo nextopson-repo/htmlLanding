@@ -616,3 +616,17 @@ body {
 }
 
 
+.writing-mode-horizontal {
+  writing-mode: horizontal-tb;
+}
+
+
+
+.mobile-star {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+}
