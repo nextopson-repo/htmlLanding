@@ -634,7 +634,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 220px;
+  margin-top: 240px;
 }
 
 .Left_Image_Section {
@@ -728,6 +728,7 @@ body {
     word-spacing: 2px !important;
     letter-spacing: 0px !important;
     
+    
   }
 }
     @media (width: 1024px) {
@@ -742,5 +743,17 @@ body {
            p.text-center {
              font-size: 16px;
              max-width: 750px;
+             
            }
+         }
+
+
+         #heroSection p {
+           font-weight:200 ;
+           font-family: outfit;
+           line-height: 32px;
+         }
+
+         #heroSection h1 {
+          font-size: 58px;
          }
