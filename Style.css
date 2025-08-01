@@ -634,8 +634,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 250px;
-  position: relative;
+  margin-top: 220px;
 }
 
 .Left_Image_Section {
@@ -680,7 +679,7 @@ body {
 }
 
 .pera_tag {
-  /* width: 40vw; */
+  width: 41vw;
   flex-shrink: initial;
 }
 
@@ -694,31 +693,21 @@ body {
     justify-content: center;
     align-items: center;
     position: static;
-  
-  
+    min-width: 93vw;
   }
 
-
-  .head1{
-    font-size: 26px;
-    width: 100vw;
-  }
-
-
- .Feature_List {
+  .Feature_List {
     justify-content: center;
     align-items: center;
-  
 
   }
-
-  .paratag{
-    font-size: 16px;
-    width: 100vw;
-    }
 
   .About_Section {
     justify-content: center;
+  }
+
+  .pera_tag {
+    width: 92vw;
   }
 
 }
