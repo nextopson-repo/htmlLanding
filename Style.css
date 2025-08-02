@@ -634,7 +634,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 240px;
+  margin-top: 280px;
 }
 
 .Left_Image_Section {
@@ -719,7 +719,7 @@ body {
 
 }
 
-@media (min-width: 1024px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   #Categorie {
     max-width: 900px;
     margin-left: auto;
@@ -769,3 +769,17 @@ body {
        
          }
 
+
+
+
+ #Categorie{
+  width: 1200px !important;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+
+ .videosec{
+  margin-left: 8rem;
+ 
+ }
