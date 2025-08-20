@@ -786,3 +786,66 @@ body {
  
  }
 
+
+
+ /* testimonials-grid */
+
+ /* Add this to your CSS file or in a <style> tag */
+.testimonial-image {
+  @apply w-24 h-32 sm:w-28 sm:h-36 lg:w-32 lg:h-40 object-cover rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105;
+}
+
+/* Floating animations for a more dynamic feel */
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-1deg); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+}
+
+@keyframes float4 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(-0.5deg); }
+}
+
+@keyframes float5 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(1.5deg); }
+}
+
+@keyframes float6 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(-1.5deg); }
+}
+
+.animate-float-1 { animation: float1 6s ease-in-out infinite; }
+.animate-float-2 { animation: float2 8s ease-in-out infinite; }
+.animate-float-3 { animation: float3 7s ease-in-out infinite; }
+.animate-float-4 { animation: float4 9s ease-in-out infinite; }
+.animate-float-5 { animation: float5 5s ease-in-out infinite; }
+.animate-float-6 { animation: float6 10s ease-in-out infinite; }
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    padding: 0 1rem;
+  }
+  
+  .testimonial-image {
+    @apply w-20 h-28;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-image {
+    @apply w-16 h-24 rounded-xl;
+  }
+}
