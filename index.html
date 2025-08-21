@@ -9,6 +9,7 @@
     content="NextDeal is India’s leading real estate marketplace and networking app. Buy, sell, rent properties, and connect with verified agents and investors — all in one powerful platform." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <link rel="stylesheet" href="./Style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,6 +54,15 @@
     })(window, document, 'script', 'dataLayer', 'GTM-5WT9X4RD');</script>
   <!-- End Google Tag Manager -->
 
+  <!-- lottie animation link -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+
+  <!-- gsap animation link -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 </head>
 
 <body class="font-outfit relative overflow-x-hidden  max-[360px]:text-[14px]">
@@ -63,8 +73,10 @@
 
   <header class="flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 bg-white top-0 left-0 w-full z-50">
     <div class="w-[100px] sm:w-[140px] md:w-[170px] flex items-center max-[360px]:w-[90px]">
-      <img src="./Images/nextdeal-blue (1).svg" alt="Logo" class="h-[20px] w-auto hidden md:block" />
+      <a href="/">
+        <img src="./Images/nextdeal-blue (1).svg" alt="Logo" class="h-[20px] w-auto hidden md:block" />
       <img src="./Images/nextdeal-blue (1).svg" alt="Mobile Logo" class="h-[20px] w-auto block md:hidden" />
+      </a>
     </div>
 
     <!-- Desktop Nav -->
@@ -117,9 +129,11 @@
     <div id="downloadWrapper" class="downloadWrapper hidden sm:hidden md:flex ml-4 relative mr-3">
 
       <div class="mainBox">
-        <div class="androidicon">
-          <img class="androidimg" src="/Images/DownloadForAndroid.svg" alt="Download for Android" />
-        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.nextdeal&pcampaignid=web_share" target="_blank">
+          <div class="androidicon">
+            <img class="androidimg" src="/Images/DownloadForAndroid.svg" alt="Download for Android" />
+          </div>
+        </a>
         <div class="divider"></div>
         <div class="appleicon">
           <img class="appleimg" src="/Images/DownloadForApple.svg" alt="Download for Apple" />
@@ -189,68 +203,67 @@
   </div>
 
   <!-- Background Image -->
-
-  <div class="w-full bg-white overflow-hidden">
+  <div class="w-full bg-white mb-24">
     <!-- Background Image for md+ -->
-    <div class="mainimg absolute inset-0 w-full h-full z-0 hidden md:block">
-      <img src="/Images/mainimg.png" alt="Background" class="w-full h-full object-fill md:translate-y-[100px]
-      lg:translate-y-[260px]
-      xl:translate-y-[320px]
-      2xl:translate-y-[260px]" />
+    <div class="mainimg absolute inset-0 w-full h-full z-0 hidden md:block top-[35%]">
+      <img src="/Images/Group 8.png" alt="Background" class="w-full h-[90%] object-fill" />
     </div>
 
-    <div class="absolute bottom-0 left-0 w-full flex justify-center gap-0 z-0 md:hidden">
-      <img src="/Images/Group 4.png" alt="Mobile Image 1"
-        class="w-full h-[250px] max-[360px]:h-[180px] translate-y-32" />
+    <!-- Wave Layers -->
+    <div class="absolute top-[105%] left-0 w-full h-full z-1 water1">
+      <img src="/Images/Vector (1).png" alt="Water Wave 1" class="w-full h-[170px] max-[360px]:h-[180px]" />
     </div>
-  </div>
+
+    <div class="absolute top-[110%] left-0 w-full h-full z-2 water2">
+      <img src="/Images/Vector (2).png" alt="Water Wave 2" class="w-full h-[170px] max-[360px]:h-[180px]" />
+    </div>
 
 
-  <!-- Hero Section -->
-  <section id="heroSection" class="relative z-10 pt-[80px] pb-32 heroSection min-h-screen px-4 md:px-6 lg:px-8">
 
-    <!-- Tagline Button -->
-    <div class="text-center">
-      <div
-        class="inline-flex items-center justify-center whitespace-nowrap overflow-hidden w-full max-[360px]:w-[280px] max-[360px]:text-[13px] sm:w-[380px] h-[46px] px-4 py-3 border border-[#CCDDFC] rounded-full text-blue-600 font-semibold mb-8 gap-2 bg-white shadow hover:bg-blue-600 hover:text-white transition group">
 
-        <img src="/Images/Vector 1.svg"
-          class="w-5 h-5 shrink-0 transition group-hover:invert group-hover:brightness-0" />
+    <!-- Hero Section -->
+    <section id="heroSection"
+      class="w-full relative z-10 pt-[80px] heroSection min-h-screen px-4 md:px-6 lg:px-8">
+      <!-- Tagline Button -->
+      <div class="text-center">
+        <div
+          class="inline-flex items-center justify-center whitespace-nowrap overflow-hidden w-full max-[360px]:w-[280px] max-[360px]:text-[13px] sm:w-[380px] h-[46px] px-4 py-3 border border-[#CCDDFC] rounded-full text-blue-600 font-semibold mb-8 gap-2 bg-white shadow hover:bg-blue-600 hover:text-white transition group">
 
-        <span class="truncate">Introducing Nextdeals to the world!</span>
+          <img src="/Images/Vector 1.svg"
+            class="w-5 h-5 shrink-0 transition group-hover:invert group-hover:brightness-0" />
+
+          <span class="truncate">Introducing Nextdeals to the world!</span>
+        </div>
       </div>
-    </div>
 
-    <!-- Main Heading -->
-    <h1
-      class="text-center font-bold text-2xl max-[360px]:text-2xl sm:text-4xl md:text-[46px]  xl:text-3xl 2xl:text-6xl text-[#001A48] leading-tight">
-
-      AI-Powered Marketplace for Real Estate
-    </h1>
+      <!-- Main Heading -->
+      <h1
+        class="text-center font-bold text-[#001A48] leading-tight">
+        AI-Powered Marketplace for Real Estate
+      </h1>
 
 
 
-    <!-- Description -->
+      <!-- Description -->
 
-    <p class="paras text-center mx-auto mt-5 text-md sm:text-base md:text-[28px] xl:text-[24px] max-w-3xl xl:max-w-5xl">
+      <p class="paras text-center mx-auto mt-5 text-md sm:text-base md:text-[18px] xl:text-[24px] max-w-5xl">
+        Welcome to Nextdeal – the smart real estate marketplace connecting buyers, sellers, renters,<br>
+        and agents for faster, simpler, and more transparent transactions.
+      </p>
 
-      Welcome to Nextdeal – the smart real estate marketplace connecting buyers, sellers, renters,<br>
-      and agents for faster, simpler, and more transparent transactions.
-    </p>
+      <!-- App Download Buttons -->
+      <div class="mt-6 flex justify-center flex-wrap gap-4">
+        <a href="https://play.google.com/store/apps/details?id=com.nextdeal&pcampaignid=web_share" target="_blank">
+          <img src="/Images/Google Play Blue.png"
+            class="h-16 md:h-[60px] max-[1024px]:h-[36px] max-[1024px]:w-[140px] bg-white hover:scale-105 transition-transform duration-300 max-[360px]:h-12" />
+        </a>
+        <a href="#">
+          <img src="/Images/AppStoreBlue.png"
+            class="h-16 md:h-[60px] max-[1024px]:h-[36px] max-[1024px]:w-[140px] bg-white hover:scale-105 transition-transform duration-300 max-[360px]:h-12" />
+        </a>
+      </div>
 
-    <!-- App Download Buttons -->
-    <div class="mt-14 max-[1024px]:mt-6 flex justify-center flex-wrap gap-4">
-      <a href="#">
-        <img src="/Images/Google Play Blue.png"
-          class="h-16 md:h-[60px] max-[1024px]:h-[36px] max-[1024px]:w-[140px] bg-white hover:scale-105 transition-transform duration-300 max-[360px]:h-12" />
-      </a>
-      <a href="#">
-        <img src="/Images/AppStoreBlue.png"
-          class="h-16 md:h-[60px] max-[1024px]:h-[36px] max-[1024px]:w-[140px] bg-white hover:scale-105 transition-transform duration-300 max-[360px]:h-12" />
-      </a>
-    </div>
-
-  </section>
+    </section>
   </div>
 
   <!-- Scripts -->
@@ -315,9 +328,8 @@
 
 
 
-  <!-- About Section -->
-
-  <div class="About_Section  ">
+  <!-- About Section (AI Features section) -->
+  <div class="About_Section mb-24 pt-12 animateBox ">
 
     <!-- Left Image Section -->
     <div class="Left_Image_Section"
@@ -330,24 +342,14 @@
     <!-- Right Content Section -->
     <div class="Right_Content_Section">
       <!-- AI Features Button -->
-      <button class="bg-blue-600 text-white rounded-lg text-sm ">
-        <img src="/Images/Star 1 (1).svg" alt="" />AI Features
+      <button class="bg-blue-600 text-white rounded-lg text-sm gap-2 flex items-center ">
+        <img src="/Images/Star 1 (1).svg" alt="star icon" class="h-5 w-5" /> <span>AI Features</span>
       </button>
-
-      <!-- <div class="Right_Content_Section w-full md:w-1/2 md:-mt-12 md:translate-x-4">
-        AI Features Button
-        <button class="bg-blue-600 text-white px-4 py-1 rounded-lg text-sm mb-4 flex items-center gap-2 mx-auto md:mx-0">
-          <img src="/Images/Star 1 (1).svg" alt="" />AI Features
-        </button> -->
 
       <!-- Heading -->
       <h1 class="text-3xl lg:text-4xl font-medium mb-8  text-center md:text-left text-[#001A48] leading-tight">
         Personalized Real Estate,<br />Powered by AI
       </h1>
-
-      <!-- Feature List -->
-      <!-- <div class="space-y-6">-------------------------------------------- -->
-
 
       <!-- Feature Item -->
       <div class="Feature_List">
@@ -423,16 +425,10 @@
 
 
 
-
-
-
-
-
-
   <!--Categories  and Integration -->
 
   <div id="Categorie"
-    class="hidden md:block text-white px-4 sm:px-6 md:px-8 lg:px-10 py-10 rounded-3xl    mt-40 relative bg-blue-600 h-auto">
+    class="hidden md:block text-white px-4 sm:px-6 md:px-8 lg:px-10 py-10 rounded-3xl relative h-auto catagories-bg animateBox">
 
     <!-- Category Tag -->
     <button class="bg-white text-blue-600 px-4 py-1 text-sm rounded-full mb-4 flex items-center gap-2">
@@ -545,7 +541,7 @@
 
 
 
-
+  <!-- mobile catagories section with animation and dynamic card slider -->
   <script>
     const slides1 = [
       { img: "./Images/building-02-solid-rounded.svg", text: "Builder Floors" },
@@ -607,12 +603,18 @@
 
 
 
-  <!-- Video section s -->
+  <!-- CRM Solution section -->
 
-  <div class=" videosec  md:px-12 pt-28 flex flex-col md:flex-row hidden sm:flex mb-32">
+  <div class=" videosec  md:px-12 pt-28 flex flex-col md:flex-row hidden sm:flex mb-32 animateBox">
 
     <!-- Left Text Section -->
-    <div class=" leftsec flex-1 mt-12">
+    <div class=" leftsec flex-1 mt-12 relative">
+
+      <span class="absolute left-[30%] -top-[3.5%] w-full h-full">
+        <dotlottie-wc src="https://lottie.host/210b23a9-542e-42e7-a2f3-3693a5d1e1bc/hegPNItQEv.lottie"
+          style="width: 300px;height: 300px" speed="3" autoplay loop></dotlottie-wc>
+      </span>
+
       <h2 class="text-5xl font-bold leading-tight text-gray-900 mt-4">
         Discover our <br />
         feature-rich CRM <br />
@@ -627,9 +629,9 @@
     </div>
 
     <!-- Right GIF/Image Section -->
-    <div class=" videoimg w-[450px]  ">
+    <div class=" videoimg w-[450px] h-full  ">
 
-      <img src="/Images/Analytics Character Animation.gif" alt="Video Thumbnail" class="w-full h-full object-cover" />
+      <img src="/Images/crm-img.jpg" alt="Video Thumbnail" class="w-full h-full object-cover" />
     </div>
 
 
@@ -641,7 +643,7 @@
   <!-- We Provide Solution for EveryOne-->
 
 
-  <section class="w-full px-6 py-16 bg-[#0066ff] text-white font-outfit">
+  <section class="w-full px-6 py-16 bg-[#0066ff] text-white font-outfit animateBox">
     <!-- Heading -->
     <h2 class="text-3xl md:text-4xl font-semibold text-center mb-8">
       We provide solutions for everyone
@@ -877,7 +879,7 @@
   <!--Why Choose  Us-->
 
 
-  <section class="max-w-7xl mx-auto px-6 py-16 text-center">
+  <section class="max-w-7xl mx-auto px-6 py-16 text-center animateBox">
     <!-- Button -->
     <div class="flex justify-center mb-4">
       <button
@@ -1003,7 +1005,7 @@
 
   <!-- Available accross in Map-->
 
-  <section class="w-full bg-[#0047FF] text-white font-sans pt-12 pb-16 font-outfit">
+  <section class="w-full bg-[#0047FF] text-white font-sans pt-12 pb-16 font-outfit animateBox">
     <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
       <!-- Left Column (Text) -->
@@ -1017,16 +1019,59 @@
         </p>
 
         <!-- Mobile Map -->
-        <div class="relative flex justify-center items-center md:hidden">
+        <div class="relative flex md:hidden justify-center items-center">
           <img src="/Images/map.png" alt="India Map White" class="w-full max-w-md object-contain rounded-lg" />
 
           <!-- Delhi -->
-          <span class="absolute top-[25%] left-[58%] w-3 h-3 bg-red-500 rounded-full animate-ping z-10"></span>
-          <span class="absolute top-[25%] left-[58%] w-2 h-2 bg-red-600 rounded-full z-20"></span>
+          <div class="group absolute top-[30%] left-[29%]">
+            <span class="w-3 h-3 bg-orange-400 rounded-full animate-ping z-10 absolute"></span>
+            <span class="w-2 h-2 bg-orange-500 rounded-full z-20 absolute mt-[2px] ml-[2px]"></span>
+            <!-- Badge -->
+            <div
+              class="lg:w-[8.5rem] text-center absolute z-30 -top-7 left-1/2 -translate-x-1/2 px-2 py-1 bg-blue-900 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition">
+              Coming soon in Delhi
+            </div>
+          </div>
 
-          <!-- Mumbai -->
-          <span class="absolute top-[62%] left-[40%] w-3 h-3 bg-green-500 rounded-full animate-ping z-10"></span>
-          <span class="absolute top-[62%] left-[40%] w-2 h-2 bg-green-600 rounded-full z-20"></span>
+          <!-- Chandigarh -->
+          <div class="group absolute top-[20%] left-[29%]">
+            <span class="w-3 h-3 bg-orange-400 rounded-full animate-ping z-10 absolute"></span>
+            <span class="w-2 h-2 bg-orange-500 rounded-full z-20 absolute mt-[2px] ml-[2px]"></span>
+            <div
+              class="lg:w-[10.4rem] text-center absolute z-30 -top-7 left-1/2 -translate-x-1/2 px-2 py-1 bg-blue-900 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition">
+              Coming soon in Chandigarh
+            </div>
+          </div>
+
+          <!-- Lucknow -->
+          <div class="group absolute top-[36%] left-[41%]">
+            <span class="w-3 h-3 bg-orange-400 rounded-full animate-ping z-10 absolute"></span>
+            <span class="w-2 h-2 bg-orange-500 rounded-full z-20 absolute mt-[2px] ml-[2px]"></span>
+            <div
+              class="absolute z-20 -top-7 left-1/2 -translate-x-1/2 px-2 py-1 bg-blue-900 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition">
+              Lucknow
+            </div>
+          </div>
+
+          <!-- Indore -->
+          <div class="group absolute top-[49%] left-[30%]">
+            <span class="w-3 h-3 bg-orange-400 rounded-full animate-ping z-10 absolute"></span>
+            <span class="w-2 h-2 bg-orange-500 rounded-full z-20 absolute mt-[2px] ml-[2px]"></span>
+            <div
+              class="absolute z-20 -top-7 left-1/2 -translate-x-1/2 px-2 py-1 bg-blue-900 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition">
+              Indore
+            </div>
+          </div>
+
+          <!-- Bengaluru -->
+          <!-- <div class="group absolute top-[79%] left-[35%]">
+          <span class="w-3 h-3 bg-orange-400 rounded-full animate-ping z-10 absolute"></span>
+          <span class="w-2 h-2 bg-orange-500 rounded-full z-20 absolute mt-[2px] ml-[2px]"></span>
+          <div
+            class="absolute z-20 -top-7 left-1/2 -translate-x-1/2 px-2 py-1 bg-blue-900 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition">
+            Bengaluru
+          </div>
+        </div> -->
         </div>
 
         <!-- Stats -->
@@ -1055,13 +1100,57 @@
         <img src="/Images/map.png" alt="India Map White" class="w-full max-w-md object-contain rounded-lg" />
 
         <!-- Delhi -->
-        <span class="absolute top-[25%] left-[58%] w-3 h-3 bg-red-500 rounded-full animate-ping z-10"></span>
-        <span class="absolute top-[25%] left-[58%] w-2 h-2 bg-red-600 rounded-full z-20"></span>
+        <div class="group absolute top-[30%] left-[34%]">
+          <span class="w-3 h-3 bg-orange-400 rounded-full animate-ping z-10 absolute"></span>
+          <span class="w-2 h-2 bg-orange-500 rounded-full z-20 absolute mt-[2px] ml-[2px]"></span>
+          <!-- Badge -->
+          <div
+            class="lg:w-[8.5rem] text-center absolute z-30 -top-7 left-1/2 -translate-x-1/2 px-2 py-1 bg-blue-900 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition">
+            Coming soon in Delhi
+          </div>
+        </div>
 
-        <!-- Mumbai -->
-        <span class="absolute top-[62%] left-[40%] w-3 h-3 bg-green-500 rounded-full animate-ping z-10"></span>
-        <span class="absolute top-[62%] left-[40%] w-2 h-2 bg-green-600 rounded-full z-20"></span>
+        <!-- Chandigarh -->
+        <div class="group absolute top-[20%] left-[34%]">
+          <span class="w-3 h-3 bg-orange-400 rounded-full animate-ping z-10 absolute"></span>
+          <span class="w-2 h-2 bg-orange-500 rounded-full z-20 absolute mt-[2px] ml-[2px]"></span>
+          <div
+            class="lg:w-[10.4rem] text-center absolute z-30 -top-7 left-1/2 -translate-x-1/2 px-2 py-1 bg-blue-900 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition">
+            Coming soon in Chandigarh
+          </div>
+        </div>
+
+        <!-- Lucknow -->
+        <div class="group absolute top-[36%] left-[43%]">
+          <span class="w-3 h-3 bg-orange-400 rounded-full animate-ping z-10 absolute"></span>
+          <span class="w-2 h-2 bg-orange-500 rounded-full z-20 absolute mt-[2px] ml-[2px]"></span>
+          <div
+            class="absolute z-20 -top-7 left-1/2 -translate-x-1/2 px-2 py-1 bg-blue-900 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition">
+            Lucknow
+          </div>
+        </div>
+
+        <!-- Indore -->
+        <div class="group absolute top-[49%] left-[32%]">
+          <span class="w-3 h-3 bg-orange-400 rounded-full animate-ping z-10 absolute"></span>
+          <span class="w-2 h-2 bg-orange-500 rounded-full z-20 absolute mt-[2px] ml-[2px]"></span>
+          <div
+            class="absolute z-20 -top-7 left-1/2 -translate-x-1/2 px-2 py-1 bg-blue-900 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition">
+            Indore
+          </div>
+        </div>
+
+        <!-- Bengaluru -->
+        <!-- <div class="group absolute top-[79%] left-[35%]">
+          <span class="w-3 h-3 bg-orange-400 rounded-full animate-ping z-10 absolute"></span>
+          <span class="w-2 h-2 bg-orange-500 rounded-full z-20 absolute mt-[2px] ml-[2px]"></span>
+          <div
+            class="absolute z-20 -top-7 left-1/2 -translate-x-1/2 px-2 py-1 bg-blue-900 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition">
+            Bengaluru
+          </div>
+        </div> -->
       </div>
+
 
     </div>
   </section>
@@ -1077,7 +1166,7 @@
 
   <!-- Trusted and Testimonials -->
 
-  <section class="relative py-24 px-4 w-full">
+  <section class="relative py-24 px-4 w-full animateBox">
     <!-- Background Image -->
     <img src="/Images/Wave Line 1.png" alt="Wave Background"
       class="absolute top-0 left-0 w-[1600px] min-w-[100%] h-full object-cover opacity-60 z-0 pt-40 hidden md:flex" />
@@ -1146,7 +1235,7 @@
 
 
   <!--  Frequency ask questions-->
-  <section class="w-full px-4 py-12 text-center bg-white text-gray-900">
+  <section class="w-full px-4 py-12 text-center bg-white text-gray-900 animateBox">
     <!-- Button -->
     <div class="mb-4">
       <button
@@ -1258,11 +1347,10 @@
 
 
   <!--  playstore  -->
-
   <!-- App Download Banner -->
-  <div class="w-full flex justify-center items-center px-4 py-12 mb-10">
+  <div class="w-full flex justify-center items-center px-4 py-12 mb-10 animateBox">
     <div
-      class="relative w-full max-w-[1280px] bg-gradient-to-r from-blue-700 to-blue-400 rounded-[14px] shadow-md px-6 sm:px-12 py-8 flex flex-col sm:flex-row sm:justify-between sm:items-center text-white relative overflow-hidden">
+      class="relative w-full max-w-[1280px] rounded-[14px] shadow-md px-6 sm:px-12 py-8 flex flex-col sm:flex-row sm:justify-between sm:items-center text-white relative overflow-hidden">
 
       <!-- main bg Image -->
       <img src="/Images/Frame 261.png" alt="Background" class="absolute top-0 left-0 w-full h-full" />
@@ -1276,7 +1364,8 @@
       <!-- Right Buttons -->
       <div class="relative z-10 flex gap-4 justify-center">
         <!-- Google Play -->
-        <a href="/google-play" target="_blank" class="hover:scale-[1.02]">
+        <a href="https://play.google.com/store/apps/details?id=com.nextdeal&pcampaignid=web_share" target="_blank"
+          class="hover:scale-[1.02]">
           <img src="/Images/Google Play Blue1.png" alt="Google Play" class="h-12 sm:h-14">
         </a>
         <!-- App Store -->
@@ -1557,41 +1646,6 @@
         Limited.
         All rights reserved.</p>
 
-      <!-- Desktop Social Icons -->
-      <!-- <div class="inline-flex justify-start items-center gap-6 hidden sm:inline-flex pr-10"> -->
-      <!-- Facebook -->
-      <!-- <div
-          class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
-          <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-          <div
-            class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
-          </div>
-          <img src="/Images/Socimg/facebook.svg" alt="Facebook"
-            class="w-5 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
-        </div> -->
-
-      <!-- Instagram -->
-      <!-- <div
-          class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
-          <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-          <div
-            class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
-          </div>
-          <img src="/Images/Socimg/instagram.svg" alt="Instagram"
-            class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
-        </div> -->
-
-      <!-- Twitter -->
-      <!-- <div
-          class="w-10 h-10 relative rounded-full outline outline-1 outline-offset-[-1px] outline-white/80 overflow-hidden group cursor-pointer">
-          <div class="absolute w-10 h-10 left-[-40px] top-[-60px] bg-white rounded-full"></div>
-          <div
-            class="absolute inset-0 bg-white transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-in-out origin-top-left">
-          </div>
-          <img src="/Images/Socimg/twitter.svg" alt="Twitter"
-            class="w-4 h-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:brightness-0 transition-all duration-300 z-10" />
-        </div> -->
-      <!-- </div> -->
     </div>
   </footer>
 
@@ -1715,15 +1769,66 @@
     }
   </script>
 
-
-
-
-
-
-
-
-
   <script src="script.js"></script>
+
+  <!-- gsap animation -->
+  <script>
+    // Register plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate all elements with class "animateBox"
+    gsap.utils.toArray(".animateBox").forEach((el) => {
+      let animType = el.dataset.anim || "up";
+
+      let props = { y: 80, opacity: 0 }; // default "up"
+      if (animType === "left") props = { x: -100, opacity: 0 };
+      if (animType === "right") props = { x: 100, opacity: 0 };
+      if (animType === "zoom") props = { scale: 0.5, opacity: 0 };
+
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          toggleActions: "play none none reset",
+          once: true // 👈 ek bar animate ho, dobara hidden na ho
+        },
+        ...props,
+        duration: 1,
+        ease: "power3.out"
+      });
+    });
+
+    // Reload fix
+    window.addEventListener("load", () => {
+      ScrollTrigger.refresh();
+    });
+
+    // Water wave 1
+    gsap.to(".water1", {
+      y: 100, // moves 100px down
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".water1",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+
+    // Water wave 2
+    gsap.to(".water2", {
+      y: 200, // moves 200px down (faster)
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".water2",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  </script>
+
+
 </body>
 
 </html>

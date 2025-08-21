@@ -634,23 +634,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 280px;
+  margin-top: 200px;
 }
 
 .Left_Image_Section {
   display: flex;
   flex-direction: column;
-  /* padding-top: 160px; */
 }
 
 .Left_Image_Section>.left_img {
-  width: 648px;
-  padding-top: 2rem;
+  width: 748px;
   position: relative;
 }
-
-
-
 
 
 .Right_Content_Section {
@@ -711,7 +706,7 @@ body {
   }
 
   #heroSection h1 {
-    font-size: 40px !important;
+    font-size: 20px !important;
     line-height: 40px !important;
    
   }
@@ -762,13 +757,13 @@ body {
            font-weight:200 ;
            font-family: outfit;
            line-height: 30px;
-           font-size: 23px;
-          
+           font-size: 18px;
+           color: #001A48;
+           font-weight: 300;
          }
 
          #heroSection h1 {
-          font-size: 53px;
-       
+          font-size: 42px;
          }
 
 
@@ -783,7 +778,6 @@ body {
 
  .videosec{
   margin-left: 8rem;
- 
  }
 
 
@@ -849,3 +843,14 @@ body {
     @apply w-16 h-24 rounded-xl;
   }
 }
+
+
+/* catagories baground image */
+
+.catagories-bg{
+  background-image: url("/Images/catagories-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
