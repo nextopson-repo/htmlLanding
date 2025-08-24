@@ -1882,61 +1882,60 @@
   <script src="script.js"></script>
 
   <!-- gsap animation -->
-  <script>
+  <!--<script>
     // Register plugin
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
 
     // Animate all elements with class "animateBox"
-    gsap.utils.toArray(".animateBox").forEach((el) => {
-      let animType = el.dataset.anim || "up";
+    // gsap.utils.toArray(".animateBox").forEach((el) => {
+    //   let animType = el.dataset.anim || "up";
 
-      let props = { y: 80, opacity: 0 }; // default "up"
-      if (animType === "left") props = { x: -100, opacity: 0 };
-      if (animType === "right") props = { x: 100, opacity: 0 };
-      if (animType === "zoom") props = { scale: 0.5, opacity: 0 };
+    //   let props = { y: 80, opacity: 0 }; 
+    //   if (animType === "left") props = { x: -100, opacity: 0 };
+    //   if (animType === "right") props = { x: 100, opacity: 0 };
+    //   if (animType === "zoom") props = { scale: 0.5, opacity: 0 };
 
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",
-          toggleActions: "play none none reset",
-          once: true // 👈 ek bar animate ho, dobara hidden na ho
-        },
-        ...props,
-        duration: 1,
-        ease: "power3.out"
-      });
-    });
+    //   gsap.from(el, {
+    //     scrollTrigger: {
+    //       trigger: el,
+    //       start: "top 90%",
+    //       toggleActions: "play none none reset",
+    //       once: true
+    //     },
+    //     ...props,
+    //     duration: 1,
+    //     ease: "power3.out"
+    //   });
+    // });
 
-    // Reload fix
-    window.addEventListener("load", () => {
-      ScrollTrigger.refresh();
-    });
+    // window.addEventListener("load", () => {
+    //   ScrollTrigger.refresh();
+    // });
 
     // Water wave 1
-    gsap.to(".water1", {
-      y: 15, // moves 100px down
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".water1",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true
-      }
-    });
+    // gsap.to(".water1", {
+    //   y: 15, // moves 100px down
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: ".water1",
+    //     start: "top bottom",
+    //     end: "bottom top",
+    //     scrub: true
+    //   }
+    // });
 
-    // Water wave 2
-    gsap.to(".water2", {
-      y: 30, // moves 200px down (faster)
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".water2",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true
-      }
-    });
-  </script>
+    // // Water wave 2
+    // gsap.to(".water2", {
+    //   y: 30, // moves 200px down (faster)
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: ".water2",
+    //     start: "top bottom",
+    //     end: "bottom top",
+    //     scrub: true
+    //   }
+    // });
+  </script>-->
 
 
 </body>
