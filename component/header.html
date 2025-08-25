@@ -4,8 +4,6 @@
     box-sizing: border-box;
   }
 
-  
-
   html,
   body {
     overflow-x: hidden;
@@ -16,8 +14,10 @@
 <header class="flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 bg-white fixed top-0 left-0 w-full z-50">
   <!-- Logo -->
   <div class="w-[120px] sm:w-[140px] md:w-[170px] flex items-center">
-    <img src="../Images/nextdeal-blue (1).svg" alt="Logo" class="h-[20px] w-auto hidden md:block" />
-     <img src="../Images/nextdeal-blue (1).svg" alt="Mobile Logo" class="h-[20px] w-auto block md:hidden" />
+    <a href="/">
+      <img src="/Images/nextdeal-blue (1).svg" alt="Logo" class="h-[20px] w-auto hidden md:block" />
+      <img src="/Images/nextdeal-blue (1).svg" alt="Mobile Logo" class="h-[20px] w-auto block md:hidden" />
+    </a>
   </div>
 
   <!-- Desktop Navigation -->
@@ -96,8 +96,26 @@
         </svg>
       </button>
       <div id="productDropdownMobile" class="mt-3 hidden flex-col items-center space-y-3 transition-all duration-300">
-        <img src="/Images/Nextopson-product.svg" alt="Nextopson Product" class="w-40 rounded-lg" />
-        <img src="/Images/NextCRM-product.svg" alt="NextCRM Product" class="w-40 rounded-lg" />
+        <!-- Card 1 -->
+        <a href="#" target="_blank" class="">
+          <div
+            class="group bg-[#FF5733] rounded-xl w-[70%] h-auto space-y-1 p-4 px-10 relative cursor-pointer overflow-hidden">
+            <p class="text-[11px] sm:text-xs text-white">Coming Soon NextCRM.in :</p>
+
+            <div class="flex items-center gap-2 relative">
+              <img src="/Images/footer/NextDeals Logo 1.png" alt="NextopsonVisit-button"
+                class="w-32 sm:w-36 md:w-40 h-6 sm:h-7 md:h-10 object-contain">
+
+              <!-- Arrow -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-8 h-8 md:w-10 md:h-10 pointer-events-none absolute left-44 bottom-0 text-white transform rotate-45 opacity-0 -translate-x-10 translate-y-10 transition-all duration-200 ease-out group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+                <path d="m5 12 7-7 7 7" />
+                <path d="M12 19V5" />
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
 
@@ -156,6 +174,7 @@
     const productDropdownMobile = document.getElementById('productDropdownMobile');
     const arrowIcon = document.getElementById('arrowIcon');
     let isDropdownOpen = false;
+    
     productToggleMobile.addEventListener('click', function (e) {
       e.stopPropagation();
       productDropdownMobile.classList.toggle('hidden');
@@ -169,8 +188,35 @@
         arrowIcon.style.transform = 'rotate(0deg)';
       }
     });
-    productDropdownMobile.addEventListener('click', function (e) {
-      e.stopPropagation();
+
+    // productDropdownMobile.addEventListener('click', function (e) {
+    //   e.stopPropagation();
+    // });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const productToggleMobile = document.getElementById('productToggleMobile');
+      const productDropdownMobile = document.getElementById('productDropdownMobile');
+      const arrowIcon = document.getElementById('arrowIcon');
+      let isDropdownOpen = false;
+
+      productToggleMobile.addEventListener('click', function (e) {
+        e.stopPropagation();
+        productDropdownMobile.classList.toggle('hidden');
+        isDropdownOpen = !isDropdownOpen;
+        arrowIcon.style.transform = isDropdownOpen ? 'rotate(90deg)' : 'rotate(0deg)';
+      });
+
+      document.addEventListener('click', function () {
+        if (!productDropdownMobile.classList.contains('hidden')) {
+          productDropdownMobile.classList.add('hidden');
+          isDropdownOpen = false;
+          arrowIcon.style.transform = 'rotate(0deg)';
+        }
+      });
+
+      productDropdownMobile.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
     });
 
     // Active Link Highlight (Desktop + Mobile)
