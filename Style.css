@@ -441,8 +441,6 @@ body {
 .Feature_List {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-
 }
 
 .pera_tag {
@@ -454,7 +452,6 @@ body {
   .Feature_List {
     justify-content: center;
     align-items: center;
-
   }
 
   .pera_tag {
