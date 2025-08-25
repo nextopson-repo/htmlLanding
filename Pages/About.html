@@ -535,23 +535,23 @@
 
 
   <!-- Our Story Section -->
-  <section id="our-story-section "
-    class="w-full flex justify-center items-center lg:py-20 min-h-auto bg-white md:flex mt-0"
+  <section id="our-story-section"
+    class="w-full flex justify-center items-center lg:py-20 min-h-auto bg-white md:flex"
     style="height:auto;min-height:auto;">
 
     <div class="flex flex-col md:flex-row w-full max-w-6xl overflow-hidden min-h-[420px] h-fit">
       <!-- Mobile View Image -->
-      <div class="md:hidden relative w-auto h-auto">
+      <div class="md:hidden relative w-full full bg-gradient-to-b from-[#B3CCFB] to-white">
         <!-- Image -->
-        <img src="../Images/ourimageRotate.png" alt="Our Story" class="absolute bottom-0 inset-0 w-full object-cover z-[1]" />
+        <img src="../Images/ourimageRotate.png" alt="Our Story" class=" w-full object-cover" />
 
         <!-- Centered Text -->
         <span
-          class="absolute inset-0 flex items-center justify-center -top-[100%] translate-y-[100%] font-bold text-[#0046FF] text-4xl tracking-widest">
+          class="flex items-center justify-center font-bold text-[#0046FF] text-4xl tracking-widest absolute inset-0 top-0 -translate-0">
           Our Story
         </span>
 
-        <div id="mobile-story-lines" class="absolute right-4 -top-[50%] translate-y-[50%] flex flex-col gap-3 z-20 md:hidden">
+        <div id="mobile-story-lines" class="absolute right-4  top-[140%] translate-[140%] flex flex-col gap-3 z-20 md:hidden">
           <div id="line-0" onclick="showStoryFrame(0)"
             class="w-[3px] bg-[#B3CCFB] h-5 cursor-pointer relative rounded-2xl"></div>
           <div id="line-1" onclick="showStoryFrame(1)"
@@ -582,7 +582,7 @@
       </aside>
 
       <!-- Main Content Area -->
-      <div id="our-story-main" class="flex-1 flex flex-row bg-white z-10 animate-story-main">
+      <div id="our-story-main" class="flex-1 flex flex-row bg-white z-10 animate-story-main py-14">
 
         <!-- Navigation (Desktop Only) -->
         <nav id="our-story-nav"
@@ -592,7 +592,7 @@
 
         <!-- Story Content Area -->
         <section id="our-story-content"
-          class="flex-1 flex flex-col justify-center items-start px-6 py-8 bg-white animate-story-fadein">
+          class="flex-1 flex flex-col items-start px-6 py-8 animate-story-fadein">
           <div id="story-content-area" class="w-full"></div>
         </section>
       </div>
@@ -746,7 +746,7 @@
         const fadeClass = window.__storyNavAnimated ? '' : 'story-fadein-stagger';
         const animDelay = window.__storyNavAnimated ? '' : `animation-delay:${0.2 + i * 0.12}s`;
         return `
-        <div class="flex items-center gap-2 cursor-pointer group ${fadeClass}" style="${animDelay}" onclick="showStoryFrame(${i})">
+        <div class="flex items-center gap-2 cursor-pointer group  ${fadeClass}" style="${animDelay}" onclick="showStoryFrame(${i})">
           <img 
             src="/Images/star.jpg" 
             alt="star" 
@@ -782,7 +782,7 @@
           '<span style="position:relative;display:inline-block;width:40px;">k<img src="../Images/king-img-1.png" alt="king" style="position:absolute;top:-22px;left:0;width:50px;height:30px;z-index:2;" /></span>';
 
         html = `
-        <div class="flex flex-col items-start w-full">
+        <div class="flex flex-col items-start">
           <div class="flex items-center gap-2 mb-2">
             <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight heading-animate">The <span class="font-bold text-[#0046FF]">${sparkWithKing}</span></h2>
           </div>
@@ -792,7 +792,7 @@
       `;
       } else {
         html = `
-        <div class="flex flex-col items-start h-auto w-full">
+        <div class="flex flex-col items-start">
           <div class="flex items-center gap-2 mb-2">
             <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight heading-animate">The <span class="font-bold text-[#0046FF]">${frame.nav.split(' ').slice(-1)[0]}</span></h2>
           </div>
