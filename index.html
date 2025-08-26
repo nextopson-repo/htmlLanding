@@ -2,68 +2,79 @@
 <html lang="en">
 
 <head>
+  <!-- Required Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NextDeal – #1 Real Estate Marketplace & Networking App</title>
+
+  <!-- Title & Description -->
+  <title>NextDeal - #1 Real Estate Marketplace & Networking App</title>
   <meta name="description"
-    content="NextDeal is India’s leading real estate marketplace and networking app. Buy, sell, rent properties, and connect with verified agents and investors — all in one powerful platform." />
-  <script src="https://cdn.tailwindcss.com"></script>
+    content="NextDeal is India's leading real estate marketplace and networking app. Buy, sell, rent properties, and connect with verified agents and investors — all in one powerful platform." />
+  <meta name="author" content="NextDeal" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Keywords (optional, not heavily used by Google but still fine for other engines) -->
+  <meta name="keywords"
+    content="real estate India, property marketplace, buy rent sell property, real estate networking app, real estate agents, investors" />
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://nextdeal.in/Images/ndIcon.png" />
+  <link rel="icon" type="image/svg+xml" href="https://nextdeal.in/Images/ndIcon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://nextdeal.in/Images/ndIcon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="./Style.css" />
 
-  <link rel="stylesheet" href="./Style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="/Images/icon 2.svg" />
-  <link rel="icon" type="image/png" href="/Images/icon 2.png" />
+  <!-- Open Graph (Facebook / LinkedIn) -->
+  <meta property="og:title" content="NextDeal - #1 Real Estate Marketplace & Networking App" />
+  <meta property="og:description"
+    content="Discover, buy, rent, and sell properties with NextDeal — India's most trusted real estate marketplace and networking app." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nextdeal.in/" />
+  <meta property="og:image" content="https://nextdeal.in/Images/ndIcon.png" />
 
-  <!-- Deep Linking Meta Tags for Play Store Validation -->
-  <link rel="assetlinks" href="/.well-known/assetlinks.json">
-  <meta name="assetlinks" content="/.well-known/assetlinks.json">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NextDeal - #1 Real Estate Marketplace & Networking App" />
+  <meta name="twitter:description"
+    content="India's leading real estate marketplace. Buy, sell, rent properties and network with verified agents." />
+  <meta name="twitter:image" content="https://nextdeal.in/Images/ndIcon.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://nextdeal.in/Images/icon2.png" />
-  <link rel="icon" type="image/svg+xml" href="https://nextdeal.in/Images/icon2.svg" />
-  <link rel="apple-touch-icon" href="https://nextdeal.in/Images/icon2.png" />
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#0046FF" />
 
+  <!-- Deep Linking Meta for Play Store -->
+  <link rel="assetlinks" href="/.well-known/assetlinks.json" />
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    html,
-    body {
-
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-  </style>
-
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/d81ac8fe56.js" crossorigin="anonymous"></script>
+  <!-- Animations -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
   <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
+  <script>
+    (function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5WT9X4RD');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- lottie animation link -->
-  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
-
-  <!-- gsap animation link -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5WT9X4RD');
+  </script>
 </head>
+
 
 <body class="font-outfit overflow-x-hidden max-[360px]:text-[14px]">
   <!-- Google Tag Manager (noscript) -->
