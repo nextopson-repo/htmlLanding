@@ -73,6 +73,20 @@
         'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-5WT9X4RD');
   </script>
+
+  <!-- app redirection linking code -->
+  <script>
+    window.onload = function () {
+      // Property ID nikalna URL se
+      var propertyId = window.location.pathname.split("/").pop();
+
+      // Intent URL (agar app install hai to app khulega, nahi to Play Store)
+      var appLink = `intent://property/${propertyId}#Intent;scheme=https;package=com.nextdeal;S.browser_fallback_url=https://play.google.com/store/apps/details?id=com.nextdeal&pcampaignid=web_share`;
+
+      // Redirect
+      window.location = appLink;
+    };
+  </script>
 </head>
 
 
@@ -86,8 +100,8 @@
     class="w-screen xl:max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 bg-white top-0 left-0 z-[100]">
     <div class="bg-white w-[100px] sm:w-[140px] md:w-[170px] flex items-center max-[360px]:w-[100px]">
       <a href="/">
-        <img src="./Images/nextdeal-blue (1).svg" alt="Logo" class="h-[26px] w-auto hidden md:block" />
-        <img src="./Images/nextdeal-blue (1).svg" alt="Mobile Logo" class="h-[26px] w-auto block md:hidden" />
+        <img src="/Images/nextdeal-blue (1).svg" alt="Logo" class="h-[26px] w-auto hidden md:block" />
+        <img src="/Images/nextdeal-blue (1).svg" alt="Mobile Logo" class="h-[26px] w-auto block md:hidden" />
       </a>
     </div>
 
@@ -218,11 +232,11 @@
         <div class="flex flex-col gap-3">
           <a href="https://play.google.com/store/apps/details?id=com.nextdeal&pcampaignid=web_share">
             <img src="/Images/Frame 286.png"
-            class="w-[200px] h-[58px] p-2 rounded-full max-[360px]:w-[180px] max-[360px]:h-[50px]" />
+              class="w-[200px] h-[58px] p-2 rounded-full max-[360px]:w-[180px] max-[360px]:h-[50px]" />
           </a>
           <a href="/">
             <img src="/Images/Frame 287.png"
-            class="w-[200px] h-[58px] p-2 rounded-full max-[360px]:w-[160px] max-[360px]:h-[50px]" />
+              class="w-[200px] h-[58px] p-2 rounded-full max-[360px]:w-[160px] max-[360px]:h-[50px]" />
           </a>
         </div>
       </div>
@@ -255,8 +269,16 @@
     menuToggle.addEventListener('click', () => {
       isOpen = !isOpen;
       mobileMenu.classList.toggle('hidden');
-      menuIcon.src = isOpen ? './Images/cross.png' : './Images/menu-11 copy.svg';
+      menuIcon.src = isOpen ? '/Images/cross.png' : '/Images/menu-11 copy.svg';
       if (window.innerWidth < 768) heroSection.classList.toggle('hidden', isOpen);
+
+      // 👇 Scroll lock/unlock
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+
     });
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -406,7 +428,8 @@
 
 
     <!-- Right Content Section -->
-    <div class="w-full col-span-7 lg:col-span-4 lg:pl-5 flex flex-col flex-nowrap justify-center gap-[1rem] lg:gap-[2rem]">
+    <div
+      class="w-full col-span-7 lg:col-span-4 lg:pl-5 flex flex-col flex-nowrap justify-center gap-[1rem] lg:gap-[2rem]">
 
       <!-- AI Features Button -->
       <button
@@ -1014,7 +1037,8 @@
         <!-- Icon + Title Flex Row -->
         <div class="flex items-center gap-3 mb-4">
           <!-- Icon -->
-          <div class="bg-blue-600 w-10 sm:w-14 lg:w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300">
+          <div
+            class="bg-blue-600 w-10 sm:w-14 lg:w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300">
             <img src="/Images/cursor-02-solid-rounded 1.svg" alt="" class="w-5 h-5" />
           </div>
           <!-- Title -->
@@ -1058,7 +1082,8 @@
         <!-- Icon + Title Flex Row -->
         <div class="flex items-center gap-3 mb-4">
           <!-- Icon -->
-          <div class="bg-blue-600 w-10 sm:w-[60px] lg:w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300">
+          <div
+            class="bg-blue-600 w-10 sm:w-[60px] lg:w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300">
             <img src="/Images/ProfileVerification_tick.svg" alt="" class="w-5 h-5" />
           </div>
           <!-- Title -->
@@ -1342,9 +1367,9 @@
 
       <!-- Center Bottom Images (Mobile Only) -->
       <div class="flex gap-4 sm:hidden mt-14 lg:mt-0">
-        <img src="/Images/testimonials/img-10.png" class="w-28 h-40 object-cover rounded-xl" />
-        <img src="/Images/testimonials/img-girl-4.png" class="w-28 h-40 object-cover rounded-xl mt-14" />
-        <img src="/Images/testimonials/img-11.png" class="w-28 h-40 object-cover rounded-xl" />
+        <img src="/Images/testimonials/img-10.png" class="w-20 h-32 object-cover rounded-xl" />
+        <img src="/Images/testimonials/img-girl-4.png" class="w-20 h-32 object-cover rounded-xl mt-14" />
+        <img src="/Images/testimonials/img-11.png" class="w-20 h-32 object-cover rounded-xl" />
       </div>
 
       <!-- Right Column -->
