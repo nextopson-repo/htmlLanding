@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Marketing Payment Links | Nextdeal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="w-full bg-white shadow p-4">
+        <h1 class="text-2xl font-semibold text-gray-800 text-center">
+            Marketing Payment Links – Nextdeal
+        </h1>
+    </header>
+
+    <!-- Container -->
+    <main class="max-w-5xl mx-auto mt-8 px-4">
+
+        <!-- Status Box -->
+        <div id="statusBox" class="hidden mb-4 px-4 py-3 rounded-md text-sm font-medium border"></div>
+
+        <!-- Table Box -->
+        <div class="bg-white rounded-xl shadow p-5">
+            <h2 class="text-xl font-semibold mb-4">All Payment Links</h2>
+
+            <!-- Loading -->
+            <div id="loading" class="text-center py-6 text-gray-500">Loading...</div>
+
+            <!-- Table -->
+            <div class="overflow-x-auto">
+                <table id="paymentTable" class="hidden w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-200 text-left text-sm">
+                            <th class="p-3">User</th>
+                            <th class="p-3">Plan</th>
+                            <th class="p-3">Amount</th>
+                            <th class="p-3">Status</th>
+                            <th class="p-3">Created</th>
+                            <th class="p-3">Link</th>
+                            <th class="p-3 text-center">Verify</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody" class="text-sm"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const API_BASE = "https://nextopson.com/api/v1/payment";
+
+        const statusBox = document.getElementById("statusBox");
+        const loading = document.getElementById("loading");
+        const paymentTable = document.getElementById("paymentTable");
+        const tableBody = document.getElementById("tableBody");
+
+        function showStatus(message, type = "success") {
+            statusBox.classList.remove("hidden");
+            statusBox.textContent = message;
+
+            if (type === "success") {
+                statusBox.className =
+                    "mb-4 px-4 py-3 rounded-md text-sm font-medium border bg-green-50 text-green-700 border-green-300";
+            } else {
+                statusBox.className =
+                    "mb-4 px-4 py-3 rounded-md text-sm font-medium border bg-red-50 text-red-700 border-red-300";
+            }
+
+            setTimeout(() => (statusBox.classList.add("hidden")), 3000);
+        }
+
+        // Load Payment Links
+        async function loadPaymentLinks() {
+            try {
+                const res = await fetch(API_BASE + "/marketing/payment-links", {
+                    method: "POST",
+                });
+
+                const data = await res.json();
+
+                loading.classList.add("hidden");
+
+                if (!data.success || data.count === 0) {
+                    loading.textContent = "No payment links found.";
+                    loading.classList.remove("hidden");
+                    return;
+                }
+
+                paymentTable.classList.remove("hidden");
+
+                data.data.forEach((txn) => {
+                    const tr = document.createElement("tr");
+                    tr.classList.add("border-b");
+
+                    const created = new Date(txn.transactionDate).toLocaleString("en-IN");
+
+                    tr.innerHTML = `
+                        <td class="p-3">${txn.customerName || "N/A"}<br>
+                            <span class="text-xs text-gray-500">${txn.customerPhoneNumber}</span>
+                        </td>
+
+                        <td class="p-3 capitalize">${txn.planName}</td>
+
+                        <td class="p-3 font-semibold text-green-700">₹${txn.amount}</td>
+
+                        <td class="p-3">
+                            <span class="px-2 py-1 text-xs rounded-full ${txn.transactionStatus === "success"
+                            ? "bg-green-100 text-green-700"
+                            : txn.transactionStatus === "failed"
+                                ? "bg-red-100 text-red-700"
+                                : "bg-yellow-100 text-yellow-700"
+                        }">
+                                ${txn.transactionStatus}
+                            </span>
+                        </td>
+
+                        <td class="p-3">${created}</td>
+
+                        <td class="p-3">
+                            <a href="${JSON.parse(txn.paymentFormData).short_url}" 
+                               target="_blank" 
+                               class="text-blue-600 underline">
+                                Open Link
+                            </a>
+                        </td>
+
+                        <td class="p-3 text-center">
+                            <button onclick='verifyPayment("${txn.razorpayOrderId}", "${txn.userId}")'
+                                class="px-3 py-1 text-xs font-medium bg-blue-600 text-white rounded-full hover:bg-blue-700">
+                                Verify
+                            </button>
+                        </td>
+                    `;
+
+                    tableBody.appendChild(tr);
+                });
+            } catch (error) {
+                console.error(error);
+                showStatus("Failed to load payment links.", "error");
+            }
+        }
+        // Verify Payment
+        async function verifyPayment(orderId, userId) {
+            showStatus("Verifying payment...");
+
+            const res = await fetch(API_BASE + "/marketing/verify-payment", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ orderId, userId }),
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                showStatus("Payment verified successfully!", "success");
+                setTimeout(() => location.reload(), 1000);
+            } else {
+                showStatus(data.message || "Verification failed", "error");
+            }
+        }
+        loadPaymentLinks();
+    </script>
+</body>
+
+</html>
