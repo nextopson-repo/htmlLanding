@@ -1,0 +1,61 @@
+.card {
+  width: 340px;
+  background-color: #ccc;
+  border-radius: 2em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  filter: blur(1px);
+}
+
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+.play-btn,
+.mute-btn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide-active .play-btn,
+.swiper-slide-active .mute-btn {
+  opacity: 0.85;
+  pointer-events: auto;
+}
+
+.swiper-slide-active:hover .play-btn {
+  opacity: 1;
+}
+
+/* Default (desktop) */
+.card {
+  width: 220px;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .card {
+    width: 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .card {
+    width: 84vw;
+    box-shadow: 0 0 2em rgba(255, 255, 255, 0);
+  }
+}
+
+.bg-image{
+  background-image: url(/Images/Wave\ Line\ 1.png);  /* image link change here furure */
+}

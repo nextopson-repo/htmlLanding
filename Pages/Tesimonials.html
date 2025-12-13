@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card slider</title>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/slider.css">
+</head>
+
+<body>
+  <section class="swiper mySwiper">
+    <div class="swiper-wrapper" id="videoSlider"></div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </section>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="/slider.js"></script>
+<!-- 
+<script>
+  // YOUR CLOUDINARY VIDEO LINKS
+  const cloudVideos = [
+    "https://res.cloudinary.com/demo/video/upload/w_800/sample.mp4",
+    "https://res.cloudinary.com/demo/video/upload/w_800/dog.mp4",
+    "https://res.cloudinary.com/demo/video/upload/w_800/bike.mp4",
+    "https://res.cloudinary.com/demo/video/upload/w_800/car.mp4",
+    "https://res.cloudinary.com/demo/video/upload/w_800/run.mp4"
+  ];
+
+  // Inject slides dynamically
+  const sliderWrapper = document.getElementById("videoSlider");
+
+  cloudVideos.forEach((url) => {
+    const slide = document.createElement("div");
+    slide.className = "card swiper-slide";
+
+    slide.innerHTML = `
+      <div class="video-wrapper">
+        <video 
+          src="${url}" 
+          preload="metadata"
+          muted 
+          playsinline
+        ></video>
+      </div>
+    `;
+    sliderWrapper.appendChild(slide);
+  });
+
+  // Initialize Swiper
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 300,
+      modifier: 1,
+      slideShadows: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {
+      slideChange: function () {
+        handleVideoPlayback(this);
+      },
+      afterInit: function () {
+        handleVideoPlayback(this);
+      }
+    }
+  });
+
+  // Auto play only active slide video
+  function handleVideoPlayback(swiper) {
+    document.querySelectorAll("video").forEach(v => {
+      v.pause();
+      v.currentTime = 0;
+    });
+
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    const activeVideo = activeSlide.querySelector("video");
+
+    if (activeVideo) {
+      activeVideo.play();
+    }
+
+    // Preload next slide video
+    const nextSlide = swiper.slides[swiper.activeIndex + 1];
+    if (nextSlide) {
+      const nextVideo = nextSlide.querySelector("video");
+      if (nextVideo) nextVideo.preload = "auto";
+    }
+  }
+</script> -->
+</body>
+
+</html>
