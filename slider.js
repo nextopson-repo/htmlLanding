@@ -1,67 +1,203 @@
 // // YOUR CLOUDINARY VIDEO LINKS
+
 const cloudVideos = [
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536043/WhatsApp_Video_2025-12-12_at_4.08.14_PM_aq9dyw.mp4",
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536038/WhatsApp_Video_2025-12-12_at_4.08.18_PM_2_nhraj7.mp4",
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536037/WhatsApp_Video_2025-12-12_at_4.08.19_PM_kvzxme.mp4",
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536036/WhatsApp_Video_2025-12-12_at_4.08.17_PM_lusgt0.mp4",
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536036/WhatsApp_Video_2025-12-12_at_4.08.19_PM_2_k8szit.mp4",
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536033/WhatsApp_Video_2025-12-12_at_4.08.19_PM_1_xji6qt.mp4",
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536033/WhatsApp_Video_2025-12-12_at_4.08.18_PM_vksvri.mp4",
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536034/WhatsApp_Video_2025-12-12_at_4.08.15_PM_reiw7l.mp4",
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536034/WhatsApp_Video_2025-12-12_at_4.08.16_PM_bljiiz.mp4",
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536035/WhatsApp_Video_2025-12-12_at_4.08.17_PM_1_od0h9v.mp4",
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536035/WhatsApp_Video_2025-12-12_at_4.08.18_PM_1_m6trbf.mp4",
-  "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536035/WhatsApp_Video_2025-12-12_at_4.08.17_PM_2_igplf8.mp4",
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536043/WhatsApp_Video_2025-12-12_at_4.08.14_PM_aq9dyw.mp4",
+    name: "",
+  },
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536038/WhatsApp_Video_2025-12-12_at_4.08.18_PM_2_nhraj7.mp4",
+    name: "",
+  },
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536037/WhatsApp_Video_2025-12-12_at_4.08.19_PM_kvzxme.mp4",
+    name: "",
+  },
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536036/WhatsApp_Video_2025-12-12_at_4.08.17_PM_lusgt0.mp4",
+    name: "",
+  },
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536036/WhatsApp_Video_2025-12-12_at_4.08.19_PM_2_k8szit.mp4",
+    name: "",
+  },
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536033/WhatsApp_Video_2025-12-12_at_4.08.19_PM_1_xji6qt.mp4",
+    name: "",
+  },
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536033/WhatsApp_Video_2025-12-12_at_4.08.18_PM_vksvri.mp4",
+    name: "",
+  },
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536034/WhatsApp_Video_2025-12-12_at_4.08.15_PM_reiw7l.mp4",
+    name: "",
+  },
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536034/WhatsApp_Video_2025-12-12_at_4.08.16_PM_bljiiz.mp4",
+    name: "",
+  },
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536035/WhatsApp_Video_2025-12-12_at_4.08.17_PM_1_od0h9v.mp4",
+    name: "",
+  },
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536035/WhatsApp_Video_2025-12-12_at_4.08.18_PM_1_m6trbf.mp4",
+    name: "",
+  },
+  {
+    url: "https://res.cloudinary.com/dc3bldnrd/video/upload/v1765536035/WhatsApp_Video_2025-12-12_at_4.08.17_PM_2_igplf8.mp4",
+    name: "",
+  },
 ];
 
 let isMuted = true; // default muted (autoplay safe)
 
 const sliderWrapper = document.getElementById("videoSlider");
 
-cloudVideos.forEach((url) => {
+cloudVideos.forEach(({ url, name }) => {
   const slide = document.createElement("div");
   slide.className = "card swiper-slide";
 
-  slide.innerHTML = `
-  <div class="video-wrapper relative rounded-[2rem] overflow-hidden">
-    
-    <video 
-      class="video h-full w-full object-cover"
-      src="${url}"
-      preload="metadata"
-      playsinline
-      muted
-      
-    ></video>
+  //   slide.innerHTML = `
+  //   <div class="video-wrapper relative rounded-[2rem] overflow-hidden">
 
-    <!-- PLAY / PAUSE -->
-    <button class="play-btn absolute inset-0 flex items-center justify-center text-white text-3xl opacity-80 hidden">
+  //     <video
+  //       class="video h-full w-full object-cover"
+  //       src="${url}"
+  //       preload="metadata"
+  //       playsinline
+  //       muted
+
+  //     ></video>
+
+  //     <!-- PLAY / PAUSE -->
+  //     <button class="play-btn absolute inset-0 flex items-center justify-center text-white text-3xl opacity-80 hidden">
+  //       ▶
+  //     </button>
+
+  //     <!-- MUTE -->
+  //     <button class="mute-btn absolute top-3 right-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
+  //       🔇
+  //     </button>
+
+  //   </div>
+  // `;
+
+  slide.innerHTML = `
+<div class="testimonial-card relative overflow-hidden rounded-[28px]">
+
+  <!-- Video -->
+  <video 
+    class="video absolute inset-0 h-full w-full object-cover"
+    src="${url}"
+    preload="metadata"
+    playsinline
+    muted
+  ></video>
+
+  <!-- Dark Gradient Overlay -->
+  <div class="absolute inset-0"></div>
+
+  <!-- Quote 
+  <div class="absolute top-6 left-6 right-6 text-white text-sm leading-relaxed">
+    Overall I loved the experience. I’ll definitely recommend NextDeal.
+  </div> -->
+
+  <!-- Bottom Content -->
+  <div class="absolute bottom-5 left-5 right-5 flex items-center justify-between text-white">
+    <div>
+      <p class="font-semibold text-base">${name}</p>
+      <!-- <p class="text-xs text-white/80">Graphic Designer</p> -->
+    </div>
+
+    <button class="play-btn flex items-center justify-center h-10 w-10 rounded-full bg-white/20 backdrop-blur">
       ▶
     </button>
-
-    <!-- MUTE -->
-    <button class="mute-btn absolute top-3 right-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
-      🔇
-    </button>
-
   </div>
+
+  <!-- Mute -->
+  <button class="mute-btn absolute top-4 right-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
+    🔇
+  </button>
+
+</div>
 `;
 
   sliderWrapper.appendChild(slide);
 });
 
+// var swiper = new Swiper(".mySwiper", {
+//   effect: "coverflow",
+//   grabCursor: true,
+//   centeredSlides: true,
+//   slidesPerView: "auto",
+//   spaceBetween: 40,
+
+//   loop: true,
+
+//   autoplay: {
+//     delay: 5000,
+//     disableOnInteraction: false,
+//   },
+
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+
+//   coverflowEffect: {
+//     rotate: 0,
+//     stretch: 0,
+//     depth: 180,
+//     modifier: 1,
+//     slideShadows: false,
+//   },
+
+//   breakpoints: {
+//     640: {
+//       spaceBetween: 40,
+//       coverflowEffect: {
+//         depth: 220,
+//       },
+//     },
+//     1024: {
+//       spaceBetween: 50,
+//       coverflowEffect: {
+//         depth: 300,
+//       },
+//     },
+//   },
+
+//   // on: {
+//   //   slideChange: function () {
+//   //     pauseAllVideos();
+//   //   },
+//   // },
+
+//   on: {
+//     init: function () {
+//       autoPlayActiveVideo(this); // 👈 page load pe
+//     },
+//     slideChangeTransitionEnd: function () {
+//       autoPlayActiveVideo(this); // 👈 next/prev swipe pe
+//     },
+//   },
+// });
+
 var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
-  spaceBetween: 40,
-
   loop: true,
+  spaceBetween: -10,
 
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 210,
+    modifier: 1,
+    slideShadows: false,
   },
 
   navigation: {
@@ -69,41 +205,36 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 180,
-    modifier: 1,
-    slideShadows: false,
-  },
-
   breakpoints: {
-    640: {
-      spaceBetween: 40,
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 0,
       coverflowEffect: {
-        depth: 220,
+        depth: 0,
+      },
+    },
+    640: {
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      coverflowEffect: {
+        depth: 160,
       },
     },
     1024: {
-      spaceBetween: 50,
+      slidesPerView: "auto",
+      spaceBetween: -10,
       coverflowEffect: {
-        depth: 300,
+        depth: 180,
       },
     },
   },
 
-  // on: {
-  //   slideChange: function () {
-  //     pauseAllVideos();
-  //   },
-  // },
-
   on: {
-    init: function () {
-      autoPlayActiveVideo(this); // 👈 page load pe
+    init(swiper) {
+      autoPlayActiveVideo(swiper);
     },
-    slideChangeTransitionEnd: function () {
-      autoPlayActiveVideo(this); // 👈 next/prev swipe pe
+    slideChangeTransitionEnd(swiper) {
+      autoPlayActiveVideo(swiper);
     },
   },
 });
@@ -153,7 +284,7 @@ document.addEventListener("click", (e) => {
   if (video.paused) {
     pauseAllVideos();
     video.play();
-    swiper.autoplay.stop(); // ⛔ stop slider
+    swiper.autoplay.stop();
     playBtn.innerHTML = "⏸";
   } else {
     video.pause();
@@ -164,7 +295,7 @@ document.addEventListener("click", (e) => {
 
 document.querySelectorAll(".video").forEach((video) => {
   video.addEventListener("ended", () => {
-    swiper.autoplay.start(); // 🔁 resume slider
+    swiper.autoplay.start();
   });
 });
 

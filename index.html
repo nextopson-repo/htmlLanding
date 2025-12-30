@@ -96,6 +96,9 @@
   <link rel="stylesheet" href="/slider.css">
   <link rel="stylesheet" href="/premium.css">
 
+  <!-- AOS animation  -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 
@@ -353,7 +356,7 @@
     <section id="heroSection"
       class="w-full z-[100] pt-[80px] pb-[180px] sm:pb-[350px] px-4 md:px-6 lg:px-8 space-y-8 sm:space-y-4 xl:space-y-8 z-5">
       <!-- Tagline Button -->
-      <div class="text-center">
+      <div class="text-center" >
         <div
           class="inline-flex items-center justify-center whitespace-nowrap overflow-hidden w-full max-[360px]:w-[280px] max-[360px]:text-[13px] sm:w-[380px] h-[46px] px-4 py-3 border border-[#CCDDFC] rounded-full text-blue-600 font-semibold mb-4 gap-2 bg-white shadow hover:bg-blue-600 hover:text-white transition group">
 
@@ -365,20 +368,20 @@
       </div>
 
       <!-- Main Heading -->
-      <h1 class="text-3xl px-6 sm:px-24 lg:px-0 md:text-[42px] text-center font-bold text-[#001A48] leading-tight">
+      <h1 class="text-3xl px-6 sm:px-24 lg:px-0 md:text-[42px] text-center font-bold text-[#001A48] leading-tight" >
         AI-Powered Marketplace for Real Estate
       </h1>
 
       <!-- Description -->
       <p
-        class="paras text-[30px]/1 font-outfit font-[300] text-[#001A48] text-center mx-auto text-md sm:text-base md:text-[18px] xl:text-[24px] max-w-5xl">
+        class="paras text-[30px]/1 font-outfit font-[300] text-[#001A48] text-center mx-auto text-md sm:text-base md:text-[18px] xl:text-[24px] max-w-5xl" >
         Welcome to Nextdeal – the smart real estate marketplace connecting buyers, sellers, renters,<br
           class="hidden md:block">
         and agents for faster, simpler, and more transparent transactions.
       </p>
 
       <!-- App Download Buttons -->
-      <div class="flex justify-center flex-wrap gap-6">
+      <div class="flex justify-center flex-wrap gap-6" >
         <a href="https://play.google.com/store/apps/details?id=com.nextdeal&pcampaignid=web_share" target="_blank">
           <img src="/Images/Google Play Blue.png"
             class="h-[40px] md:h-[60px] bg-white hover:scale-105 transition-transform duration-300" />
@@ -1030,7 +1033,7 @@
     </script>
   </section>
 
-  
+
   <!--Why Choose Us-->
   <section class="max-w-7xl mx-auto px-6 py-16 text-center animateBox">
     <!-- Button -->
@@ -1332,48 +1335,40 @@
 
 
   <!-- Trusted and Testimonials -->
-  <section class="w-full min-h-screen mt-14 mb-10 relative">
-    <!-- Blobs in background -->
-    <!-- <span class="bg-box-1 bg-[#FFB86F]/60 absolute left-[2%] top-[20%] w-[220px] h-[220px] rounded-full z-0"></span>
-    <span
-      class="bg-box-3 bg-[#6C63FF]/60 absolute  left-[40%] lg:left-[55%] xl:left-[45%] top-[20%] w-[220px] h-[220px] rounded-full z-0"></span> -->
-
+  <section class="w-full lg:min-h-screen mt-14 md:mb-10 relative">
     <!-- Button -->
-    <div class="mb-4 w-full flex items-center justify-center">
-      <button
-        class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md mb-4">
+    <div class="py-2 md:py-0 w-full flex items-center justify-center">
+      <button class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-md">
         <img src="/Images/Star 1 (1).svg" alt="Star" class="w-4 h-4" />
         Testimonials
       </button>
     </div>
 
-    <!-- Title -->
-    <div class="w-full mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold">Don't worry we started as brand name called nextopson <br> Now we
-        are nextdeal</h2>
+    <div class="flex flex-col md:flex-row items-center px-2 md:px-10 py-4 lg:py-0">
+      <!-- Title -->
+      <div
+        class="w-full mx-auto text-center w-full md:max-w-[45%] px-2 md:px-4 flex flex-col items-center lg:items-end justify-center lg:justify-end gap-2 lg:gap-4">
+        <h2 class="text-2xl md:text-4xl font-semibold max-w-md text-center md:text-right">Don't worry we started as brand name called
+          nextopson
+          Now we are</h2>
+        <span class="text-[#0047FF] text-[11vw] sm:text-[3.5vw] font-semibold comfortaa">nextdeal</span>
+      </div>
+      <!-- Dynamic slider -->
+      <div class="swiper mySwiper w-full md:w-[55%] py-8 md:py-14 max-h-fit">
+        <div class="swiper-wrapper flex items-center" id="videoSlider"></div>
+      </div>
     </div>
-    <!-- Dynamic slider -->
-    <div class="swiper mySwiper w-[88%] py-10 max-h-fit">
-      <div class="swiper-wrapper flex items-center" id="videoSlider"></div>
-    </div>
-    <!-- <div
-      class="hidden md:block h-full w-[5%] h-1/2 absolute top-[20%] right-[5%] translate-1/2  z-10 bg-gradient-to-l from-white to-white/0"
-      style></div>
-    <div
-      class="hidden md:block h-full w-[5%] h-1/2 absolute top-[20%] left-[5%]  translate-1/2 z-10 bg-gradient-to-r from-white to-white/0">
-    </div> -->
 
-    <div
+    <!-- <div
       class="swiper-button-next p-2 border-[1px] rounded-md border-blue-500 h-14 w-7 hover:scale-105 hidden sm:block">
     </div>
     <div
       class="swiper-button-prev p-2 border-[1px] rounded-md border-blue-500 h-14 w-7 hover:scale-105 hidden sm:block">
-    </div>
+    </div> -->
 
     <div class="bg-[#0047FF] py-6 mx-4 sm:mx-10 text-center rounded-3xl text-white catagories-bg relative">
       <div class="absolute top-2.5 right-3">
         <div id="infoWrapper" class="relative">
-          <!-- Info Button -->
           <button id="infoBtn" type="button"
             class="flex items-center justify-center h-6 w-6 rounded-full bg-white/20 hover:bg-white/30 transition cursor-pointer"
             aria-label="Information">
@@ -1384,7 +1379,6 @@
             </svg>
           </button>
 
-          <!-- Tooltip -->
           <div id="infoTooltip" class="absolute right-0 top-8 hidden
              w-max max-w-[150px] rounded-xl bg-black/80
              px-4 py-2 text-xs text-white text-center
@@ -1407,6 +1401,7 @@
         </div>
       </div>
     </div>
+
   </section>
 
   <!-- Info button -->
@@ -1428,10 +1423,6 @@
       }
     });
   </script>
-
-
-
-
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -1458,8 +1449,9 @@
 
     <!-- FAQ Container -->
     <div class="w-full sm:max-w-7xl md:px-4 sm:mx-auto space-y-4  text-left">
-      <!-- FAQ Item -->
-      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+
+      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer open"
+        onclick="toggleFaq(this)">
         <div class="flex justify-between items-center">
           <p class="font-semibold">Is Nextdeal free to use?
           </p>
@@ -1471,9 +1463,7 @@
         </div>
       </div>
 
-      <!-- FAQ Item -->
-      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer open"
-        onclick="toggleFaq(this)">
+      <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
         <div class="flex justify-between items-center">
           <p class="font-semibold">Can I contact the owner/agent directly?
           </p>
@@ -1485,7 +1475,6 @@
         </div>
       </div>
 
-      <!-- FAQ Item -->
       <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
         <div class="flex justify-between items-center">
           <p class="font-semibold">Do I need to pay through the app?
@@ -1498,7 +1487,6 @@
         </div>
       </div>
 
-      <!-- FAQ Item -->
       <div class="faq-item border rounded-lg px-5 py-4 bg-white shadow-sm cursor-pointer" onclick="toggleFaq(this)">
         <div class="flex justify-between items-center">
           <p class="font-semibold">I am not very tech-savvy. Can I still use Nextdeal?
@@ -1963,62 +1951,11 @@
   <script src="premium.js"></script>
 
 
-  <!-- gsap animation -->
-  <!--<script>
-    // Register plugin
-    // gsap.registerPlugin(ScrollTrigger);
-
-    // Animate all elements with class "animateBox"
-    // gsap.utils.toArray(".animateBox").forEach((el) => {
-    //   let animType = el.dataset.anim || "up";
-
-    //   let props = { y: 80, opacity: 0 }; 
-    //   if (animType === "left") props = { x: -100, opacity: 0 };
-    //   if (animType === "right") props = { x: 100, opacity: 0 };
-    //   if (animType === "zoom") props = { scale: 0.5, opacity: 0 };
-
-    //   gsap.from(el, {
-    //     scrollTrigger: {
-    //       trigger: el,
-    //       start: "top 90%",
-    //       toggleActions: "play none none reset",
-    //       once: true
-    //     },
-    //     ...props,
-    //     duration: 1,
-    //     ease: "power3.out"
-    //   });
-    // });
-
-    // window.addEventListener("load", () => {
-    //   ScrollTrigger.refresh();
-    // });
-
-    // Water wave 1
-    // gsap.to(".water1", {
-    //   y: 15, // moves 100px down
-    //   ease: "none",
-    //   scrollTrigger: {
-    //     trigger: ".water1",
-    //     start: "top bottom",
-    //     end: "bottom top",
-    //     scrub: true
-    //   }
-    // });
-
-    // // Water wave 2
-    // gsap.to(".water2", {
-    //   y: 30, // moves 200px down (faster)
-    //   ease: "none",
-    //   scrollTrigger: {
-    //     trigger: ".water2",
-    //     start: "top bottom",
-    //     end: "bottom top",
-    //     scrub: true
-    //   }
-    // });
-  </script>-->
-
+  <!-- AOS animation -->
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script> -->
   <!-- Counter Animation -->
   <script>
     function animateCounter(el) {

@@ -1,4 +1,4 @@
-.card {
+/* .card {
   width: 340px;
   background-color: #ccc;
   border-radius: 2em;
@@ -8,11 +8,11 @@
   justify-content: center;
   flex-direction: column;
   padding: 3px;
-}
+} */
 
-.swiper-slide:not(.swiper-slide-active) {
+/* .swiper-slide:not(.swiper-slide-active) {
   filter: blur(1px);
-}
+} */
 
 
 video::-webkit-media-controls {
@@ -58,4 +58,80 @@ video::-webkit-media-controls {
 
 .bg-image{
   background-image: url(/Images/Wave\ Line\ 1.png);  /* image link change here furure */
+}
+
+/* new css slider */
+
+/* .testimonial-card {
+  width: 280px;
+  height: 420px;
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+} */
+
+.testimonial-card {
+ width: 200px;
+  height: 300px;
+  background-color: #ccc;
+  border-radius: 2em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3px;
+  position: relative;
+}
+
+/* CENTER CARD */
+.swiper-slide-active .testimonial-card {
+  transform: scale(1.15);
+  z-index: 10;
+}
+
+/* SIDE CARDS */
+.swiper-slide-prev .testimonial-card,
+.swiper-slide-next .testimonial-card {
+  transform: scale(0.9);
+  opacity: 1;
+}
+
+/* FAR CARDS */
+.swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next)
+.testimonial-card {
+  opacity: 0;
+}
+
+/* Hide controls by default */
+.play-btn,
+.mute-btn {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show only on active */
+.swiper-slide-active .play-btn,
+.swiper-slide-active .mute-btn {
+  opacity: 1;
+}
+
+
+/* Mobile fix */
+@media (max-width: 640px) {
+  .testimonial-card {
+    width: 90vw;
+    height: 420px;
+    margin: auto;
+  }
+
+  .swiper-slide-active .testimonial-card {
+    transform: scale(1);
+  }
+
+  .swiper-slide-prev .testimonial-card,
+  .swiper-slide-next .testimonial-card {
+    opacity: 0;
+  }
 }
